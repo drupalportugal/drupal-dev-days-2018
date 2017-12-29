@@ -24,6 +24,7 @@
         "drupal/metatag": "~1.0",
         "drupal/captcha": "~1.0",
         "drupal/config_split": "~1.0",
+        "drupal/contact_storage": "~1.0",
         "drupal/linked_field": "~1.0",
         "drupal/token": "~1.0",
         "drupal/pathauto": "~1.0",
