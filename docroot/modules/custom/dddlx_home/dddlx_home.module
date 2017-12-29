@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Contains dddlx_home.module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function dddlx_home_theme($existing, $type, $theme, $path) {
+  $themes = [];
+
+  $themes['home_main_content'] = [
+    'variables' => [],
+  ];
+
+  $themes['about_home_block'] = [
+    'variables' => [],
+  ];
+
+  return $themes;
+}

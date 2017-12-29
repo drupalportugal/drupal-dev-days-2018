@@ -1,0 +1,5 @@
+name: dddlis_users
+type: module
+description: Custom module for customize the users at the DrupalDevDays Lisboa 2018.
+core: 8.x
+package: Custom

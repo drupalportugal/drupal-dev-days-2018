@@ -1,0 +1,12 @@
+uuid: e175abf9-0e1d-4f7b-898d-dac0912cfff4
+langcode: en
+status: true
+dependencies: {  }
+id: attendee
+label: Attendee
+weight: 2
+is_admin: null
+permissions:
+  1: 'edit own session content'
+  2: 'use text format filtered_html'
+  3: 'cancel account'

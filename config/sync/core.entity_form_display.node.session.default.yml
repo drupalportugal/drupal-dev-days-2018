@@ -1,0 +1,103 @@
+uuid: 323003dd-0328-438d-9b1b-63ee8a620f16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.session.body
+    - field.field.node.session.field_file
+    - field.field.node.session.field_room
+    - field.field.node.session.field_session_level
+    - field.field.node.session.field_session_status
+    - field.field.node.session.field_session_track_type
+    - field.field.node.session.field_session_type
+    - field.field.node.session.field_user_ref
+    - node.type.session
+  module:
+    - file
+    - text
+id: node.session.default
+targetEntityType: node
+bundle: session
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_file:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_room:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_session_level:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_session_status:
+    type: options_buttons
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_session_track_type:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_session_type:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_user_ref:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  session_intro:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true
