@@ -791,5 +791,10 @@ $config_directories['sync'] = '../config/sync';
 if (isset($_SERVER['DEVDESKTOP_DRUPAL_SETTINGS_DIR']) && file_exists($_SERVER['DEVDESKTOP_DRUPAL_SETTINGS_DIR'] . '/loc_dddlx_dd.inc')) {
   require $_SERVER['DEVDESKTOP_DRUPAL_SETTINGS_DIR'] . '/loc_dddlx_dd.inc';
 }
+
+if (file_exists('/var/www/site-php')) {
+  require '/var/www/site-php/lisbon2018/lisbon2018-settings.inc';
+}
+
 // </DDSETTINGS>
 $settings['install_profile'] = 'standard';
