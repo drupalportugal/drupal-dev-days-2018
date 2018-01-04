@@ -35,6 +35,8 @@
         "drupal/paragraphs": "~1.0",
         "drupal/restui": "~1.0",
         "drupal/shield": "~1.0",
+        "drupal/devel": "~1.2",
+        "drupal/twig_xdebug": "~1.0",
         "drupal/cors": "~1.0",
         "drush/drush": "~8.0|^9.0.0-beta8",
         "webflo/drupal-finder": "^1.0.0",
