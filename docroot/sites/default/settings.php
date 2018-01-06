@@ -798,4 +798,3 @@ if (file_exists('/var/www/site-php')) {
 }
 
 // </DDSETTINGS>
-$settings['install_profile'] = 'standard';
