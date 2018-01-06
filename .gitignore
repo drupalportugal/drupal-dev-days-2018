@@ -8,6 +8,9 @@
 /docroot/libraries/
 /config/ignored
 
+# Ignore localsite
+/docroot/sites/dddlx.dd/
+
 # Ignore sensitive information
 /docroot/sites/*/settings.local.php
 
