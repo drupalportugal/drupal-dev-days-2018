@@ -1,0 +1,5 @@
+name: Drupal Dev Days Attendee
+type: module
+description: Drupal Dev Days Attendee module
+core: 8.x
+package: DDD

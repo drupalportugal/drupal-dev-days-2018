@@ -1,0 +1,27 @@
+# Attendee routing definition
+attendee.settings_tab:
+  route_name: attendee.settings
+  title: 'Settings'
+  base_route: attendee.settings
+
+entity.attendee.canonical:
+  route_name: entity.attendee.canonical
+  base_route: entity.attendee.canonical
+  title: 'View'
+
+entity.attendee.edit_form:
+  route_name: entity.attendee.edit_form
+  base_route: entity.attendee.canonical
+  title: 'Edit'
+
+entity.attendee.version_history:
+  route_name: entity.attendee.version_history
+  base_route: entity.attendee.canonical
+  title: 'Revisions'
+
+entity.attendee.delete_form:
+  route_name:  entity.attendee.delete_form
+  base_route:  entity.attendee.canonical
+  title: Delete
+  weight: 10
+

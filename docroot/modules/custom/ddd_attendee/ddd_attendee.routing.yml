@@ -1,0 +1,7 @@
+entity.attendee.structure:
+  path: '/admin/structure/ddd/attendee'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Attendee Structure'
+  requirements:
+    _permission: 'access administration pages'
