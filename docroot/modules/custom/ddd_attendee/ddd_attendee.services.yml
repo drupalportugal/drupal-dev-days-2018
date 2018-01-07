@@ -1,0 +1,5 @@
+services:
+  ddd_attendee.manager:
+    class: Drupal\ddd_attendee\AttendeeManager
+    arguments: ['@entity_type.manager', '@lock']
+

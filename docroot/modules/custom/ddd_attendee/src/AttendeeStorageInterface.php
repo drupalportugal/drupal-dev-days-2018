@@ -58,4 +58,26 @@ interface AttendeeStorageInterface extends ContentEntityStorageInterface {
    */
   public function clearRevisionsLanguage(LanguageInterface $language);
 
+  /**
+   * Get an Attendee by id.
+   *
+   * @param string $id
+   *   The attendee id.
+   *
+   * @return \Drupal\Core\Entity\EntityInterface|null
+   *   The Attendee entity if found or null.
+   */
+  public function getAttendeeById($id);
+
+  /**
+   * Get an Attendee by mail.
+   *
+   * @param string $mail
+   *   The attendee email.
+   *
+   * @return \Drupal\Core\Entity\EntityInterface|null
+   *   The Attendee entity if found or null.
+   */
+  public function getAttendeeByMail($mail);
+
 }

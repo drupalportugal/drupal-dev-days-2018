@@ -4,7 +4,6 @@ namespace Drupal\ddd_attendee\Controller;
 
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\Core\ProxyClass\Lock\DatabaseLockBackend;
 use Drupal\ddd_attendee\Event\TitoEvents;
 use Drupal\ddd_attendee\Exception\TitoWebhookException;
 use Drupal\ddd_attenndee\Event\TitoEvent;
@@ -26,23 +25,13 @@ class TitoWebhookController extends ControllerBase {
   protected $eventDispatcher;
 
   /**
-   * The lock backend service.
-   *
-   * @var \Drupal\Core\Lock\DatabaseLockBackend
-   */
-  protected $lockBackend;
-
-  /**
    * TitoWebhookController constructor.
    *
    * @param \Symfony\Component\EventDispatcher\EventDispatcherInterface $event_dispatcher
    *   The Switch event dispatcher.
-   * @param \Drupal\Core\ProxyClass\Lock\DatabaseLockBackend $lock_backend
-   *   The lock backend service.
    */
-  public function __construct(EventDispatcherInterface $event_dispatcher, DatabaseLockBackend $lock_backend) {
+  public function __construct(EventDispatcherInterface $event_dispatcher) {
     $this->eventDispatcher = $event_dispatcher;
-    $this->lockBackend = $lock_backend;
   }
 
   /**

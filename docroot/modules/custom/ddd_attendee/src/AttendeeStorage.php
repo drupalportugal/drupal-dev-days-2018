@@ -6,6 +6,7 @@ use Drupal\Core\Entity\Sql\SqlContentEntityStorage;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\ddd_attendee\Entity\AttendeeInterface;
+use Drupal\user\UserInterface;
 
 /**
  * Defines the storage handler class for Attendee entities.
@@ -55,4 +56,27 @@ class AttendeeStorage extends SqlContentEntityStorage implements AttendeeStorage
       ->execute();
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function getAttendeeById($id) {
+    $attendees = $this->loadByProperties(['name' => $id]);
+    if (!empty($attendees)) {
+      $attendee = reset($attendees);
+      return $attendee;
+    }
+    return NULL;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getAttendeeByMail($mail) {
+    $attendees = $this->loadByProperties(['mail' => $mail]);
+    if (!empty($attendees)) {
+      $attendee = reset($attendees);
+      return $attendee;
+    }
+    return NULL;
+  }
 }
