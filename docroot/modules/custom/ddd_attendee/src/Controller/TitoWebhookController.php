@@ -56,6 +56,33 @@ class TitoWebhookController extends ControllerBase {
   public function processPayload(Request $request) {
     try {
       /*
+       * Validate HMAC if the webhook_security_token is set.
+       *
+       * Check https://ti.to/docs/webhook
+       */
+      if (!empty($this->config('ddd_attendee.settings')->get('webhook_security_token'))) {
+        /*
+         * Get tito signature from header.
+         */
+        $signature = $request->headers->get("Tito-Signature");
+        /*
+         * If empty signature.
+         */
+        if (empty($signature)) {
+          throw new TitoWebhookException("Empty signature.");
+        }
+        /*
+         * Hash payload to check if is the same as signature
+         */
+        $hash = base64_encode(hash_hmac("sha256", $request->getContent(), $this->config('ddd_attendee.settings')->get('webhook_security_token'), TRUE));
+        /*
+         * If signature hash is not equal to generate hash.
+         */
+        if ($signature != $hash) {
+          throw new TitoWebhookException("Signature mismatch.");
+        }
+      }
+      /*
        * Check if request is not empty.
        */
       if (empty($request->getContent())) {

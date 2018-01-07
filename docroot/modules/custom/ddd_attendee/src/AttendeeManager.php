@@ -80,7 +80,13 @@ class AttendeeManager implements AttendeeManagerInterface {
     /*
      * Set user on attendee if exists or empty if not found.
      */
-    $attendee->set("user", $this->userStorage->loadByProperties(['mail' => $mail]));
+    if (empty($mail)) {
+      $mail = NULL;
+    }
+    else {
+      $mail = $this->userStorage->loadByProperties(['mail' => $mail]);
+    }
+    $attendee->set("user", $mail);
     return $attendee->save();
   }
 
