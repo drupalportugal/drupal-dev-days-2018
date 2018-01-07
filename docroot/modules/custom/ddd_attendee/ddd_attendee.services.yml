@@ -3,3 +3,9 @@ services:
     class: Drupal\ddd_attendee\AttendeeManager
     arguments: ['@entity_type.manager', '@lock']
 
+  ddd_attendee.tito_webhook_event.subscriber:
+    class: Drupal\ddd_attendee\EventSubscriber\TitoEventsSubscriber
+    arguments: ['@ddd_attendee.manager']
+    tags:
+      - { name: event_subscriber }
+
