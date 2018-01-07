@@ -6,7 +6,7 @@ use Drupal\Component\Serialization\Json;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\ddd_attendee\Event\TitoEvents;
 use Drupal\ddd_attendee\Exception\TitoWebhookException;
-use Drupal\ddd_attenndee\Event\TitoEvent;
+use Drupal\ddd_attendee\Event\TitoEvent;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Request;

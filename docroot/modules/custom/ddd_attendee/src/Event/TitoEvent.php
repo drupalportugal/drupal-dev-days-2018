@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\ddd_attenndee\Event;
+namespace Drupal\ddd_attendee\Event;
 
 use Drupal\ddd_attendee\Exception\TitoWebhookException;
 use Symfony\Component\EventDispatcher\Event;
@@ -8,7 +8,7 @@ use Symfony\Component\EventDispatcher\Event;
 /**
  * Class SwitchEvent.
  *
- * @see \Drupal\ddd_attenndee\Event\TitoEvents
+ * @see \Drupal\ddd_attendee\Event\TitoEvents
  */
 class TitoEvent extends Event {
 
