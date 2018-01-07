@@ -60,10 +60,12 @@ class AttendeeStorage extends SqlContentEntityStorage implements AttendeeStorage
    * {@inheritdoc}
    */
   public function getAttendeeById($id) {
-    $attendees = $this->loadByProperties(['name' => $id]);
+    $query = $this->getQuery();
+    $attendees = $query->condition("name", $id)
+      ->execute();
     if (!empty($attendees)) {
       $attendee = reset($attendees);
-      return $attendee;
+      return $this->load($attendee);
     }
     return NULL;
   }
@@ -72,10 +74,12 @@ class AttendeeStorage extends SqlContentEntityStorage implements AttendeeStorage
    * {@inheritdoc}
    */
   public function getAttendeeByMail($mail) {
-    $attendees = $this->loadByProperties(['mail' => $mail]);
+    $query = $this->getQuery();
+    $attendees = $query->condition("mail", $mail)
+      ->execute();
     if (!empty($attendees)) {
       $attendee = reset($attendees);
-      return $attendee;
+      return $this->load($attendee);
     }
     return NULL;
   }

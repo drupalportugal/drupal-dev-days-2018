@@ -1,6 +1,7 @@
 <?php
 
 namespace Drupal\ddd_attendee;
+use Drupal\Component\Serialization\Json;
 use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\ProxyClass\Lock\DatabaseLockBackend;
 use Drupal\user\UserInterface;
@@ -74,7 +75,7 @@ class AttendeeManager implements AttendeeManagerInterface {
      * If payload is not empty, append to Attendee.
      */
     if (!empty($payload)) {
-      $attendee->get("payload")->appendItem($payload);
+      $attendee->get("payload")->appendItem(Json::encode($payload));
     }
     /*
      * Set user on attendee if exists or empty if not found.
@@ -91,29 +92,27 @@ class AttendeeManager implements AttendeeManagerInterface {
      * Get attendees by mail.
      * Load by properties can return multiple.
      */
-    $attendees = $this->attendeeStorage->loadByProperties($user->getEmail());
+    $attendee = $this->attendeeStorage->getAttendeeByMail($user->getEmail());
     /*
      * If there are attendees by mail.
      */
-    if (!empty($attendees)) {
+    if (!empty($attendee)) {
       /*
        * Iterate over Attendees.
        */
       /** @var \Drupal\ddd_attendee\Entity\AttendeeInterface $attendee */
-      foreach ($attendees as $attendee) {
+      /*
+       * If Attendee has not users.
+       */
+      if ($attendee->get("user")->isEmpty()) {
         /*
-         * If Attendee has not users.
+         * Set user on Attendee.
          */
-        if ($attendee->get("user")->isEmpty()) {
-          /*
-           * Set user on Attendee.
-           */
-          $attendee->set("user", $user->id());
-          /*
-           * Save Attendee.
-           */
-          $attendee->save();
-        }
+        $attendee->set("user", $user->id());
+        /*
+         * Save Attendee.
+         */
+        $attendee->save();
       }
     }
   }

@@ -83,10 +83,10 @@ class TitoEvent extends Event {
    * @throws \Drupal\ddd_attendee\Exception\TitoWebhookException
    */
   public function getMail() {
-    if (empty($this->payload["mail"])) {
+    if (empty($this->payload["email"])) {
       throw new TitoWebhookException("Payload mail not found.");
     }
-    return $this->payload["mail"];
+    return $this->payload["email"];
   }
 
 }
