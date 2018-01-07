@@ -5,3 +5,11 @@ entity.attendee.structure:
     _title: 'Attendee Structure'
   requirements:
     _permission: 'access administration pages'
+
+ddd_attendee.tito_webhook_controller:
+  path: '/dev/api/tito/webhook'
+  defaults:
+    _controller: '\Drupal\ddd_attendee\Controller\TitoWebhookController::processPayload'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'

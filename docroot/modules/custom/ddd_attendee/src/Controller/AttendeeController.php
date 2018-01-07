@@ -23,6 +23,8 @@ class AttendeeController extends ControllerBase implements ContainerInjectionInt
    *
    * @return array
    *   An array suitable for drupal_render().
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    */
   public function revisionShow($attendee_revision) {
     $attendee = $this->entityManager()->getStorage('attendee')->loadRevision($attendee_revision);
@@ -39,6 +41,8 @@ class AttendeeController extends ControllerBase implements ContainerInjectionInt
    *
    * @return string
    *   The page title.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    */
   public function revisionPageTitle($attendee_revision) {
     $attendee = $this->entityManager()->getStorage('attendee')->loadRevision($attendee_revision);
@@ -53,6 +57,8 @@ class AttendeeController extends ControllerBase implements ContainerInjectionInt
    *
    * @return array
    *   An array as expected by drupal_render().
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    */
   public function revisionOverview(AttendeeInterface $attendee) {
     $account = $this->currentUser();
