@@ -1,0 +1,148 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.page-full {
+  overflow: hidden;
+}
+
+.page-full__header__wrapper {
+  background-color: #e6ebf4;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.page-full__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+
+.page-full__title h1 {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  text-align: left;
+  font-weight: normal;
+}
+
+@media (min-width: 888px) {
+  .page-full__title h1 {
+    font-size: 2.8125rem;
+    line-height: 3.75rem;
+  }
+}
+
+/* Sidebar & content */
+.page-full__content-outer-wrapper {
+  position: relative;
+}
+
+@media (min-width: 999px) {
+  .page-full__content-wrapper {
+    margin: 0 -20px;
+  }
+}
+
+.page-full__tags {
+  padding-bottom: 10px;
+}
+
+.page-full__tags .field__item {
+  display: inline-block;
+}
+
+.page-full__tags .field__item span {
+  text-align: center;
+  display: inline-block;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: color ease .35s, background ease .35s;
+  text-transform: uppercase;
+  margin: 0 5px 10px;
+}
+
+.page-full__tags .field__item span a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #fff;
+  transition: color ease .35s, background ease .35s;
+  border: 1px solid #000;
+  color: #000;
+  transition: color ease .35s, background ease .35s;
+}
+
+.page-full__tags .field__item span a:hover, .page-full__tags .field__item span a:focus, .page-full__tags .field__item span a:active {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+}
+
+.page-full__tags .field__item span:hover, .page-full__tags .field__item span:focus, .page-full__tags .field__item span:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.page-full__tags .field__item span:hover a, .page-full__tags .field__item span:focus a, .page-full__tags .field__item span:active a {
+  color: #fff;
+}
+
+[dir="rtl"] .page-full__tags .field__item span {
+  text-align: center;
+}
+
+/* Sidebar & content */
+@media (min-width: 999px) {
+  .page-full__content {
+    float: left;
+    width: 66.66667%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  [dir="rtl"] .page-full__content {
+    float: right;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+}
+
+@media (min-width: 999px) {
+  .page-full__sidebar-bottom {
+    float: right;
+    width: 33.33333%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  [dir="rtl"] .page-full__sidebar-bottom {
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+  }
+}
+
+@media (min-width: 999px) {
+  .page-full__footer__wrapper {
+    clear: left;
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  [dir="rtl"] .page-full__footer__wrapper {
+    clear: right;
+  }
+  [dir="rtl"] .page-full__footer__wrapper {
+    float: right;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+}

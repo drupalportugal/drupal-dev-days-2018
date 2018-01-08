@@ -1,0 +1,83 @@
+@import 'init';
+
+// Account menu
+//
+// An "account menu" is secondary navigaton, displayed in the header region
+//
+// Markup: nav-secondary.twig
+//
+// Style guide: navigation.nav-secondary
+
+.nav-secondary__block-wrapper {
+  position: relative;
+
+  @include respond-to(m) {
+    display: block;
+    margin: 0 auto;
+    height: 0;
+    max-width: 1165px;
+  }
+}
+
+.nav-secondary {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  background: color('white');
+
+  @include respond-to(m) {
+    position: absolute;
+    top: -115px;
+    right: 0;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    background: transparent;
+  }
+
+  &__item,
+  li {
+    position: relative;
+    display: block;
+    width: auto;
+    background-color: color('white');
+    padding: 15px 0;
+    border-bottom: 1px solid color('grey-light');
+
+    @include respond-to(m) {
+      flex: 1 1 auto;
+      display: flex;
+      padding: 8px 0;
+      padding: 0;
+      border: 0;
+      align-items: center;
+      background: transparent;
+    }
+
+    a {
+      padding: 15px 20px;
+      margin: 0 auto;
+      color: color('black');
+      text-decoration: none;
+      position: relative;
+
+      @include respond-to(m) {
+        padding: 10px 15px;
+        margin: 0 auto;
+        text-decoration: none;
+        position: relative;
+        transition: color ease .35s;
+        font-size: 14px;
+      }
+
+      &:hover {
+        color: color(blue-extra-light);
+      }
+    } // end a
+  } // end li
+}

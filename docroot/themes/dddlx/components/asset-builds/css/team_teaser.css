@@ -1,0 +1,65 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.team-teaser {
+  border: #ededed 1px solid;
+  position: relative;
+  padding-top: 20px;
+}
+
+.team-teaser__content,
+.team-teaser__body {
+  text-align: center;
+}
+
+.team-teaser__title h2 {
+  font-size: 0.875rem;
+  line-height: 1.8rem;
+  text-align: center;
+  display: inline-block;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: color ease .35s, background ease .35s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px auto 10px;
+}
+
+.team-teaser__title h2 a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #fff;
+  transition: color ease .35s, background ease .35s;
+  border: 1px solid #000;
+  color: #000;
+  transition: color ease .35s, background ease .35s;
+}
+
+.team-teaser__title h2 a:hover, .team-teaser__title h2 a:focus, .team-teaser__title h2 a:active {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+}
+
+.team-teaser__title h2:hover, .team-teaser__title h2:focus, .team-teaser__title h2:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.team-teaser__title h2:hover a, .team-teaser__title h2:focus a, .team-teaser__title h2:active a {
+  color: #fff;
+}
+
+[dir="rtl"] .team-teaser__title h2 {
+  text-align: center;
+}
+
+.team-teaser__image img {
+  margin: 0 auto;
+}
+
+.team-teaser__role {
+  margin: 0 auto 15px;
+  font-style: italic;
+  letter-spacing: 2px;
+}

@@ -1,0 +1,18 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+/* Sidebar & content */
+.sidebar-form {
+  background: #f8f8f8;
+  padding: 20px;
+}
+
+.sidebar-form .form--inline .form-item {
+  width: 100%;
+}
+
+.sidebar-form .form--inline .form-item input {
+  border: 0;
+}
+
+.sidebar-form .form--inline select.form-select {
+  border: 0;
+}

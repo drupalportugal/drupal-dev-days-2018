@@ -1,0 +1,19 @@
+paragraph_clipping:
+  label: Paragraph Clipping
+  description: Display a clipping as a slice of content.
+  use: "@dddlx/paragraphs/clipping/clipping.twig"
+  fields:
+    title:
+      type: string
+      label: Clipping title
+      description: The clipping title
+      preview: Lorem ipsum dolor sit amet
+    description:
+      type: text
+      label: Clipping description
+      description: The clipping description
+      preview: Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+    files:
+      type: file
+      label: Clipping files
+      description: The clipping files

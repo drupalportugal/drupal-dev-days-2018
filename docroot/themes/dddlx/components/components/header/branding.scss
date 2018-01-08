@@ -1,0 +1,72 @@
+@import 'init';
+// Branding
+//
+// Markup: branding.twig
+//
+// Style guide: components.branding
+
+.branding {
+
+  &__wrapper {
+    @include respond-to(m) {
+      padding-top: 20px;
+      height: 155px;
+    }
+  }
+
+  &__logo {
+    width: 33px;
+    height: 45px;
+    overflow: hidden;
+    float: left;
+    margin-top: 4px;
+
+    @include respond-to(m) {
+      overflow: initial;
+      margin: 0 10px 0 0;
+      padding: 0;
+      width: 145px;
+      height: 120px;
+    }
+  }
+
+  // Logo image.
+  &__logo-image {
+    vertical-align: middle;
+    height: 45px;
+    max-width: none;
+
+    @include respond-to(m) {
+      height: 120px;
+    }
+  }
+
+  // Wrapper for website name and slogan.
+  &__name-and-slogan {
+    float: left;
+  }
+
+  // The name of the website.
+  &__site-name {
+    margin: 0;
+  }
+
+  // The link around the name of the website.
+  &__site-link {
+    &:link,
+    &:visited {
+      color: color(text);
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  // The slogan (or tagline) of a website.
+  &__site-slogan {
+    margin: 0;
+  }
+}

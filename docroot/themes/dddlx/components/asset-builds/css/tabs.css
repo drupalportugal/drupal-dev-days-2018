@@ -1,0 +1,148 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.tabs {
+  line-height: 1.875rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  white-space: nowrap;
+}
+
+@media print {
+  .tabs {
+    display: none;
+  }
+}
+
+.tabs__tab {
+  float: left;
+  overflow: hidden;
+  background: #dddddd;
+  border-right: solid 1px #cccccc;
+}
+
+.tabs__tab:last-child {
+  border: 0;
+}
+
+[dir="rtl"] .tabs__tab {
+  float: right;
+}
+
+.tabs__tab.is-active {
+  background: #000;
+  color: white;
+}
+
+.tabs__tab-link {
+  font-size: 0.875rem;
+  padding: 6px 10px;
+  display: block;
+  text-decoration: none;
+  transition: color .3s, background .3s, border .3s;
+  text-shadow: #fff 0 1px 0;
+  color: #000;
+  background: #dddddd;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+@media (min-width: 730px) {
+  .tabs__tab-link {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+}
+
+.tabs__tab-link::after {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 3px;
+  bottom: 8px;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+  background: transparent;
+  transition: width ease .15s, background ease .15s;
+}
+
+.tabs__tab-link:focus, .tabs__tab-link:hover {
+  background: #eaeaea;
+}
+
+.tabs__tab-link:focus::after, .tabs__tab-link:hover::after {
+  width: 14px;
+  background: #000;
+}
+
+.tabs__tab-link:active, .tabs__tab-link.is-active, .tabs__tab-link--is-active {
+  background: transparent;
+  color: #e6ebf4;
+  text-shadow: none;
+  position: relative;
+}
+
+.tabs__tab-link:active::after, .tabs__tab-link.is-active::after, .tabs__tab-link--is-active::after {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 14px;
+  height: 3px;
+  bottom: 8px;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+  background: #e6ebf4;
+}
+
+.tabs__tab-link:active:hover::after, .tabs__tab-link.is-active:hover::after, .tabs__tab-link--is-active:hover::after {
+  background: #e6ebf4;
+}
+
+.tabs--secondary {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  background-image: none;
+}
+
+.tabs + .tabs--secondary,
+.tabs + h2 + .tabs--secondary {
+  margin-top: 0;
+  background-image: linear-gradient(to top, #cccccc 1px, transparent 1px);
+}
+
+.tabs--secondary .tabs__tab {
+  margin: 0.5625rem 0.1875rem;
+  border: 0;
+  background: transparent;
+}
+
+[dir="rtl"] .tabs--secondary .tabs__tab {
+  float: right;
+}
+
+.tabs--secondary .tabs__tab.is-active {
+  border-bottom-color: transparent;
+}
+
+.tabs--secondary .tabs__tab-link {
+  border: 1px solid #cccccc;
+  border-radius: 24px;
+  color: #606060;
+  background: #f1f1f1;
+  letter-spacing: normal;
+}
+
+.tabs--secondary .tabs__tab-link:focus, .tabs--secondary .tabs__tab-link:hover {
+  color: #2d2d2d;
+  background: #dddddd;
+  border-color: #999999;
+}
+
+.tabs--secondary .tabs__tab-link:active, .tabs--secondary .tabs__tab-link.is-active, .tabs--secondary .tabs__tab-link--is-active {
+  color: white;
+  text-shadow: #2d2d2d 0 1px 0;
+  background: #606060;
+  border-color: black;
+}

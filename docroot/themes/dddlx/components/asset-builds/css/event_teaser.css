@@ -1,0 +1,200 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.event-teaser {
+  margin: 0 auto;
+  max-width: 800px;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+@media (min-width: 730px) {
+  .event-teaser {
+    flex-wrap: nowrap;
+    padding: 10px 0;
+  }
+}
+
+.event-teaser__text__wrapper,
+.event-teaser__image__wrapper {
+  -webkit-box-flex: 0;
+          flex: 0 0 100%;
+  padding: 0 10px;
+  position: relative;
+}
+
+@media (min-width: 730px) {
+  .event-teaser__text__wrapper,
+  .event-teaser__image__wrapper {
+    -webkit-box-flex: 0;
+            flex: 0 0 50%;
+  }
+}
+
+.event-teaser__text__wrapper {
+  margin: 30px auto 0;
+  -webkit-box-ordinal-group: 3;
+          order: 2;
+}
+
+@media (min-width: 730px) {
+  .event-teaser__text__wrapper {
+    margin: 0 auto;
+    -webkit-box-ordinal-group: 2;
+            order: 1;
+  }
+}
+
+@media (min-width: 730px) {
+  .event-teaser--switch .event-teaser__text__wrapper {
+    -webkit-box-ordinal-group: 3;
+            order: 2;
+  }
+}
+
+
+.event-teaser__title h2 {
+  text-align: left;
+  margin: 15px auto;
+}
+
+
+.event-teaser__title h2 a {
+  text-decoration: none;
+}
+
+
+.event-teaser__subtitle {
+  margin: 30px auto 20px;
+}
+
+.event-teaser__link {
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  background-color: #5776b7;
+  cursor: pointer;
+  transition: color ease .35s, background ease .35s;
+}
+
+.event-teaser__link a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #5776b7;
+  transition: color ease .35s, background ease .35s;
+  border: 1px solid #5776b7;
+  color: #fff;
+  transition: color ease .35s, background ease .35s;
+}
+
+.event-teaser__link a:hover, .event-teaser__link a:focus, .event-teaser__link a:active {
+  border: 1px solid #5776b7;
+  background-color: #fff;
+  color: #5776b7;
+}
+
+.event-teaser__link:hover, .event-teaser__link:focus, .event-teaser__link:active {
+  background-color: #fff;
+  color: #5776b7;
+}
+
+.event-teaser__link:hover a, .event-teaser__link:focus a, .event-teaser__link:active a {
+  color: #5776b7;
+}
+
+[dir="rtl"] .event-teaser__link {
+  text-align: center;
+}
+
+.event-teaser__image__wrapper {
+  -webkit-box-ordinal-group: 2;
+          order: 1;
+}
+
+@media (min-width: 730px) {
+  .event-teaser__image__wrapper {
+    margin: 0 auto;
+    -webkit-box-ordinal-group: 3;
+            order: 2;
+  }
+}
+
+@media (min-width: 730px) {
+  .event-teaser--switch .event-teaser__image__wrapper {
+    -webkit-box-ordinal-group: 2;
+            order: 1;
+  }
+}
+
+.event-teaser__image {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+@media (min-width: 730px) {
+  .event-teaser__image {
+    padding-bottom: 75%;
+  }
+}
+
+.event-teaser__image img {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  max-width: none;
+  width: 105%;
+  height: auto;
+  z-index: 5;
+}
+
+@media (min-width: 730px) {
+  .event-teaser__image img {
+    width: auto;
+    height: 105%;
+  }
+}
+
+.event-teaser__image::before {
+  position: absolute;
+  display: block;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+  width: 0;
+  height: 0;
+  z-index: 10;
+  border-style: solid;
+  border-width: 0 15px 10px;
+  border-color: transparent transparent #fff;
+}
+
+@media (min-width: 730px) {
+  .event-teaser__image::before {
+    bottom: auto;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+    border-width: 20px 0 20px 15px;
+    border-color: transparent transparent transparent #fff;
+  }
+}
+
+@media (min-width: 730px) {
+  .event-teaser--switch .event-teaser__image::before {
+    top: 50%;
+    left: auto;
+    right: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+    border-width: 20px 15px 20px 0;
+    border-color: transparent #fff transparent transparent;
+  }
+}

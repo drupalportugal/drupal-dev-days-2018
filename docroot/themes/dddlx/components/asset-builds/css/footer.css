@@ -1,0 +1,143 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.footer {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin-top: 3rem;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+
+.footer__menu {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  background: #000;
+}
+
+@media (min-width: 555px) {
+  .footer__menu {
+    padding: 20px 10px;
+    text-align: center;
+    max-width: 1024px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: stretch;
+            align-items: stretch;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 730px) {
+  .footer__menu {
+    flex-wrap: nowrap;
+  }
+}
+
+.footer__menu__item,
+.footer__menu li {
+  position: relative;
+  display: block;
+  padding: 15px 0;
+  border-top: 1px solid #606060;
+}
+
+.footer__menu__item:last-child,
+.footer__menu li:last-child {
+  border-bottom: 1px solid #606060;
+}
+
+@media (min-width: 555px) {
+  .footer__menu__item,
+  .footer__menu li {
+    -webkit-box-flex: 0;
+            flex: 0 0 33.333%;
+    max-width: 33.333%;
+    display: -webkit-box;
+    display: flex;
+    padding: 0;
+    border: 0;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+  .footer__menu__item:last-child,
+  .footer__menu li:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (min-width: 730px) {
+  .footer__menu__item,
+  .footer__menu li {
+    -webkit-box-flex: 1;
+            flex: 1 1 auto;
+    max-width: none;
+  }
+}
+
+.footer__menu__item a,
+.footer__menu li a {
+  padding: 15px 20px;
+  margin: 0 auto;
+  text-decoration: none;
+  position: relative;
+  color: #fff;
+}
+
+@media (min-width: 555px) {
+  .footer__menu__item a,
+  .footer__menu li a {
+    text-transform: uppercase;
+    padding: 15px 20px;
+    margin: 0 auto;
+    text-decoration: none;
+    position: relative;
+    transition: color ease .35s;
+  }
+}
+
+.footer__menu__item a:hover,
+.footer__menu li a:hover {
+  color: #e6ebf4;
+}
+
+/*
+** footer branding logo
+*/
+.footer-branding__wrapper {
+  width: 100%;
+  background: #fff;
+}
+
+.footer-branding {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  border-top: 1px solid #cccccc;
+  padding: 40px 10px;
+}
+
+.is-path-frontpage .footer-branding {
+  border-top: 0;
+  padding: 0 10px 40px;
+}
+
+.footer-branding__logo__primary {
+  overflow: visible;
+  display: block;
+  -webkit-box-flex: 0;
+          flex: 0 0 auto;
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 72px;
+  height: 72px;
+  background-image: url(../..//components/footer/DDD_2018_horizontal_version.svg);
+}

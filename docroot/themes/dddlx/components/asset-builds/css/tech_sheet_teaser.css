@@ -1,0 +1,123 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.caf-criteria-teaser,
+.caf-indicator-teaser,
+.caf-subcriteria-teaser,
+.ods-goal-teaser,
+.ods-indicator-teaser,
+.ods-objective-teaser,
+.forum-teaser,
+.tech-sheet-teaser {
+  padding: 20px;
+  border: 1px solid #ededed;
+}
+
+.field-list__item .caf-criteria-teaser, .field-list__item
+.caf-indicator-teaser, .field-list__item
+.caf-subcriteria-teaser, .field-list__item
+.ods-goal-teaser, .field-list__item
+.ods-indicator-teaser, .field-list__item
+.ods-objective-teaser, .field-list__item
+.forum-teaser, .field-list__item
+.tech-sheet-teaser {
+  border: 0;
+  padding: 10px;
+  background: #f8f8f8;
+}
+
+@media (min-width: 888px) {
+  .tech-sheet-teaser__text__wrapper {
+    float: left;
+    width: 50%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  [dir="rtl"] .tech-sheet-teaser__text__wrapper {
+    float: right;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+}
+
+@media (min-width: 888px) {
+  .tech-sheet-teaser__image__wrapper {
+    float: left;
+    width: 50%;
+    margin-left: 50%;
+    margin-right: -100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  [dir="rtl"] .tech-sheet-teaser__image__wrapper {
+    float: right;
+    margin-right: 50%;
+    margin-left: -100%;
+  }
+}
+
+.caf-criteria-teaser__title,
+.caf-indicator-teaser__title,
+.caf-subcriteria-teaser__title,
+.ods-goal-teaser__title,
+.ods-indicator-teaser__title,
+.ods-objective-teaser__title,
+.forum-teaser__title,
+.tech-sheet-teaser__title {
+  display: inline-block;
+}
+
+.caf-criteria-teaser__title h2,
+.caf-indicator-teaser__title h2,
+.caf-subcriteria-teaser__title h2,
+.ods-goal-teaser__title h2,
+.ods-indicator-teaser__title h2,
+.ods-objective-teaser__title h2,
+.forum-teaser__title h2,
+.tech-sheet-teaser__title h2 {
+  font-size: 2rem;
+  margin: 0 auto 10px;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.caf-criteria-teaser__title h2 a,
+.caf-indicator-teaser__title h2 a,
+.caf-subcriteria-teaser__title h2 a,
+.ods-goal-teaser__title h2 a,
+.ods-indicator-teaser__title h2 a,
+.ods-objective-teaser__title h2 a,
+.forum-teaser__title h2 a,
+.tech-sheet-teaser__title h2 a {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+}
+
+.caf-criteria-teaser__title h2 a:hover,
+.caf-indicator-teaser__title h2 a:hover,
+.caf-subcriteria-teaser__title h2 a:hover,
+.ods-goal-teaser__title h2 a:hover,
+.ods-indicator-teaser__title h2 a:hover,
+.ods-objective-teaser__title h2 a:hover,
+.forum-teaser__title h2 a:hover,
+.tech-sheet-teaser__title h2 a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+.caf-criteria-teaser__name,
+.caf-indicator-teaser__name,
+.caf-subcriteria-teaser__name,
+.ods-goal-teaser__name,
+.ods-indicator-teaser__name,
+.ods-objective-teaser__name,
+.forum-teaser__name,
+.tech-sheet-teaser__name {
+  font-size: 1.25rem;
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}

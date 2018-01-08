@@ -1,0 +1,93 @@
+@import 'init';
+
+// Teaser Article
+//
+// A teaser article to display the preview of a content
+//
+// .article-teaser--switch - switch position of image and text content
+//
+// Markup: article_teaser.twig
+//
+// Style guide: teasers.article_teaser
+
+.article-teaser {
+  text-align: center;
+
+  @include respond-to(until-l) {
+    padding: 0 (zen-half-gutter());
+  }
+
+  @include respond-to(l) {
+    @include zen-grid-container();
+    text-align: left;
+  }
+}
+
+.article-teaser__text__wrapper {
+  padding-top: 30px;
+
+  @include respond-to(l) {
+    @include zen-grid-item(3, 1);
+  }
+}
+
+.article-teaser__image__wrapper {
+  @include respond-to(l) {
+    @include zen-grid-item(3, 4);
+  }
+}
+
+%article-teaser__title,
+.article-teaser__title {
+  h2 {
+    @include font-size(xl);
+    text-align: center;
+    margin: 0 auto 20px;
+    text-transform: uppercase;
+
+    @include respond-to(l) {
+      text-align: left;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+%article-teaser__subtitle,
+.article-teaser__subtitle {
+  margin-bottom: 20px;
+}
+
+.article-teaser__link {
+  @include button-dddlx(white, black, black);
+}
+
+.article-teaser__image {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    width: 0;
+    height: 0;
+    z-index: 10;
+    border-style: solid;
+    border-width: 0 15px 10px;
+    border-color: transparent transparent color('white');
+
+    @include respond-to(l) {
+      bottom: auto;
+      top: 50%;
+      left: 0;
+      transform: translate3d(0, -50%, 0);
+      border-width: 20px 0 20px 15px;
+      border-color: transparent transparent transparent color('white');
+    }
+  }
+}

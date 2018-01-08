@@ -1,0 +1,132 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.indented .comment {
+  padding-left: 20px;
+  border-top: 1px solid #ededed;
+}
+
+.indented {
+  padding-left: 20px;
+}
+
+.comment__title {
+  margin-bottom: 0;
+}
+
+@media (min-width: 999px) {
+  .comment__title {
+    float: left;
+  }
+}
+
+.comment__title .permalink {
+  font-size: 2rem;
+  line-height: 1.5rem;
+  padding: 8px 0;
+  letter-spacing: 1px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 300;
+  transition: color ease .25s;
+}
+
+.comment__title .permalink:hover {
+  color: #5776b7;
+}
+
+.comment__mark {
+  padding: 5px 10px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #e6ebf4;
+  background: #000;
+}
+
+@media (min-width: 999px) {
+  .comment__mark {
+    float: right;
+    margin-left: 10px;
+  }
+}
+
+.comment__permalink {
+  display: inline-block;
+  margin-top: 24px;
+}
+
+@media (min-width: 999px) {
+  .comment__permalink {
+    float: right;
+  }
+}
+
+.comment__permalink__link {
+  vertical-align: middle;
+}
+
+.comment__permalink__link svg {
+  transition: fill ease .35s;
+  fill: #000;
+}
+
+.comment__permalink__link:hover svg {
+  transition: fill ease .35s;
+  fill: #5776b7;
+}
+
+.comment__submitted {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 999px) {
+  .comment__submitted {
+    clear: both;
+  }
+}
+
+.comment__body {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.comment .comment-delete a,
+.comment .comment-edit a, .comment .comment-reply a {
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  border: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #000;
+  transition: background ease .25s, color ease .25s;
+  margin-bottom: 10px;
+}
+
+.comment .comment-delete a:hover,
+.comment .comment-edit a:hover, .comment .comment-reply a:hover {
+  color: #e6ebf4;
+  background: #000;
+}
+
+@media (min-width: 999px) {
+  .comment .comment-delete a,
+  .comment .comment-edit a, .comment .comment-reply a {
+    padding: 6px 15px;
+  }
+}
+
+.comment .comment-delete a,
+.comment .comment-edit a {
+  background: #ededed;
+}
+
+.comment .comment-reply a {
+  background: #e6ebf4;
+}

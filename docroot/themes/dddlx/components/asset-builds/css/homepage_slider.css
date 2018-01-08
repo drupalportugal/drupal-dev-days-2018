@@ -1,0 +1,50 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+/* Sidebar & content */
+.homepage-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+/* 
+** Slick slider overrides
+*/
+.slick__arrow {
+  top: calc(50% - 30px);
+}
+
+.slick__arrow button {
+  background: none;
+  transition: color ease .35s;
+}
+
+.slick__arrow button::before {
+  font-family: "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  color: #fff;
+}
+
+.slick__arrow button:hover::before {
+  color: #5776b7;
+}
+
+.slick-prev,
+.slick-next {
+  border-radius: 0;
+  width: 40px;
+  height: 60px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  width: 40px;
+  height: 60px;
+  content: '';
+  display: block;
+}
+
+.slick-prev::before {
+  background-image: url(../..//containers/homepage_slider/arrow_left.png);
+}
+
+.slick-next::before {
+  background-image: url(../..//containers/homepage_slider/arrow_right.png);
+}

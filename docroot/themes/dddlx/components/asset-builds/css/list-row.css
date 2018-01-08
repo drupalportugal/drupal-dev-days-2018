@@ -1,0 +1,16 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.list-row__item {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+@media (min-width: 999px) {
+  .list-row__item {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.list-row__item:last-child {
+  margin-bottom: 0;
+}

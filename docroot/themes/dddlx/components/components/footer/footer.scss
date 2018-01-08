@@ -1,0 +1,125 @@
+@import 'init';
+
+// Footer
+//
+// Markup: footer.twig
+//
+// Style guide: components.footer
+
+.footer,
+%footer {
+  @include type-layout(s, 1);
+  @include margin-top(2, s);
+  text-align: center;
+  background: color('black');
+  color: color('white');
+}
+
+.footer__menu {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  background: color('black');
+
+  @include respond-to(xs) {
+    padding: 20px 10px;
+    text-align: center;
+    max-width: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  @include respond-to(m) {
+    flex-wrap: nowrap;
+  }
+
+  &__item,
+  li {
+    position: relative;
+    display: block;
+    padding: 15px 0;
+    border-top: 1px solid color('grey-dark');
+
+    &:last-child {
+      border-bottom: 1px solid color('grey-dark');
+    }
+
+    @include respond-to(xs) {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+      display: flex;
+      padding: 0;
+      border: 0;
+      align-items: center;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @include respond-to(m) {
+      flex: 1 1 auto;
+      max-width: none;
+    }
+
+    a {
+      padding: 15px 20px;
+      margin: 0 auto;
+      text-decoration: none;
+      position: relative;
+      color: color('white');
+
+      @include respond-to(xs) {
+        text-transform: uppercase;
+        padding: 15px 20px;
+        margin: 0 auto;
+        text-decoration: none;
+        position: relative;
+        transition: color ease .35s;
+      }
+
+      &:hover {
+        color: color(blue-extra-light);
+      }
+    }
+  }
+}
+
+
+/*
+** footer branding logo
+*/
+
+.footer-branding__wrapper {
+  width: 100%;
+  background: color('white');
+}
+
+.footer-branding {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid color(grey-light);
+  padding: 40px 10px;
+
+  .is-path-frontpage & {
+    border-top: 0;
+    padding: 0 10px 40px;
+  }
+}
+
+.footer-branding__logo__primary {
+  overflow: visible;
+  display: block;
+  flex: 0 0 auto;
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 72px;
+  height: 72px;
+  background-image: image-url('footer/DDD_2018_horizontal_version.svg');
+}

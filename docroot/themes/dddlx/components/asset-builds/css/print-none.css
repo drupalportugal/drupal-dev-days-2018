@@ -1,0 +1,12 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+@media print {
+  .print-none,
+  .toolbar,
+  .action-links,
+  .links,
+  .book-navigation,
+  .forum-topic-navigation,
+  .feed-icons {
+    display: none;
+  }
+}

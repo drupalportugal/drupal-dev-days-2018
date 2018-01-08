@@ -1,0 +1,7 @@
+# Set the default values of settings on the theme-settings.php form.
+
+zen_rebuild_registry: 0
+
+logo:
+  path: 'themes/dddlx/logo.svg'
+  use_default: false

@@ -1,0 +1,19 @@
+paragraph_video:
+  label: Paragraph video
+  description: Display a video slice of content.
+  use: "@dddlx/paragraphs/video/video.twig"
+  fields:
+    content:
+      type: media
+      label: Video Content
+      description: Your video content.
+      preview: >
+        <div class="video-embed-field-responsive-video">
+        <iframe width="854" height="480" frameborder="0" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/0H2J7RVrRwQ?autoplay=0&amp;start=0&amp;rel=0"></iframe>
+        </div>
+    caption:
+      type: text
+      label: Video Caption
+      description: Your video caption
+      preview: Objectivo 1 - erradicação da pobreza
+      

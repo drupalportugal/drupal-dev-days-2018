@@ -1,0 +1,14 @@
+@import 'init';
+
+// "More" link
+//
+// Styles the "Read more…" links common in Drupal.
+//
+// Markup: more-link.twig
+//
+// Style guide: navigation.more-link
+
+.more-link,
+%more-link {
+  @include button-dddlx(blue-extra-light, blue-extra-light, black, tall);
+}

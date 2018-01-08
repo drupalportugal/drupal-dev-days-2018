@@ -1,0 +1,88 @@
+@import 'init';
+
+// Primary menu
+//
+// The primary site navigation, displayed in the header region
+//
+// Markup: nav-primary.twig
+//
+// Style guide: navigation.nav-primary
+
+/* .nav-primary__block-wrapper {
+
+} */
+
+.nav-primary {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  background: color('white');
+
+  @include respond-to(m) {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  &__item,
+  li {
+    position: relative;
+    display: block;
+    width: auto;
+    background-color: color('white');
+    padding: 15px 0;
+    border-top: 1px solid color('grey-light');
+
+    &:last-child {
+      border-bottom: 1px solid color('grey-light');
+    }
+
+    @include respond-to(m) {
+      flex: 1 1 90px;
+      display: flex;
+      padding: 0;
+      border: 0;
+      align-items: center;
+      background-color: transparent;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    a {
+      padding: 15px 20px;
+      margin: 0 auto;
+      color: color('black');
+      text-decoration: none;
+      position: relative;
+
+      @include respond-to(m) {
+        padding: 0;
+        margin: 0 auto;
+        text-decoration: none;
+        position: relative;
+        transition: all ease .35s;
+        height: 90px;
+        width: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid color(blue-light);
+        background: color(white);
+      }
+
+      &:hover,
+      &.is-active {
+        color: color(blue);
+        border: 1px solid color(blue);
+        background: color(blue-extra-light);
+      }
+    } // end a
+  } // end li
+}

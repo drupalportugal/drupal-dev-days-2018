@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Component for the footer.
+ *
+ * Variables:
+ * - modifier_class: [string] Classes to modify the default component styling.
+ * - attributes: [string] HTML attributes for the wrapping element.
+ * - content: [string] The component contents.
+ */
+#}
+{{ attach_library('dddlx/footer') }}
+<footer class="footer {{ modifier_class }}" role="contentinfo"{{ attributes }}>
+
+  <div class="footer-branding__wrapper">
+
+    <div class="footer-branding layout-center">
+
+      <a href="{{ root_path }}" title="{{ 'Home'|t }}" rel="home" class="footer-branding__logo__primary">
+      </a>
+
+    </div>
+
+
+  </div>
+
+  <div class="layout-center">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+</footer>

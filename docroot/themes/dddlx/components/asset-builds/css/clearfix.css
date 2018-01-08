@@ -1,0 +1,11 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.clearfix::before {
+  content: '';
+  display: table;
+}
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}

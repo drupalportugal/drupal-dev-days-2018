@@ -1,0 +1,117 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.partner-full {
+  overflow: hidden;
+}
+
+.partner-full__header__wrapper {
+  background-color: #e6ebf4;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.partner-full__title h1 {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  text-align: left;
+  font-weight: normal;
+}
+
+@media (min-width: 888px) {
+  .partner-full__title h1 {
+    font-size: 2.8125rem;
+    line-height: 3.75rem;
+  }
+}
+
+/* Sidebar & content */
+.partner-full__content-outer-wrapper {
+  position: relative;
+}
+
+@media (min-width: 999px) {
+  .partner-full__content-wrapper {
+    margin: 0 -20px;
+  }
+}
+
+.partner-full__sidebar-top {
+  text-align: center;
+  margin: 30px auto;
+}
+
+@media (min-width: 999px) {
+  .partner-full__sidebar-top {
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+  }
+  [dir="rtl"] .partner-full__sidebar-top {
+    float: right;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+}
+
+.partner-full__image img {
+  margin: 0 auto;
+}
+
+@media (min-width: 999px) {
+  .partner-full__content {
+    float: right;
+    width: 66.66667%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  [dir="rtl"] .partner-full__content {
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+  }
+}
+
+.partner-full__url {
+  text-align: center;
+  display: inline-block;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: color ease .35s, background ease .35s;
+}
+
+.partner-full__url a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #fff;
+  transition: color ease .35s, background ease .35s;
+  border: 1px solid #000;
+  color: #000;
+  transition: color ease .35s, background ease .35s;
+}
+
+.partner-full__url a:hover, .partner-full__url a:focus, .partner-full__url a:active {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+}
+
+.partner-full__url:hover, .partner-full__url:focus, .partner-full__url:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.partner-full__url:hover a, .partner-full__url:focus a, .partner-full__url:active a {
+  color: #fff;
+}
+
+[dir="rtl"] .partner-full__url {
+  text-align: center;
+}

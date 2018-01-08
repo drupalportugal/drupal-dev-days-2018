@@ -1,0 +1,212 @@
+article_teaser:
+  label: Article Teaser
+  category: Teasers
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/article_teaser
+  regions:
+    text:
+      label: Text Area
+    media:
+      label: Media Area
+
+article_teaser_small:
+  label: Article Teaser Small
+  category: Teasers
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/article_teaser_small
+  regions:
+    text:
+      label: Text Area
+
+article_full:
+  label: Article Full
+  category: Full
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/article_full
+  regions:
+    background:
+      label: Background image
+    header:
+      label: Header area
+    admin:
+      label: Admin area
+    main:
+      label: Content area
+    asidefirst:
+      label: Sidebar bottom
+    footer:
+      label: Footer area
+
+event_teaser:
+  label: Event Teaser
+  category: Teasers
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/event_teaser
+  regions:
+    text:
+      label: Text Area
+    media:
+      label: Media Area
+
+event_teaser_small:
+  label: Event Teaser Small
+  category: Teasers
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/event_teaser_small
+  regions:
+    text:
+      label: Text Area
+
+event_full:
+  label: Event Full
+  category: Full
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/event_full
+  regions:
+    background:
+      label: Background image
+    header:
+      label: Header area
+    admin:
+      label: Admin area
+    main:
+      label: Content area
+    asidefirst:
+      label: Sidebar top
+    asidesecond:
+      label: Sidebar bottom
+    footer:
+      label: Footer area
+
+page_full:
+  label: Page Full
+  category: Full
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/page_full
+  regions:
+    background:
+      label: Background image
+    header:
+      label: Header area
+    admin:
+      label: Admin area
+    main:
+      label: Content area
+    asidefirst:
+      label: Sidebar bottom
+    footer:
+      label: Footer area
+
+page_teaser:
+  label: Page teaser
+  category: Teasers
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/page_teaser
+  regions:
+    main:
+      label: Content area
+
+featured_block:
+  label: Featured Full
+  category: Full
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/featured_full
+  regions:
+    background:
+      label: Background image
+    main:
+      label: Content area
+
+partner_full:
+  label: Partner Full
+  category: Full
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/partner_full
+  regions:
+    header:
+      label: Header area
+    admin:
+      label: Admin area
+    main:
+      label: Content area
+    asidefirst:
+      label: Sidebar top
+    footer:
+      label: Footer area
+
+partner_teaser:
+  label: Partner teaser
+  category: Teasers
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/partner_teaser
+  regions:
+    main:
+      label: Content area
+
+team_full:
+  label: Team Full
+  category: Full
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/team_full
+  regions:
+    header:
+      label: Header area
+    admin:
+      label: Admin area
+    main:
+      label: Content area
+    asidefirst:
+      label: Sidebar top
+
+team_teaser:
+  label: Team teaser
+  category: Teasers
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/team_teaser
+  regions:
+    main:
+      label: Content area
+
+tech_sheet_full:
+  label: Technical Sheet Full
+  category: Full
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/tech_sheet_full
+  regions:
+    header:
+      label: Header area
+    admin:
+      label: Admin area
+    main:
+      label: Content area
+    asidefirst:
+      label: Sidebar bottom
+    footer:
+      label: Footer area
+
+
+tech_sheet_teaser:
+  label: Technical Sheet Teaser
+  category: Teasers
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/tech_sheet_teaser
+  regions:
+    text:
+      label: Text Area
+    media:
+      label: Media Area

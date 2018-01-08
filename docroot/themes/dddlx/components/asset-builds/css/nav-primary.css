@@ -1,0 +1,98 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+/* .nav-primary__block-wrapper {
+
+} */
+.nav-primary {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  background: #fff;
+}
+
+@media (min-width: 730px) {
+  .nav-primary {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    max-width: 1024px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: stretch;
+            align-items: stretch;
+  }
+}
+
+.nav-primary__item,
+.nav-primary li {
+  position: relative;
+  display: block;
+  width: auto;
+  background-color: #fff;
+  padding: 15px 0;
+  border-top: 1px solid #cccccc;
+}
+
+.nav-primary__item:last-child,
+.nav-primary li:last-child {
+  border-bottom: 1px solid #cccccc;
+}
+
+@media (min-width: 730px) {
+  .nav-primary__item,
+  .nav-primary li {
+    -webkit-box-flex: 1;
+            flex: 1 1 90px;
+    display: -webkit-box;
+    display: flex;
+    padding: 0;
+    border: 0;
+    -webkit-box-align: center;
+            align-items: center;
+    background-color: transparent;
+  }
+  .nav-primary__item:last-child,
+  .nav-primary li:last-child {
+    border-bottom: 0;
+  }
+}
+
+.nav-primary__item a,
+.nav-primary li a {
+  padding: 15px 20px;
+  margin: 0 auto;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+
+@media (min-width: 730px) {
+  .nav-primary__item a,
+  .nav-primary li a {
+    padding: 0;
+    margin: 0 auto;
+    text-decoration: none;
+    position: relative;
+    transition: all ease .35s;
+    height: 90px;
+    width: 90px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    border: 1px solid #c4cfe5;
+    background: #fff;
+  }
+}
+
+.nav-primary__item a:hover, .nav-primary__item a.is-active,
+.nav-primary li a:hover,
+.nav-primary li a.is-active {
+  color: #5776b7;
+  border: 1px solid #5776b7;
+  background: #e6ebf4;
+}
