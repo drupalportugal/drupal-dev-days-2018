@@ -19,9 +19,8 @@
     <a href="{{ root_path }}" title="{{ 'Home'|t }}" rel="home" class="branding__logo">
       <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" class="branding__logo-image"/>
     </a>
-
   {% endif %}
-  {% if site_name or site_slogan %}
+  {# {% if site_name or site_slogan %}
     <div class="branding__name-and-slogan">
       {% if site_name %}
         <h1 class="branding__site-name">
@@ -32,5 +31,12 @@
         <div class="branding__site-slogan">{{ site_slogan }}</div>
       {% endif %}
     </div>
-  {% endif %}
+  {% endif %} #}
+
+    <div class="branding__name-and-slogan visually-hidden">
+      <h1 class="branding__site-name">
+        <a href="{{ root_path }}" title="{{ 'Home'|t }}" rel="home" class="branding__site-link"> {{ site_name }}</a>
+      </h1>
+    </div>
+
 </div>

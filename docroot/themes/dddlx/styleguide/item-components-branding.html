@@ -199,7 +199,15 @@
             
 
 <div class="branding__wrapper layout-center">
+    
+
+    <div class="branding__name-and-slogan visually-hidden">
+      <h1 class="branding__site-name">
+        <a href="" title="Home" rel="home" class="branding__site-link"> </a>
+      </h1>
     </div>
+
+</div>
 
             <div class="kss-modifier__example-footer"></div>
           </div>
@@ -230,9 +238,8 @@
     &lt;a href=&quot;{{ root_path }}&quot; title=&quot;{{ &#039;Home&#039;|t }}&quot; rel=&quot;home&quot; class=&quot;branding__logo&quot;&gt;
       &lt;img src=&quot;{{ site_logo }}&quot; alt=&quot;{{ &#039;Home&#039;|t }}&quot; class=&quot;branding__logo-image&quot;/&gt;
     &lt;/a&gt;
-
   {% endif %}
-  {% if site_name or site_slogan %}
+  {# {% if site_name or site_slogan %}
     &lt;div class=&quot;branding__name-and-slogan&quot;&gt;
       {% if site_name %}
         &lt;h1 class=&quot;branding__site-name&quot;&gt;
@@ -243,7 +250,14 @@
         &lt;div class=&quot;branding__site-slogan&quot;&gt;{{ site_slogan }}&lt;/div&gt;
       {% endif %}
     &lt;/div&gt;
-  {% endif %}
+  {% endif %} #}
+
+    &lt;div class=&quot;branding__name-and-slogan visually-hidden&quot;&gt;
+      &lt;h1 class=&quot;branding__site-name&quot;&gt;
+        &lt;a href=&quot;{{ root_path }}&quot; title=&quot;{{ &#039;Home&#039;|t }}&quot; rel=&quot;home&quot; class=&quot;branding__site-link&quot;&gt; {{ site_name }}&lt;/a&gt;
+      &lt;/h1&gt;
+    &lt;/div&gt;
+
 &lt;/div&gt;
 </code></pre>
           </details>

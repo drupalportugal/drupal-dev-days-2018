@@ -206,14 +206,15 @@
       <a href="/" title="Home" rel="home" class="branding__logo">
       <img src="kss-assets/sample-inline.svg" alt="Home" class="branding__logo-image"/>
     </a>
+    
 
-        <div class="branding__name-and-slogan">
-              <h1 class="branding__site-name">
-          <a href="/" title="Home" rel="home" class="branding__site-link"> Site Name</a>
-        </h1>
-                    <div class="branding__site-slogan">Site slogan</div>
-          </div>
-  </div>
+    <div class="branding__name-and-slogan visually-hidden">
+      <h1 class="branding__site-name">
+        <a href="/" title="Home" rel="home" class="branding__site-link"> Site Name</a>
+      </h1>
+    </div>
+
+</div>
   
       <div class="navbar__wrapper">
 
@@ -221,10 +222,9 @@
     <span class="navbar__mobile-menu__icon"></span>
   </div>
 
-  
-
-
-        </div>
+            
+  <div class="test">Monday 2nd July Friday 6th July at ISCTE</div>
+</div>
 
   </header>
 
@@ -257,9 +257,6 @@
   {% block navigation %}
     {% embed &quot;@dddlx/navigation/navbar/navbar.twig&quot; %}
         {% block content %}
-
-
-
         {% endblock %}
       {% endembed %}
   {% endblock %}

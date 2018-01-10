@@ -12,12 +12,9 @@
   width: 100%;
   background-color: color('white');
   z-index: 300;
-  border-bottom: 1px solid color(grey-extra-light);
 
   @include respond-to(m) {
-    position: relative;
-    background-color: transparent;
-    border-bottom: 0;
+
   }
 
   // Wrapping link for logo.
@@ -27,9 +24,7 @@
     left: 0;
 
     @include respond-to(m) {
-      margin: 0 10px 0 0;
-      padding: 0;
-      width: 145px;
+
     }
 
     @include rtl() {

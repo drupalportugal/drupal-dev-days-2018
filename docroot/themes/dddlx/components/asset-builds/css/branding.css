@@ -1,39 +1,16 @@
 /*! typey | GPLv2 License | https://github.com/jptaranto/typey */
-@media (min-width: 730px) {
-  .branding__wrapper {
-    padding-top: 20px;
-    height: 155px;
-  }
-}
-
 .branding__logo {
-  width: 33px;
+  width: 45px;
   height: 45px;
   overflow: hidden;
   float: left;
   margin-top: 4px;
 }
 
-@media (min-width: 730px) {
-  .branding__logo {
-    overflow: initial;
-    margin: 0 10px 0 0;
-    padding: 0;
-    width: 145px;
-    height: 120px;
-  }
-}
-
 .branding__logo-image {
   vertical-align: middle;
   height: 45px;
   max-width: none;
-}
-
-@media (min-width: 730px) {
-  .branding__logo-image {
-    height: 120px;
-  }
 }
 
 .branding__name-and-slogan {

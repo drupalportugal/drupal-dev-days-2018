@@ -4,7 +4,6 @@
 }
 
 .article-full__header__wrapper {
-  background-color: #e6ebf4;
   position: relative;
   overflow: hidden;
   margin-bottom: 50px;
@@ -54,44 +53,8 @@
 }
 
 .article-full__tags .field__item span {
-  text-align: center;
-  display: inline-block;
-  color: #000;
-  background-color: #fff;
-  cursor: pointer;
-  transition: color ease .35s, background ease .35s;
   text-transform: uppercase;
   margin: 0 5px 10px;
-}
-
-.article-full__tags .field__item span a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 5px 15px;
-  background-color: #fff;
-  transition: color ease .35s, background ease .35s;
-  border: 1px solid #000;
-  color: #000;
-  transition: color ease .35s, background ease .35s;
-}
-
-.article-full__tags .field__item span a:hover, .article-full__tags .field__item span a:focus, .article-full__tags .field__item span a:active {
-  border: 1px solid #000;
-  background-color: #000;
-  color: #fff;
-}
-
-.article-full__tags .field__item span:hover, .article-full__tags .field__item span:focus, .article-full__tags .field__item span:active {
-  background-color: #000;
-  color: #fff;
-}
-
-.article-full__tags .field__item span:hover a, .article-full__tags .field__item span:focus a, .article-full__tags .field__item span:active a {
-  color: #fff;
-}
-
-[dir="rtl"] .article-full__tags .field__item span {
-  text-align: center;
 }
 
 /* Sidebar & content */

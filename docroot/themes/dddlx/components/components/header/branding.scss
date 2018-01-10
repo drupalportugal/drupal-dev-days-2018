@@ -9,24 +9,19 @@
 
   &__wrapper {
     @include respond-to(m) {
-      padding-top: 20px;
-      height: 155px;
+
     }
   }
 
   &__logo {
-    width: 33px;
+    width: 45px;
     height: 45px;
     overflow: hidden;
     float: left;
     margin-top: 4px;
 
     @include respond-to(m) {
-      overflow: initial;
-      margin: 0 10px 0 0;
-      padding: 0;
-      width: 145px;
-      height: 120px;
+
     }
   }
 
@@ -37,7 +32,7 @@
     max-width: none;
 
     @include respond-to(m) {
-      height: 120px;
+      
     }
   }
 

@@ -4,7 +4,6 @@
 }
 
 .page-full__header__wrapper {
-  background-color: #e6ebf4;
   position: relative;
   overflow: hidden;
   margin-bottom: 50px;
@@ -54,44 +53,8 @@
 }
 
 .page-full__tags .field__item span {
-  text-align: center;
-  display: inline-block;
-  color: #000;
-  background-color: #fff;
-  cursor: pointer;
-  transition: color ease .35s, background ease .35s;
   text-transform: uppercase;
   margin: 0 5px 10px;
-}
-
-.page-full__tags .field__item span a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 5px 15px;
-  background-color: #fff;
-  transition: color ease .35s, background ease .35s;
-  border: 1px solid #000;
-  color: #000;
-  transition: color ease .35s, background ease .35s;
-}
-
-.page-full__tags .field__item span a:hover, .page-full__tags .field__item span a:focus, .page-full__tags .field__item span a:active {
-  border: 1px solid #000;
-  background-color: #000;
-  color: #fff;
-}
-
-.page-full__tags .field__item span:hover, .page-full__tags .field__item span:focus, .page-full__tags .field__item span:active {
-  background-color: #000;
-  color: #fff;
-}
-
-.page-full__tags .field__item span:hover a, .page-full__tags .field__item span:focus a, .page-full__tags .field__item span:active a {
-  color: #fff;
-}
-
-[dir="rtl"] .page-full__tags .field__item span {
-  text-align: center;
 }
 
 /* Sidebar & content */

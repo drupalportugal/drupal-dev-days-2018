@@ -19,21 +19,15 @@
   background: color('white');
 
   @include respond-to(m) {
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    height: 100%;
-    max-width: 1024px;
     display: flex;
     justify-content: center;
-    align-items: stretch;
   }
 
   &__item,
   li {
     position: relative;
     display: block;
-    width: auto;
+    width: 100%;
     background-color: color('white');
     padding: 15px 0;
     border-top: 1px solid color('grey-light');
@@ -43,15 +37,13 @@
     }
 
     @include respond-to(m) {
-      flex: 1 1 90px;
-      display: flex;
-      padding: 0;
       border: 0;
-      align-items: center;
-      background-color: transparent;
+      display: inline-block;
+      width: auto;
+      margin: 0;
 
       &:last-child {
-        border-bottom: 0;
+        border: 0;
       }
     }
 
@@ -68,8 +60,8 @@
         text-decoration: none;
         position: relative;
         transition: all ease .35s;
-        height: 90px;
-        width: 90px;
+        height: 120px;
+        width: 120px;
         display: flex;
         align-items: center;
         justify-content: center;

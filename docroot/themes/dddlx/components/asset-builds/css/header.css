@@ -4,29 +4,12 @@
   width: 100%;
   background-color: #fff;
   z-index: 300;
-  border-bottom: 1px solid #ededed;
-}
-
-@media (min-width: 730px) {
-  .header {
-    position: relative;
-    background-color: transparent;
-    border-bottom: 0;
-  }
 }
 
 .header__logo {
   float: left;
   top: 0;
   left: 0;
-}
-
-@media (min-width: 730px) {
-  .header__logo {
-    margin: 0 10px 0 0;
-    padding: 0;
-    width: 145px;
-  }
 }
 
 [dir="rtl"] .header__logo {
