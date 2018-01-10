@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Contains ddd_attendee.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ddd_attendee_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ddd_attendee module.
+    case 'help.page.ddd_attendee':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Drupal Dev Days Attendee module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ddd_attendee_theme() {
+  return [
+    'ddd_attendee' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_insert().
+ *
+ * Acts after an entity is created.
+ */
+function ddd_attendee_entity_insert(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == "user") {
+    /** @var \Drupal\ddd_attendee\AttendeeManager $atendee_manager */
+    $atendee_manager = \Drupal::service("ddd_attendee.manager");
+    /** @var \Drupal\User\Entity\User $entity */
+    $atendee_manager->setAttendeesUserByUserAccountEmail($entity);
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ *
+ * Acts after an entity is updated.
+ */
+function ddd_attendee_entity_update(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == "user") {
+    /** @var \Drupal\ddd_attendee\AttendeeManager $atendee_manager */
+    $atendee_manager = \Drupal::service("ddd_attendee.manager");
+    /** @var \Drupal\User\Entity\User $entity */
+    $atendee_manager->setAttendeesUserByUserAccountEmail($entity);
+  }
+}

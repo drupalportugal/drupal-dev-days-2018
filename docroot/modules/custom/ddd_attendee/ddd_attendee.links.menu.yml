@@ -1,0 +1,20 @@
+# Attendee menu items definition
+
+entity.attendee.structure:
+  route_name: entity.attendee.structure
+  parent: system.admin_structure
+  description: 'Administer Attendee configurations'
+  title: Attendee Structure
+
+entity.attendee.collection:
+  title: 'Attendee list'
+  route_name: entity.attendee.collection
+  description: 'List Attendee entities'
+  parent: entity.attendee.structure
+  weight: 100
+
+entity.attendee.structure.settings:
+  title: Attendee settings
+  description: 'Configure Attendee entities'
+  route_name: attendee.settings
+  parent: entity.attendee.structure

@@ -1,0 +1,30 @@
+add attendee entities:
+  title: 'Create new Attendee entities'
+
+administer attendee entities:
+  title: 'Administer Attendee entities'
+  description: 'Allow to access the administration form to configure Attendee entities.'
+  restrict access: true
+
+delete attendee entities:
+  title: 'Delete Attendee entities'
+
+edit attendee entities:
+  title: 'Edit Attendee entities'
+
+view published attendee entities:
+  title: 'View published Attendee entities'
+
+view unpublished attendee entities:
+  title: 'View unpublished Attendee entities'
+
+view all attendee revisions:
+  title: 'View all Attendee revisions'
+
+revert all attendee revisions:
+  title: 'Revert all Attendee revisions'
+  description: 'Role requires permission <em>view Attendee revisions</em> and <em>edit rights</em> for attendee entities in question or <em>administer attendee entities</em>.'
+
+delete all attendee revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Attendee revisions</em> and <em>delete rights</em> for attendee entities in question or <em>administer attendee entities</em>.'
