@@ -39,7 +39,6 @@
         "drupal/shield": "~1.0",
         "drupal/token": "~1.0",
         "drupal/twig_xdebug": "~1.0",
-        "drupal/zen": "^7.0@alpha",
         "drush/drush": "~8.0|^9.0.0-beta8",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
