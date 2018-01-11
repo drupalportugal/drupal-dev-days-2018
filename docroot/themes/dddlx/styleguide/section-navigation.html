@@ -774,6 +774,8 @@ side or below the main content.</p>
 {% import _self as menus %}
 {{ attach_library(&#039;dddlx/nav-primary&#039;) }}
 
+&lt;div class=&quot;nav-primary__slogan&quot;&gt;&lt;span&gt;Monday 2nd July Friday 6th July at ISCTE&lt;/span&gt;&lt;/div&gt;
+
 {#
   We call a macro which calls itself to render the full tree.
   @see http://twig.sensiolabs.org/doc/tags/macro.html
@@ -798,7 +800,7 @@ side or below the main content.</p>
         ]
       %}
       &lt;li{{ item.attributes.addClass(classes) }}&gt;
-        {{ link(item.title, item.url) }}
+        &lt;span class=&quot;nav-primary__item__wrapper&quot;&gt;{{ link(item.title, item.url) }}&lt;/span&gt;
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
@@ -1054,7 +1056,6 @@ side or below the main content.</p>
 
       
     
-  <div class="test">Monday 2nd July Friday 6th July at ISCTE</div>
 </div>
 
 
@@ -1076,7 +1077,6 @@ side or below the main content.</p>
     {{ content }}
   {% endblock %}
   
-  &lt;div class=&quot;test&quot;&gt;Monday 2nd July Friday 6th July at ISCTE&lt;/div&gt;
 &lt;/div&gt;
 
 </code></pre>

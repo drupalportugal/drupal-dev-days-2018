@@ -200,15 +200,17 @@
 
 <header class="header  clearfix" role="banner" >
 
+  <div class="header__content">
       
 
-<div class="branding__wrapper layout-center">
+
+<div class="branding__wrapper">
       <a href="/" title="Home" rel="home" class="branding__logo">
       <img src="kss-assets/sample-inline.svg" alt="Home" class="branding__logo-image"/>
+      <span class="branding__logo-image-text">Template &quot;/logo_lettering.svg&quot; is not defined.</span>
     </a>
-    
-
-    <div class="branding__name-and-slogan visually-hidden">
+  
+    <div class="branding__name visually-hidden">
       <h1 class="branding__site-name">
         <a href="/" title="Home" rel="home" class="branding__site-link"> Site Name</a>
       </h1>
@@ -223,10 +225,10 @@
   </div>
 
             
-  <div class="test">Monday 2nd July Friday 6th July at ISCTE</div>
 </div>
 
-  </header>
+    </div>
+</header>
 
             <div class="kss-modifier__example-footer"></div>
           </div>
@@ -250,6 +252,7 @@
 {{ attach_library(&#039;dddlx/header&#039;) }}
 &lt;header class=&quot;header {{ modifier_class }} clearfix&quot; role=&quot;banner&quot; {{ attributes }}&gt;
 
+  &lt;div class=&quot;header__content&quot;&gt;
   {% block branding %}
     {% include &quot;branding.twig&quot; %}
   {% endblock %}
@@ -260,12 +263,13 @@
         {% endblock %}
       {% endembed %}
   {% endblock %}
+  &lt;/div&gt;
 &lt;/header&gt;
 </code></pre>
           </details>
               
               <div class="kss-source kss-style">
-          Source: <code>components/header/header.scss</code>, line 3
+          Source: <code>components/header/header.scss</code>, line 4
         </div>
           </div>
   </article>

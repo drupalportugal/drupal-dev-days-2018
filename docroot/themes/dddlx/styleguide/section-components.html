@@ -494,10 +494,10 @@ building a good component.</p>
           <div class="kss-modifier__example">
             
 
-<div class="branding__wrapper layout-center">
-    
 
-    <div class="branding__name-and-slogan visually-hidden">
+<div class="branding__wrapper">
+  
+    <div class="branding__name visually-hidden">
       <h1 class="branding__site-name">
         <a href="" title="Home" rel="home" class="branding__site-link"> </a>
       </h1>
@@ -529,26 +529,16 @@ building a good component.</p>
  */
 #}
 {{ attach_library(&#039;dddlx/branding&#039;) }}
-&lt;div class=&quot;branding__wrapper layout-center&quot;&gt;
+{# &lt;div class=&quot;branding__wrapper layout-center&quot;&gt; #}
+&lt;div class=&quot;branding__wrapper&quot;&gt;
   {% if site_logo %}
     &lt;a href=&quot;{{ root_path }}&quot; title=&quot;{{ &#039;Home&#039;|t }}&quot; rel=&quot;home&quot; class=&quot;branding__logo&quot;&gt;
       &lt;img src=&quot;{{ site_logo }}&quot; alt=&quot;{{ &#039;Home&#039;|t }}&quot; class=&quot;branding__logo-image&quot;/&gt;
+      &lt;span class=&quot;branding__logo-image-text&quot;&gt;{{ source(directory ~ &#039;/logo_lettering.svg&#039;) }}&lt;/span&gt;
     &lt;/a&gt;
   {% endif %}
-  {# {% if site_name or site_slogan %}
-    &lt;div class=&quot;branding__name-and-slogan&quot;&gt;
-      {% if site_name %}
-        &lt;h1 class=&quot;branding__site-name&quot;&gt;
-          &lt;a href=&quot;{{ root_path }}&quot; title=&quot;{{ &#039;Home&#039;|t }}&quot; rel=&quot;home&quot; class=&quot;branding__site-link&quot;&gt; {{ site_name }}&lt;/a&gt;
-        &lt;/h1&gt;
-      {% endif %}
-      {% if site_slogan %}
-        &lt;div class=&quot;branding__site-slogan&quot;&gt;{{ site_slogan }}&lt;/div&gt;
-      {% endif %}
-    &lt;/div&gt;
-  {% endif %} #}
 
-    &lt;div class=&quot;branding__name-and-slogan visually-hidden&quot;&gt;
+    &lt;div class=&quot;branding__name visually-hidden&quot;&gt;
       &lt;h1 class=&quot;branding__site-name&quot;&gt;
         &lt;a href=&quot;{{ root_path }}&quot; title=&quot;{{ &#039;Home&#039;|t }}&quot; rel=&quot;home&quot; class=&quot;branding__site-link&quot;&gt; {{ site_name }}&lt;/a&gt;
       &lt;/h1&gt;
@@ -857,18 +847,6 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
 
 <footer class="footer " role="contentinfo">
 
-  <div class="footer-branding__wrapper">
-
-    <div class="footer-branding layout-center">
-
-      <a href="" title="Home" rel="home" class="footer-branding__logo__primary">
-      </a>
-
-    </div>
-
-
-  </div>
-
   <div class="layout-center">
         <ul class="footer__menu">
         <li class="footer__menu__item"><a href="#">Home</a></li>
@@ -880,6 +858,23 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
         <li class="footer__menu__item"><a href="#">Ut</a></li>
     </ul>
   </div>
+
+  <div class="footer-tag__wrapper">
+      <strong><a href="https://www.drupal.org/" target="_blank">Drupal.org</a></strong> issue queue tag: <strong>DevDaysLisboa</strong> <br/ >
+      Social media hashtag: <strong>#drupaldevdays</strong>
+  </div>
+
+  <div class="footer-branding__wrapper">
+
+    <div class="footer-branding">
+      <a href="" title="Home" rel="home" class="footer-branding__logo__primary">
+      </a>
+    </div>
+
+    <span class="footer-branding__slogan">Drupal Developer Days 2018</span>
+
+  </div>
+
 </footer>
 
             <div class="kss-modifier__example-footer"></div>
@@ -904,29 +899,34 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
 {{ attach_library(&#039;dddlx/footer&#039;) }}
 &lt;footer class=&quot;footer {{ modifier_class }}&quot; role=&quot;contentinfo&quot;{{ attributes }}&gt;
 
-  &lt;div class=&quot;footer-branding__wrapper&quot;&gt;
-
-    &lt;div class=&quot;footer-branding layout-center&quot;&gt;
-
-      &lt;a href=&quot;{{ root_path }}&quot; title=&quot;{{ &#039;Home&#039;|t }}&quot; rel=&quot;home&quot; class=&quot;footer-branding__logo__primary&quot;&gt;
-      &lt;/a&gt;
-
-    &lt;/div&gt;
-
-
-  &lt;/div&gt;
-
   &lt;div class=&quot;layout-center&quot;&gt;
     {% block content %}
       {{ content }}
     {% endblock %}
   &lt;/div&gt;
+
+  &lt;div class=&quot;footer-tag__wrapper&quot;&gt;
+      &lt;strong&gt;&lt;a href=&quot;https://www.drupal.org/&quot; target=&quot;_blank&quot;&gt;Drupal.org&lt;/a&gt;&lt;/strong&gt; issue queue tag: &lt;strong&gt;DevDaysLisboa&lt;/strong&gt; &lt;br/ &gt;
+      Social media hashtag: &lt;strong&gt;#drupaldevdays&lt;/strong&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;footer-branding__wrapper&quot;&gt;
+
+    &lt;div class=&quot;footer-branding&quot;&gt;
+      &lt;a href=&quot;{{ root_path }}&quot; title=&quot;{{ &#039;Home&#039;|t }}&quot; rel=&quot;home&quot; class=&quot;footer-branding__logo__primary&quot;&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;span class=&quot;footer-branding__slogan&quot;&gt;Drupal Developer Days 2018&lt;/span&gt;
+
+  &lt;/div&gt;
+
 &lt;/footer&gt;
 </code></pre>
           </details>
               
               <div class="kss-source kss-style">
-          Source: <code>components/footer/footer.scss</code>, line 3
+          Source: <code>components/footer/footer.scss</code>, line 5
         </div>
           </section>
           <section id="kssref-components-header" class="kss-section kss-section--depth-2 ">
@@ -1007,15 +1007,17 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
 
 <header class="header  clearfix" role="banner" >
 
+  <div class="header__content">
       
 
-<div class="branding__wrapper layout-center">
+
+<div class="branding__wrapper">
       <a href="/" title="Home" rel="home" class="branding__logo">
       <img src="kss-assets/sample-inline.svg" alt="Home" class="branding__logo-image"/>
+      <span class="branding__logo-image-text">Template &quot;/logo_lettering.svg&quot; is not defined.</span>
     </a>
-    
-
-    <div class="branding__name-and-slogan visually-hidden">
+  
+    <div class="branding__name visually-hidden">
       <h1 class="branding__site-name">
         <a href="/" title="Home" rel="home" class="branding__site-link"> Site Name</a>
       </h1>
@@ -1030,10 +1032,10 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
   </div>
 
             
-  <div class="test">Monday 2nd July Friday 6th July at ISCTE</div>
 </div>
 
-  </header>
+    </div>
+</header>
 
             <div class="kss-modifier__example-footer"></div>
           </div>
@@ -1057,6 +1059,7 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
 {{ attach_library(&#039;dddlx/header&#039;) }}
 &lt;header class=&quot;header {{ modifier_class }} clearfix&quot; role=&quot;banner&quot; {{ attributes }}&gt;
 
+  &lt;div class=&quot;header__content&quot;&gt;
   {% block branding %}
     {% include &quot;branding.twig&quot; %}
   {% endblock %}
@@ -1067,12 +1070,13 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
         {% endblock %}
       {% endembed %}
   {% endblock %}
+  &lt;/div&gt;
 &lt;/header&gt;
 </code></pre>
           </details>
               
               <div class="kss-source kss-style">
-          Source: <code>components/header/header.scss</code>, line 3
+          Source: <code>components/header/header.scss</code>, line 4
         </div>
           </section>
           <section id="kssref-components-hidden" class="kss-section kss-section--depth-2 ">

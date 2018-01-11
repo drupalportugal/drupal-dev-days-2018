@@ -31,7 +31,7 @@
 @media (min-width: 888px) {
   .article-teaser__text__wrapper {
     float: left;
-    width: 50%;
+    width: 300%;
     margin-left: 0%;
     margin-right: -100%;
     padding-left: 20px;
@@ -47,15 +47,15 @@
 @media (min-width: 888px) {
   .article-teaser__image__wrapper {
     float: left;
-    width: 50%;
-    margin-left: 50%;
+    width: 300%;
+    margin-left: 300%;
     margin-right: -100%;
     padding-left: 20px;
     padding-right: 20px;
   }
   [dir="rtl"] .article-teaser__image__wrapper {
     float: right;
-    margin-right: 50%;
+    margin-right: 300%;
     margin-left: -100%;
   }
 }

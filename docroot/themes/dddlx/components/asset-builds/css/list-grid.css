@@ -44,17 +44,17 @@
   .list-grid__item {
     padding-left: 20px;
     padding-right: 20px;
-    width: 50%;
+    width: 300%;
     float: left;
   }
 }
 
 @media (min-width: 888px) {
   .list-grid__item:not(.list-grid__item--tight) {
-    width: 33.33333%;
+    width: 200%;
   }
   .list-grid__item.list-grid__item--tight {
-    width: 25%;
+    width: 150%;
   }
 }
 

@@ -198,10 +198,10 @@
           <div class="kss-modifier__example">
             
 
-<div class="branding__wrapper layout-center">
-    
 
-    <div class="branding__name-and-slogan visually-hidden">
+<div class="branding__wrapper">
+  
+    <div class="branding__name visually-hidden">
       <h1 class="branding__site-name">
         <a href="" title="Home" rel="home" class="branding__site-link"> </a>
       </h1>
@@ -233,26 +233,16 @@
  */
 #}
 {{ attach_library(&#039;dddlx/branding&#039;) }}
-&lt;div class=&quot;branding__wrapper layout-center&quot;&gt;
+{# &lt;div class=&quot;branding__wrapper layout-center&quot;&gt; #}
+&lt;div class=&quot;branding__wrapper&quot;&gt;
   {% if site_logo %}
     &lt;a href=&quot;{{ root_path }}&quot; title=&quot;{{ &#039;Home&#039;|t }}&quot; rel=&quot;home&quot; class=&quot;branding__logo&quot;&gt;
       &lt;img src=&quot;{{ site_logo }}&quot; alt=&quot;{{ &#039;Home&#039;|t }}&quot; class=&quot;branding__logo-image&quot;/&gt;
+      &lt;span class=&quot;branding__logo-image-text&quot;&gt;{{ source(directory ~ &#039;/logo_lettering.svg&#039;) }}&lt;/span&gt;
     &lt;/a&gt;
   {% endif %}
-  {# {% if site_name or site_slogan %}
-    &lt;div class=&quot;branding__name-and-slogan&quot;&gt;
-      {% if site_name %}
-        &lt;h1 class=&quot;branding__site-name&quot;&gt;
-          &lt;a href=&quot;{{ root_path }}&quot; title=&quot;{{ &#039;Home&#039;|t }}&quot; rel=&quot;home&quot; class=&quot;branding__site-link&quot;&gt; {{ site_name }}&lt;/a&gt;
-        &lt;/h1&gt;
-      {% endif %}
-      {% if site_slogan %}
-        &lt;div class=&quot;branding__site-slogan&quot;&gt;{{ site_slogan }}&lt;/div&gt;
-      {% endif %}
-    &lt;/div&gt;
-  {% endif %} #}
 
-    &lt;div class=&quot;branding__name-and-slogan visually-hidden&quot;&gt;
+    &lt;div class=&quot;branding__name visually-hidden&quot;&gt;
       &lt;h1 class=&quot;branding__site-name&quot;&gt;
         &lt;a href=&quot;{{ root_path }}&quot; title=&quot;{{ &#039;Home&#039;|t }}&quot; rel=&quot;home&quot; class=&quot;branding__site-link&quot;&gt; {{ site_name }}&lt;/a&gt;
       &lt;/h1&gt;

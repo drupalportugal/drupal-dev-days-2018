@@ -4,6 +4,33 @@
   width: 100%;
   background-color: #fff;
   z-index: 300;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 888px) {
+  .header {
+    position: relative;
+    background: url(../..//components/header/header_pattern.svg) repeat-x center top;
+    background-size: contain;
+  }
+}
+
+@media (min-width: 888px) {
+  .header__content {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    background: url(../..//components/header/header_pattern.svg) repeat-x center top;
+    background-size: contain;
+  }
+}
+
+@media (min-width: 1111px) {
+  .header__content {
+    max-width: 960px;
+  }
 }
 
 .header__logo {

@@ -1,5 +1,6 @@
 @import 'init';
 
+$image-url-subdirectory: 'components/header';
 // Header
 //
 // Markup: header.twig
@@ -12,73 +13,98 @@
   width: 100%;
   background-color: color('white');
   z-index: 300;
+  top: 0;
+  left: 0;
 
-  @include respond-to(m) {
-
+  @include respond-to(l) {
+    position: relative;
+    background: image-url('header_pattern.svg') repeat-x center top;
+    background-size: contain;
   }
+}
 
-  // Wrapping link for logo.
-  &__logo {
-    float: left;
-    top: 0;
-    left: 0;
+.header__content {
+  @include zen-layout($columns: 8, $gutters: 0) {
 
-    @include respond-to(m) {
-
-    }
-
-    @include rtl() {
-      float: right;
-      margin: 0 0 0 10px;
-    }
-  }
-
-  // Logo image.
-  &__logo-image {
-    vertical-align: bottom;
-  }
-
-  // Wrapper for website name and slogan.
-  &__name-and-slogan {
-    float: left;
-  }
-
-  // The name of the website.
-  &__site-name {
-    margin: 0;
-  }
-
-  // The link around the name of the website.
-  &__site-link {
-    &:link,
-    &:visited {
-      color: color(text);
-      text-decoration: none;
-    }
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
+    @include respond-to(l) {
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      background: image-url('header_pattern.svg') repeat-x center top;
+      background-size: contain;
     }
   }
 
-  // The slogan (or tagline) of a website.
-  &__site-slogan {
-    margin: 0;
+  @include zen-layout($columns: 8, $gutters: 0) {
+
+    @include respond-to(xxl) {
+      max-width: $canvas-content;
+    }
+  }
+}
+
+// Wrapping link for logo.
+.header__logo {
+  float: left;
+  top: 0;
+  left: 0;
+
+  @include respond-to(l) {
+
   }
 
-  // The secondary menu (login, etc.)
-  &__secondary-menu {
+  @include rtl() {
     float: right;
+    margin: 0 0 0 10px;
+  }
+}
 
-    @include rtl() {
-      float: left;
-    }
+// Logo image.
+.header__logo-image {
+  vertical-align: bottom;
+}
+
+// Wrapper for website name and slogan.
+.header__name-and-slogan {
+  float: left;
+}
+
+// The name of the website.
+.header__site-name {
+  margin: 0;
+}
+
+// The link around the name of the website.
+.header__site-link {
+  &:link,
+  &:visited {
+    color: color(text);
+    text-decoration: none;
   }
 
-  // Wrapper for any blocks placed in the header region.
-  &__region {
-    // Clear the logo.
-    clear: both;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
   }
+}
+
+// The slogan (or tagline) of a website.
+.header__site-slogan {
+  margin: 0;
+}
+
+// The secondary menu (login, etc.)
+.header__secondary-menu {
+  float: right;
+
+  @include rtl() {
+    float: left;
+  }
+}
+
+// Wrapper for any blocks placed in the header region.
+.header__region {
+  // Clear the logo.
+  clear: both;
 }

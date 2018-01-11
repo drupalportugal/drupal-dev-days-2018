@@ -12,6 +12,7 @@
 {{ attach_library('dddlx/header') }}
 <header class="header {{ modifier_class }} clearfix" role="banner" {{ attributes }}>
 
+  <div class="header__content">
   {% block branding %}
     {% include "branding.twig" %}
   {% endblock %}
@@ -22,4 +23,5 @@
         {% endblock %}
       {% endembed %}
   {% endblock %}
+  </div>
 </header>
