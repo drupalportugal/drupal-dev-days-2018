@@ -6,7 +6,7 @@
 /docroot/themes/contrib/
 /docroot/profiles/contrib/
 /docroot/libraries/
-/config/ignored
+/config/ignored/*
 
 # Ignore localsite
 /docroot/sites/dddlx.dd/
