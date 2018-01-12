@@ -1,0 +1,390 @@
+# These lines define the dddlx/base library.
+base:
+  css:
+    # The SMACSS category, "base", is loaded before other categories. Drupal 8
+    # loads stylesheets based on the SMACSS ordering of:
+    # base, layout, component, state, theme
+    base:
+      # The {} brackets allow you to specify the additional options, weight and
+      # media. For example, you can specify this is a print media stylesheet by
+      # specifying: { media: print } Note: this isn't recommended since
+      # separate print stylesheets is bad for front-end performance.
+      components/asset-builds/css/base.css: {}
+  # If this library had JavaScript you could specify it like this:
+  # js:
+  #   js/script.js: {}
+  dependencies:
+    - dddlx/clearfix
+    - dddlx/visually-hidden
+
+fonts:
+  version: VERSION
+  css:
+    theme:
+      '//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700': {type: external} # external font
+
+layouts:
+  css:
+    # The SMACSS category, "layout", is loaded after "base" styles.
+    layout:
+      components/asset-builds/css/layouts.css: {}
+
+autocomplete:
+  css:
+    component:
+      components/asset-builds/css/autocomplete.css: {}
+
+breadcrumb:
+  css:
+    component:
+      components/asset-builds/css/breadcrumb.css: {}
+  dependencies:
+    - dddlx/visually-hidden
+
+box:
+  css:
+    component:
+      components/asset-builds/css/box.css: {}
+
+clearfix:
+  css:
+    component:
+      components/asset-builds/css/clearfix.css: {}
+
+collapsible-fieldset:
+  css:
+    component:
+      components/asset-builds/css/collapsible-fieldset.css: {}
+
+comment:
+  css:
+    component:
+      components/asset-builds/css/comment.css: {}
+
+footer:
+  css:
+    component:
+      components/asset-builds/css/footer.css: {}
+
+form-item:
+  css:
+    component:
+      components/asset-builds/css/form-item.css: {}
+
+form-table:
+  css:
+    component:
+      components/asset-builds/css/form-table.css: {}
+
+header:
+  css:
+    component:
+      components/asset-builds/css/header.css: {}
+  dependencies:
+    - dddlx/clearfix
+
+branding:
+  css:
+    component:
+      components/asset-builds/css/branding.css: {}
+
+hidden:
+  css:
+    component:
+      components/asset-builds/css/hidden.css: {}
+
+highlight-mark:
+  css:
+    component:
+      components/asset-builds/css/highlight-mark.css: {}
+
+inline-links:
+  css:
+    component:
+      components/asset-builds/css/inline-links.css: {}
+
+inline-sibling:
+  css:
+    component:
+      components/asset-builds/css/inline-sibling.css: {}
+
+messages:
+  css:
+    component:
+      components/asset-builds/css/messages.css: {}
+
+more-link:
+  css:
+    component:
+      components/asset-builds/css/more-link.css: {}
+
+nav-menu:
+  css:
+    component:
+      components/asset-builds/css/nav-menu.css: {}
+
+nav-primary:
+  css:
+    component:
+      components/asset-builds/css/nav-primary.css: {}
+
+nav-secondary:
+  css:
+    component:
+      components/asset-builds/css/nav-secondary.css: {}
+
+navbar:
+  css:
+    component:
+      components/asset-builds/css/navbar.css: {}
+  dependencies:
+    - core/jquery
+    - dddlx/clearfix
+    - dddlx/visually-hidden
+  js:
+    components/navigation/navbar/navbar.js: {}
+
+pager:
+  css:
+    component:
+      components/asset-builds/css/pager.css: {}
+
+print-none:
+  css:
+    component:
+      components/asset-builds/css/print-none.css: {}
+
+progress-bar:
+  css:
+    component:
+      components/asset-builds/css/progress-bar.css: {}
+
+progress-throbber:
+  css:
+    component:
+      components/asset-builds/css/progress-throbber.css: {}
+
+resizable-textarea:
+  css:
+    component:
+      components/asset-builds/css/resizable-textarea.css: {}
+
+responsive-video:
+  css:
+    component:
+      components/asset-builds/css/responsive-video.css: {}
+
+section:
+  css:
+    component:
+      components/asset-builds/css/section.css: {}
+
+sidebar_form:
+  css:
+    component:
+      components/asset-builds/css/sidebar_form.css: {}
+
+sidebar_menu_forum:
+  css:
+    component:
+      components/asset-builds/css/sidebar_menu_forum.css: {}
+
+skip-link:
+  css:
+    component:
+      components/asset-builds/css/skip-link.css: {}
+
+table-drag:
+  css:
+    component:
+      components/asset-builds/css/table-drag.css: {}
+
+tabs:
+  css:
+    component:
+      components/asset-builds/css/tabs.css: {}
+  dependencies:
+    - dddlx/clearfix
+    - dddlx/visually-hidden
+
+visually-hidden:
+  css:
+    component:
+      components/asset-builds/css/visually-hidden.css: {}
+
+watermark:
+  css:
+    component:
+      components/asset-builds/css/watermark.css: {}
+
+wireframe:
+  css:
+    component:
+      components/asset-builds/css/wireframe.css: {}
+
+paragraphs-text:
+  css:
+    component:
+      components/asset-builds/css/paragraphs_text.css: {}
+
+paragraphs-quote:
+  css:
+    component:
+      components/asset-builds/css/paragraphs_quote.css: {}
+
+paragraphs-image:
+  css:
+    component:
+      components/asset-builds/css/paragraphs_image.css: {}
+
+paragraphs-clipping:
+  css:
+    component:
+      components/asset-builds/css/paragraphs_clipping.css: {}
+
+paragraphs-video:
+  css:
+    component:
+      components/asset-builds/css/paragraphs_video.css: {}
+
+article_teaser:
+  css:
+    component:
+      components/asset-builds/css/article_teaser.css: {}
+
+article_teaser_small:
+  css:
+    component:
+      components/asset-builds/css/article_teaser_small.css: {}
+
+article_full:
+  css:
+    component:
+      components/asset-builds/css/article_full.css: {}
+
+event_teaser:
+  css:
+    component:
+      components/asset-builds/css/event_teaser.css: {}
+
+event_teaser_small:
+  css:
+    component:
+      components/asset-builds/css/event_teaser_small.css: {}
+
+event_full:
+  css:
+    component:
+      components/asset-builds/css/event_full.css: {}
+
+page_full:
+  css:
+    component:
+      components/asset-builds/css/page_full.css: {}
+
+page_teaser:
+  css:
+    component:
+      components/asset-builds/css/page_teaser.css: {}
+
+partner_full:
+  css:
+    component:
+      components/asset-builds/css/partner_full.css: {}
+
+partner_teaser:
+  css:
+    component:
+      components/asset-builds/css/partner_teaser.css: {}
+
+team_full:
+  css:
+    component:
+      components/asset-builds/css/team_full.css: {}
+
+team_teaser:
+  css:
+    component:
+      components/asset-builds/css/team_teaser.css: {}
+
+list-grid:
+  css:
+    component:
+      components/asset-builds/css/list-grid.css: {}
+
+list-row:
+  css:
+    component:
+      components/asset-builds/css/list-row.css: {}
+
+page-title:
+  css:
+    component:
+      components/asset-builds/css/page-title.css: {}
+
+featured_full:
+  css:
+    component:
+      components/asset-builds/css/featured_full.css: {}
+
+homepage-slider:
+  css:
+    component:
+      components/asset-builds/css/homepage_slider.css: {}
+
+tech_sheet_teaser:
+  css:
+    component:
+      components/asset-builds/css/tech_sheet_teaser.css: {}
+
+tech_sheet_full:
+  css:
+    component:
+      components/asset-builds/css/tech_sheet_full.css: {}
+
+admin-tabs:
+  css:
+    component:
+      components/asset-builds/css/admin-tabs.css: {}
+
+date:
+  css:
+    component:
+      components/asset-builds/css/date.css: {}
+
+field-list:
+  css:
+    component:
+      components/asset-builds/css/field-list.css: {}
+
+forum:
+  css:
+    component:
+      components/asset-builds/css/forum.css: {}
+
+forum-state:
+  css:
+    component:
+      components/asset-builds/css/forum-state.css: {}
+
+
+taxonomy:
+  css:
+    component:
+      components/asset-builds/css/taxonomy.css: {}
+
+comments:
+  css:
+    component:
+      components/asset-builds/css/comments.css: {}
+
+comment:
+  css:
+    component:
+      components/asset-builds/css/comment.css: {}
+
+registration:
+  css:
+    component:
+      components/asset-builds/css/registration.css: {}
+

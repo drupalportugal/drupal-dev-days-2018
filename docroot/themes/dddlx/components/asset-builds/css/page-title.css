@@ -1,0 +1,17 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.page-title {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+@media (min-width: 888px) {
+  .page-title {
+    font-size: 3.4375rem;
+    line-height: 4.5rem;
+  }
+}

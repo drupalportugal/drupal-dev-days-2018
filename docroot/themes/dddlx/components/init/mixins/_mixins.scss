@@ -1,0 +1,52 @@
+@mixin button-dddlx($bgcolor: blue, $bdcolor: blue, $txtcolor: white, $size: '') {
+  text-align: center;
+  display: inline-block;
+  color: color($txtcolor);
+  background-color: color($bgcolor);
+  cursor: pointer;
+  transition: color ease .35s, background ease .35s;
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+    @if $size == 'tall' {
+      text-transform: uppercase;
+      padding: 10px 15px;
+    }
+    @else if $size == 'narrow' {
+      text-transform: uppercase;
+      padding: 3px 12px;
+    }
+    @else {
+      padding: 5px 15px;
+    }
+    background-color: color($bgcolor);
+    transition: color ease .35s, background ease .35s;
+    border: 1px solid color($bdcolor);
+    color: color($txtcolor);
+    transition: color ease .35s, background ease .35s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: 1px solid color($bdcolor);
+      background-color: color($txtcolor);
+      color: color($bgcolor);
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: color($txtcolor);
+    color: color($bgcolor);
+
+    a {
+      color: color($bgcolor);
+    }
+  }
+
+  @include rtl() {
+    text-align: center;
+  }
+}

@@ -1,0 +1,11 @@
+@import 'init';
+
+.admin-tabs {
+  margin-bottom: 50px;
+
+  @include respond-to(l) {
+    position: absolute;
+    right: zen-half-gutter();
+    top: -103px; // 50px from header margin bottom + 30px from tip + 23px half height of tabs
+  }
+}

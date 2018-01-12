@@ -1,0 +1,17 @@
+@import 'init';
+
+// List Row
+
+.list-row__item {
+  margin-bottom: 10px;
+  padding: 10px;
+
+  @include respond-to(xl) {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

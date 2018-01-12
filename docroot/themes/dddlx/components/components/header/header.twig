@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Component for the header.
+ *
+ * Variables:
+ * - modifier_class: [string] Classes to modify the default component styling.
+ * - attributes: [string] HTML attributes for the wrapping element.
+ * - content: [string] The component contents.
+ */
+#}
+{{ attach_library('dddlx/header') }}
+<header class="header {{ modifier_class }} clearfix" role="banner" {{ attributes }}>
+
+  <div class="header__content">
+  {% block branding %}
+    {% include "branding.twig" %}
+  {% endblock %}
+
+  {% block navigation %}
+    {% embed "@dddlx/navigation/navbar/navbar.twig" %}
+        {% block content %}
+        {% endblock %}
+      {% endembed %}
+  {% endblock %}
+  </div>
+</header>

@@ -1,0 +1,16 @@
+{
+  "root_path": "/",
+  "site_logo": "kss-assets/sample-inline.svg",
+  "site_name": "Site Name",
+  "site_slogan": "Site slogan",
+  "links": [
+    {
+      "url": "#",
+      "text": "My account"
+    },
+    {
+      "url": "#",
+      "text": "Log out"
+    }
+  ]
+}

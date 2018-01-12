@@ -1,0 +1,137 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+/* .nav-primary__block-wrapper {
+
+} */
+.nav-primary {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  background: #fff;
+}
+
+@media (min-width: 888px) {
+  .nav-primary {
+    float: right;
+    width: 42.85714%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: right;
+    background: transparent;
+  }
+  [dir="rtl"] .nav-primary {
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+  }
+}
+
+.nav-primary__item {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  padding: 15px 0;
+  border-top: 1px solid #cccccc;
+}
+
+.nav-primary__item:last-child {
+  border-bottom: 1px solid #cccccc;
+}
+
+@media (min-width: 888px) {
+  .nav-primary__item {
+    border: 0;
+    display: block;
+    float: left;
+    width: 33.333%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .nav-primary__item:last-child {
+    border: 0;
+  }
+}
+
+.nav-primary__item a {
+  padding: 15px 20px;
+  margin: 0 auto;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+
+@media (min-width: 888px) {
+  .nav-primary__item a {
+    padding: 0;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    text-decoration: none;
+    position: absolute;
+    transition: all ease .35s;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #c4cfe5;
+    background: #fff;
+  }
+}
+
+.nav-primary__item a:hover, .nav-primary__item a.is-active {
+  color: #5776b7;
+  border: 1px solid #5776b7;
+  background: #e6ebf4;
+}
+
+.nav-primary__item__wrapper {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+@media (min-width: 888px) {
+  .nav-primary__item__wrapper {
+    padding-bottom: 100%;
+  }
+}
+
+.nav-primary__slogan {
+  display: none;
+}
+
+@media (min-width: 888px) {
+  .nav-primary__slogan {
+    display: inline-block;
+    float: right;
+    width: 28.57143%;
+    margin-right: 42.85714%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: right;
+    min-height: 120px;
+    position: relative;
+  }
+  [dir="rtl"] .nav-primary__slogan {
+    float: left;
+    margin-left: 42.85714%;
+    margin-right: -100%;
+  }
+  .nav-primary__slogan span {
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    padding-right: 20px;
+  }
+}

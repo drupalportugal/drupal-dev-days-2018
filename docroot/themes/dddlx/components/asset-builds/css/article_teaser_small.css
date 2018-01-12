@@ -1,0 +1,87 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.article-teaser-small {
+  background: #fff;
+  border: 1px solid #ededed;
+  margin: 0 auto 20px;
+  padding: 10px 20px 40px;
+  text-align: center;
+}
+
+@media (min-width: 888px) {
+  .article-teaser-small {
+    text-align: left;
+    margin: 0 auto;
+    padding: 10px 20px 30px;
+  }
+}
+
+
+.article-teaser-small__title h3 {
+  font-size: 1.25rem;
+  margin: 0 auto;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (min-width: 888px) {
+  
+  .article-teaser-small__title h3 {
+    text-align: left;
+  }
+}
+
+
+.article-teaser-small__title h3 a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+.article-teaser-small__title h3 a:hover {
+  color: #5776b7;
+}
+
+
+.article-teaser-small__subtitle {
+  margin-bottom: 20px;
+}
+
+.article-teaser-small__link {
+  text-align: center;
+  display: inline-block;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: color ease .35s, background ease .35s;
+}
+
+.article-teaser-small__link a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #fff;
+  transition: color ease .35s, background ease .35s;
+  border: 1px solid #000;
+  color: #000;
+  transition: color ease .35s, background ease .35s;
+}
+
+.article-teaser-small__link a:hover, .article-teaser-small__link a:focus, .article-teaser-small__link a:active {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+}
+
+.article-teaser-small__link:hover, .article-teaser-small__link:focus, .article-teaser-small__link:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.article-teaser-small__link:hover a, .article-teaser-small__link:focus a, .article-teaser-small__link:active a {
+  color: #fff;
+}
+
+[dir="rtl"] .article-teaser-small__link {
+  text-align: center;
+}

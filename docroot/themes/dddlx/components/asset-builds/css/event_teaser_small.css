@@ -1,0 +1,95 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.event-teaser-small {
+  background: #fff;
+  padding: 10px 20px 20px;
+  border: 1px solid #ededed;
+  text-align: center;
+}
+
+@media (min-width: 888px) {
+  .event-teaser-small {
+    text-align: left;
+  }
+}
+
+.event-teaser-small.is-happening {
+  border-color: #999999;
+}
+
+
+.event-teaser-small__title h3 {
+  font-size: 1.125rem;
+  margin: 0 auto;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (min-width: 888px) {
+  
+  .event-teaser-small__title h3 {
+    text-align: left;
+  }
+}
+
+
+.event-teaser-small__title h3 a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+.event-teaser-small__title h3 a:hover {
+  color: #5776b7;
+}
+
+.event-teaser-small__subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 auto;
+}
+
+.event-teaser-small__event-start-date {
+  font-size: 0.75rem;
+  margin: 0 auto 20px;
+  text-transform: uppercase;
+}
+
+.event-teaser-small__link {
+  text-align: center;
+  display: inline-block;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: color ease .35s, background ease .35s;
+}
+
+.event-teaser-small__link a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #fff;
+  transition: color ease .35s, background ease .35s;
+  border: 1px solid #000;
+  color: #000;
+  transition: color ease .35s, background ease .35s;
+}
+
+.event-teaser-small__link a:hover, .event-teaser-small__link a:focus, .event-teaser-small__link a:active {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+}
+
+.event-teaser-small__link:hover, .event-teaser-small__link:focus, .event-teaser-small__link:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.event-teaser-small__link:hover a, .event-teaser-small__link:focus a, .event-teaser-small__link:active a {
+  color: #fff;
+}
+
+[dir="rtl"] .event-teaser-small__link {
+  text-align: center;
+}

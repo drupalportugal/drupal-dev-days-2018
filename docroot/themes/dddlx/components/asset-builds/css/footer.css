@@ -1,0 +1,146 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.footer {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  padding-top: 90px;
+  text-align: center;
+  background: #5776b7 url(../..//components/footer/footer_pattern.svg) repeat-x center top;
+  color: #e6ebf4;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer__menu {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+@media (min-width: 555px) {
+  .footer__menu {
+    padding: 10px;
+    text-align: center;
+    max-width: 1024px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: stretch;
+            align-items: stretch;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 730px) {
+  .footer__menu {
+    flex-wrap: nowrap;
+  }
+}
+
+.footer__menu__item {
+  position: relative;
+  display: block;
+  padding: 15px 0;
+  border-bottom: 1px solid #c4cfe5;
+}
+
+.footer__menu__item:last-child {
+  border-bottom: none;
+}
+
+@media (min-width: 555px) {
+  .footer__menu__item {
+    -webkit-box-flex: 0;
+            flex: 0 0 33.333%;
+    max-width: 33.333%;
+    display: -webkit-box;
+    display: flex;
+    padding: 0;
+    border: 0;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 730px) {
+  .footer__menu__item {
+    -webkit-box-flex: 1;
+            flex: 1 1 auto;
+    max-width: none;
+  }
+}
+
+.footer__menu__item a {
+  padding: 15px 20px;
+  margin: 0 auto;
+  text-decoration: none;
+  position: relative;
+  color: #fff;
+}
+
+@media (min-width: 555px) {
+  .footer__menu__item a {
+    text-transform: uppercase;
+    padding: 15px 20px;
+    margin: 0 auto;
+    text-decoration: none;
+    position: relative;
+    transition: color ease .35s;
+  }
+}
+
+.footer__menu__item a:hover {
+  color: #e6ebf4;
+}
+
+.footer-tag__wrapper {
+  width: 100%;
+  background: #004b79;
+  padding: 30px 10px;
+}
+
+/*
+** footer branding logo and slogan
+*/
+.footer-branding__wrapper {
+  width: 100%;
+  background: #1F2E44;
+  padding: 40px 10px 10px;
+}
+
+.footer-branding {
+  margin: 0 auto;
+}
+
+.footer-branding__logo__primary {
+  display: block;
+  margin: 0 auto;
+  background-image: url(../..//components/footer/DDD_2018_horizontal_version.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 50px;
+  height: 50px;
+}
+
+.footer-branding__slogan {
+  display: block;
+  margin: 20px auto 10px;
+  text-transform: uppercase;
+}
+
+.footer__powered-by {
+  background: #1F2E44;
+  text-align: center;
+  padding: 10px 10px 40px;
+  color: #e6ebf4;
+  font-size: 0.875rem;
+}
+
+.footer__powered-by a {
+  text-decoration: none;
+  color: #fff;
+}

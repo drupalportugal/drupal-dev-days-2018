@@ -1,0 +1,25 @@
+uuid: a0404050-5ec5-4b16-af82-c87a6207836b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dddlx
+_core:
+  default_config_hash: ef78XbJ8iJcI7s04fJ_SIVkxwNToJnyNBI6MLJpy9oI
+id: dddlx_branding
+theme: dddlx
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

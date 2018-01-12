@@ -1,0 +1,26 @@
+uuid: b344a37c-a4be-45ee-b4c6-3b449b096a47
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - dddlx
+_core:
+  default_config_hash: r4AdCLSfdd65qhq17mdMn4hCTrK-sUGcg6eet4pVbFU
+id: dddlx_main_menu
+theme: dddlx
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

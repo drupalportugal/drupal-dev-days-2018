@@ -1,0 +1,10 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.paragraphs__video {
+  max-width: 900px;
+  margin: 0 0 45px;
+}
+
+.paragraphs__video__caption {
+  margin-top: 20px;
+  text-align: center;
+}

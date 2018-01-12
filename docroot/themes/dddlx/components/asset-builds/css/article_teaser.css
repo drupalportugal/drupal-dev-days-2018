@@ -1,0 +1,157 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.article-teaser {
+  text-align: center;
+}
+
+@media (min-width: 0) and (max-width: 887px) {
+  .article-teaser {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 888px) {
+  .article-teaser {
+    text-align: left;
+  }
+  .article-teaser:before {
+    content: "";
+    display: table;
+  }
+  .article-teaser:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.article-teaser__text__wrapper {
+  padding-top: 30px;
+}
+
+@media (min-width: 888px) {
+  .article-teaser__text__wrapper {
+    float: left;
+    width: 300%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  [dir="rtl"] .article-teaser__text__wrapper {
+    float: right;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+}
+
+@media (min-width: 888px) {
+  .article-teaser__image__wrapper {
+    float: left;
+    width: 300%;
+    margin-left: 300%;
+    margin-right: -100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  [dir="rtl"] .article-teaser__image__wrapper {
+    float: right;
+    margin-right: 300%;
+    margin-left: -100%;
+  }
+}
+
+
+.article-teaser__title h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 auto 20px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 888px) {
+  
+  .article-teaser__title h2 {
+    text-align: left;
+  }
+}
+
+
+.article-teaser__title h2 a {
+  text-decoration: none;
+}
+
+
+.article-teaser__subtitle {
+  margin-bottom: 20px;
+}
+
+.article-teaser__link {
+  text-align: center;
+  display: inline-block;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: color ease .35s, background ease .35s;
+}
+
+.article-teaser__link a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #fff;
+  transition: color ease .35s, background ease .35s;
+  border: 1px solid #000;
+  color: #000;
+  transition: color ease .35s, background ease .35s;
+}
+
+.article-teaser__link a:hover, .article-teaser__link a:focus, .article-teaser__link a:active {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+}
+
+.article-teaser__link:hover, .article-teaser__link:focus, .article-teaser__link:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.article-teaser__link:hover a, .article-teaser__link:focus a, .article-teaser__link:active a {
+  color: #fff;
+}
+
+[dir="rtl"] .article-teaser__link {
+  text-align: center;
+}
+
+.article-teaser__image {
+  position: relative;
+}
+
+.article-teaser__image::before {
+  position: absolute;
+  display: block;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+  width: 0;
+  height: 0;
+  z-index: 10;
+  border-style: solid;
+  border-width: 0 15px 10px;
+  border-color: transparent transparent #fff;
+}
+
+@media (min-width: 888px) {
+  .article-teaser__image::before {
+    bottom: auto;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+    border-width: 20px 0 20px 15px;
+    border-color: transparent transparent transparent #fff;
+  }
+}

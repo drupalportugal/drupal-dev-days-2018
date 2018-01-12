@@ -1,0 +1,29 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.sidebar-menu-form__title,
+.sidebar-menu-form h2 {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.sidebar-menu-form__link,
+.sidebar-menu-form a {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  padding: 8px 0;
+  letter-spacing: 1px;
+  color: #5776b7;
+  text-transform: uppercase;
+}
+
+.sidebar-menu-form__link:hover,
+.sidebar-menu-form a:hover {
+  color: #000;
+}
+
+.sidebar-menu-form {
+  padding: 0 20px;
+}

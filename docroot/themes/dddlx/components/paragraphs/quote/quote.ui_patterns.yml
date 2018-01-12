@@ -1,0 +1,16 @@
+paragraph_quote:
+  label: Paragraph Quote
+  description: Display a quote as a slice of content.
+  use: "@dddlx/paragraphs/quote/quote.twig"
+  fields:
+    content:
+      type: text
+      label: Quote
+      description: The quote text
+      preview: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+    author:
+      type: text
+      label: Author Quote
+      description: The author of the quote
+      preview: Lorem ipsum
+      

@@ -1,0 +1,20 @@
+uuid: f1823c9a-d57e-4c97-823b-f98ce279df7b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dddlx
+_core:
+  default_config_hash: MlBBjsRZN6mmnkdCjai_rUsu5iQAxhjaakrjU5TABUU
+id: dddlx_page_title
+theme: dddlx
+region: title
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

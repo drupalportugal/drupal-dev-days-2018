@@ -1,0 +1,36 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.tech-sheet-full__sidebar-bottom .forum-state {
+  padding: 12px 20px;
+  margin: 10px auto;
+  background: #000;
+  color: #e6ebf4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.tech-sheet-full__sidebar-bottom .forum-close {
+  color: #cccccc;
+}
+
+.list-row__item .forum-state__item {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+@media (min-width: 999px) {
+  .list-row__item .forum-state__item {
+    display: inline-block;
+    float: right;
+    padding: 8px 15px;
+    margin: 0 auto 10px;
+    background: #000;
+    color: #e6ebf4;
+  }
+  .list-row__item .forum-state__item.forum-close {
+    color: #cccccc;
+  }
+}

@@ -1,0 +1,134 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.list-grid {
+  margin: 20px auto;
+  max-width: 1410px;
+}
+
+.list-grid__header {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.list-grid__content {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 6rem;
+}
+
+.list-grid__content:before {
+  content: "";
+  display: table;
+}
+
+.list-grid__content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.list-grid__item-first {
+  margin-bottom: 6rem;
+}
+
+.list-grid__item {
+  margin-bottom: 1.2rem;
+  background: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+@media (min-width: 555px) {
+  .list-grid__item {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 300%;
+    float: left;
+  }
+}
+
+@media (min-width: 888px) {
+  .list-grid__item:not(.list-grid__item--tight) {
+    width: 200%;
+  }
+  .list-grid__item.list-grid__item--tight {
+    width: 150%;
+  }
+}
+
+@media (min-width: 555px) {
+  .list-grid__content-with-highlighted .list-grid__item:nth-child(2n+4) {
+    clear: both;
+  }
+}
+
+@media (min-width: 888px) {
+  .list-grid__content-with-highlighted .list-grid__item:nth-child(2n+4) {
+    clear: none;
+  }
+  .list-grid__content-with-highlighted .list-grid__item:not(.list-grid__item--tight):nth-child(3n+5) {
+    clear: both;
+  }
+  .list-grid__content-with-highlighted .list-grid__item.list-grid__item--tight:nth-child(4n+5) {
+    clear: both;
+  }
+}
+
+@media (min-width: 555px) {
+  .list-grid__content:not(.list-grid__content-with-highlighted) .list-grid__item:nth-child(2n+3) {
+    clear: both;
+  }
+}
+
+@media (min-width: 888px) {
+  .list-grid__content:not(.list-grid__content-with-highlighted) .list-grid__item:nth-child(2n+3) {
+    clear: none;
+  }
+  .list-grid__content:not(.list-grid__content-with-highlighted) .list-grid__item:not(.list-grid__item--tight):nth-child(3n+4) {
+    clear: both;
+  }
+  .list-grid__content:not(.list-grid__content-with-highlighted) .list-grid__item.list-grid__item--tight:nth-child(4n+5) {
+    clear: both;
+  }
+}
+
+.list-grid__item__link {
+  text-align: center;
+  display: inline-block;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: color ease .35s, background ease .35s;
+}
+
+.list-grid__item__link a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #fff;
+  transition: color ease .35s, background ease .35s;
+  border: 1px solid #000;
+  color: #000;
+  transition: color ease .35s, background ease .35s;
+}
+
+.list-grid__item__link a:hover, .list-grid__item__link a:focus, .list-grid__item__link a:active {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+}
+
+.list-grid__item__link:hover, .list-grid__item__link:focus, .list-grid__item__link:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.list-grid__item__link:hover a, .list-grid__item__link:focus a, .list-grid__item__link:active a {
+  color: #fff;
+}
+
+[dir="rtl"] .list-grid__item__link {
+  text-align: center;
+}

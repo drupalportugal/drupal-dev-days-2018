@@ -1,0 +1,102 @@
+@import 'init';
+
+// List Grid
+
+.list-grid {
+  margin: 20px auto;
+  max-width: 1410px;
+}
+
+.list-grid__header {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.list-grid__content {
+  @include zen-grid-container($context: flow);
+  @include margin-top(4);
+}
+
+.list-grid__item-first {
+  @include margin-bottom(4);
+}
+
+.list-grid__item {
+  @include margin-bottom(.8);
+  background: color(white);
+  padding: 10px zen-half-gutter();
+  text-align: center;
+
+  @include respond-to(xs) {
+    @include zen-apply-gutter-padding();
+    width: zen-grid-item-width(3);
+    float: left;
+  }
+
+  @include respond-to(l) {
+    &:not(.list-grid__item--tight) {
+      width: zen-grid-item-width(2);
+    }
+
+    &.list-grid__item--tight {
+      width: zen-grid-item-width(1.5);
+    }
+  }
+
+  .list-grid__content-with-highlighted & {
+    @include respond-to(xs) {
+      &:nth-child(2n+4) {
+        clear: both;
+      }
+    }
+
+    @include respond-to(l) {
+      &:nth-child(2n+4) {
+        clear: none;
+      }
+
+      &:not(.list-grid__item--tight) {
+        &:nth-child(3n+5) {
+          clear: both;
+        }
+      }
+
+      &.list-grid__item--tight {
+        &:nth-child(4n+5) {
+          clear: both;
+        }
+      }
+    }
+  }
+
+  .list-grid__content:not(.list-grid__content-with-highlighted) & {
+    @include respond-to(xs) {
+      &:nth-child(2n+3) {
+        clear: both;
+      }
+    }
+
+    @include respond-to(l) {
+      &:nth-child(2n+3) {
+        clear: none;
+      }
+
+      &:not(.list-grid__item--tight) {
+        &:nth-child(3n+4) {
+          clear: both;
+        }
+      }
+
+      &.list-grid__item--tight {
+        &:nth-child(4n+5) {
+          clear: both;
+        }
+      }
+    }
+  }
+}
+
+.list-grid__item__link {
+  @include button-dddlx(white, black, black);
+}

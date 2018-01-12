@@ -1,0 +1,63 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.partner-teaser {
+  border: #ededed 1px solid;
+  position: relative;
+  padding-top: 20px;
+}
+
+.partner-teaser__content,
+.partner-teaser__body {
+  text-align: center;
+}
+
+
+.partner-teaser__title h4 {
+  text-align: center;
+  display: inline-block;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: color ease .35s, background ease .35s;
+  margin-top: 0;
+}
+
+
+.partner-teaser__title h4 a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #fff;
+  transition: color ease .35s, background ease .35s;
+  border: 1px solid #000;
+  color: #000;
+  transition: color ease .35s, background ease .35s;
+}
+
+
+.partner-teaser__title h4 a:hover,
+.partner-teaser__title h4 a:focus,
+.partner-teaser__title h4 a:active {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+}
+
+
+.partner-teaser__title h4:hover,
+.partner-teaser__title h4:focus,
+.partner-teaser__title h4:active {
+  background-color: #000;
+  color: #fff;
+}
+
+
+.partner-teaser__title h4:hover a,
+.partner-teaser__title h4:focus a,
+.partner-teaser__title h4:active a {
+  color: #fff;
+}
+
+[dir="rtl"]
+.partner-teaser__title h4 {
+  text-align: center;
+}

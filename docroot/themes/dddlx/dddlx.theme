@@ -1,0 +1,296 @@
+<?php
+/**
+ * @file
+ * Contains the theme's functions to manipulate Drupal's default markup.
+ *
+ * Complete documentation for this file is available online.
+ * @see https://drupal.org/node/1728096
+ */
+
+
+/**
+ * Override or insert variables into the maintenance page template.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("maintenance_page" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function dddlx_preprocess_maintenance_page(&$variables, $hook) {
+  // When a variable is manipulated or added in preprocess_html or
+  // preprocess_page, that same work is probably needed for the maintenance page
+  // as well, so we can just re-use those functions to do that work here.
+  dddlx_preprocess_html($variables, $hook);
+  dddlx_preprocess_page($variables, $hook);
+}
+// */
+
+/**
+ * Override or insert variables into the html templates.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("html" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function dddlx_preprocess_html(&$variables, $hook) {
+  $variables['sample_variable'] = t('Lorem ipsum.');
+
+  // The body tag's classes are controlled by the $classes_array variable. To
+  // remove a class from $classes_array, use array_diff().
+  $variables['classes_array'] = array_diff($variables['classes_array'],
+    array('class-to-remove')
+  );
+}
+// */
+
+/**
+ * Override or insert variables into the page templates.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("page" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function dddlx_preprocess_page(&$variables, $hook) {
+  $variables['sample_variable'] = t('Lorem ipsum.');
+}
+// */
+
+
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function dddlx_micro_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // If on an individual node page, add the node type to theme suggestions.
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $first_suggestion = array_shift($suggestions);
+    array_unshift($suggestions, 'page__node__' . $node->bundle());
+    if ($first_suggestion) {
+      array_unshift($suggestions, $first_suggestion);
+    }
+    if (in_array('page__node__edit', $suggestions)) {
+      $suggestions[] = 'page__node__edit__' . $node->bundle();
+    }
+
+    $suggestions[] = 'page__full_width';
+  }
+
+  if ($path_matcher->isFrontPage()) {
+    $suggestions[] = 'page__full_width';
+  }
+}
+
+/**
+ * Implements hook_pre_render_HOOK() for menu-local-tasks templates.
+ *
+ * Use preprocess hook to convert menu_local_task into variables needed by the
+ * tabs component.
+ */
+function dddlx_micro_preprocess_menu_local_tasks(&$variables) {
+  foreach (array('primary', 'secondary') as $type) {
+    $tabs = array();
+
+    // Sort the tabs by #weight.
+    uasort($variables[$type], array('Drupal\Component\Utility\SortArray', 'sortByWeightProperty'));
+
+    foreach (array_keys($variables[$type]) as $key) {
+      // Add the tab to a new array.
+      $tabs[$key] = array(
+        'active' => $variables[$type][$key]['#active'],
+        'url' => $variables[$type][$key]['#link']['url']->toString(),
+        'text' => \Drupal\Component\Utility\Html::escape($variables[$type][$key]['#link']['title'])
+      );
+
+      // Check if the tab should be shown by rendering the original.
+      $link = drupal_render($variables[$type][$key]);
+      if (!$link) {
+        unset($tabs[$key]);
+      }
+    }
+
+    // Overwrite the original tabs data.
+    $variables[$type] = $tabs;
+  }
+}
+
+
+
+
+/**
+ * Override or insert variables into the region templates.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("region" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function dddlx_preprocess_region(&$variables, $hook) {
+  // Don't use Zen's region--no-wrapper.tpl.php template for sidebars.
+  if (strpos($variables['region'], 'sidebar_') === 0) {
+    $variables['theme_hook_suggestions'] = array_diff(
+      $variables['theme_hook_suggestions'], array('region__no_wrapper')
+    );
+  }
+}
+// */
+
+/**
+ * Override or insert variables into the block templates.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("block" in this case.)
+ */
+ /* -- Delete this line if you want to use this function
+function dddlx_preprocess_block(&$variables, $hook) {
+  // Add a count to all the blocks in the region.
+  // $variables['classes_array'][] = 'count-' . $variables['block_id'];
+
+  // By default, Zen will use the block--no-wrapper.tpl.php for the main
+  // content. This optional bit of code undoes that:
+  // if ($variables['block_html_id'] == 'block-system-main') {
+  //   $variables['theme_hook_suggestions'] = array_diff(
+  //     $variables['theme_hook_suggestions'], array('block__no_wrapper')
+  //   );
+  // }
+}
+// */
+
+/**
+ * Override or insert variables into the node templates.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("node" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function dddlx_preprocess_node(&$variables, $hook) {
+  // Make additional variables available to the template.
+  $variables['sample_variable'] = t('Lorem ipsum.');
+
+  // Optionally, run node-type-specific preprocess functions, like
+  // dddlx_preprocess_node_page() or dddlx_preprocess_node_story().
+  $function = __FUNCTION__ . '_' . $variables['node']->type;
+  if (function_exists($function)) {
+    $function($variables, $hook);
+  }
+}
+// */
+
+/**
+ * Override or insert variables into the comment templates.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("comment" in this case.)
+ */
+function dddlx_preprocess_comment(&$variables, $hook) {
+  $comment = $variables['elements']['#comment'];
+
+  $variables['permalink'] =  $comment->permalink();
+}
+
+/**
+ * Override or insert variables into the node templates.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("node" in this case.)
+ */
+function dddlx_preprocess_page_full(&$variables, $hook) {
+  // Make additional variables available to the template.
+  // $variables['sample_variable'] = t('Lorem ipsum.');
+
+  $node = $variables['content']['#node'];
+
+  $header_image_value = $node->get('field_image')->getValue();
+
+  if ($header_image_value) {
+    $variables['has_background_image'] = TRUE;
+  }
+}
+
+function dddlx_preprocess_article_full(&$variables, $hook) {
+  // Make additional variables available to the template.
+  // $variables['sample_variable'] = t('Lorem ipsum.');
+
+  $node = $variables['content']['#node'];
+
+  $header_image_value = $node->get('field_image')->getValue();
+
+  if ($header_image_value) {
+    $variables['has_background_image'] = TRUE;
+  }
+}
+
+function dddlx_preprocess_event_full(&$variables, $hook) {
+  // Make additional variables available to the template.
+  // $variables['sample_variable'] = t('Lorem ipsum.');
+
+  $node = $variables['content']['#node'];
+
+  $header_image_value = $node->get('field_image')->getValue();
+
+  if ($header_image_value) {
+    $variables['has_background_image'] = TRUE;
+  }
+}
+
+/**
+ * Override or insert variables into the comment templates.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("comment" in this case.)
+ */
+function dddlx_preprocess_field(&$variables, $hook) {
+
+  // Make additional variables available to the template.
+  $variables['class_bundle'] = $variables['element']['#bundle'];
+
+  if (isset($variables['element']['#ds_view_mode'])) {
+    $variables['class_view_mode'] = $variables['element']['#ds_view_mode'];
+  }
+  else {
+    $variables['class_view_mode'] = $variables['element']['#view_mode'];
+  }
+
+  if ($variables['field_name'] === 'field_forum_state') {
+    $value = $variables['element']['#items'][0]->getValue();
+    $variables['forum_class'] = 'forum-' . (($value['value']) ? 'open' : 'close');
+  }
+}
+
+
+function dddlx_preprocess_views_view__news__page(&$variables, $hook) {
+
+  $page = $variables['view']->getCurrentPage();
+
+  if ($page === 0) {
+    $variables['with_highlighted'] = 'with_highlighted';
+    $variables['rows']['0']['#rows']['0']['highlighted'] = 'highlighted';
+  }
+}
+
+
+function dddlx_preprocess_event_teaser_small(&$variables, $hook) {
+
+  $event_date = strtotime($variables['content']['#node']->get('field_event_start_date')->getValue()[0]['value']);
+  $current_date = time();
+
+  if ($current_date < $event_date) {
+    $variables['attributes']['class'][] = 'is-happening';
+  }
+}

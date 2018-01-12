@@ -1,0 +1,124 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.team-full {
+  overflow: hidden;
+}
+
+.team-full__header__wrapper {
+  background-color: #e6ebf4;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.team-full__title h1 {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  text-align: left;
+  font-weight: normal;
+}
+
+@media (min-width: 888px) {
+  .team-full__title h1 {
+    font-size: 2.8125rem;
+    line-height: 3.75rem;
+  }
+}
+
+/* Sidebar & content */
+.team-full__content-outer-wrapper {
+  position: relative;
+}
+
+@media (min-width: 999px) {
+  .team-full__content-wrapper {
+    margin: 0 -20px;
+  }
+}
+
+.team-full__role {
+  text-transform: uppercase;
+}
+
+@media (min-width: 999px) {
+  .team-full__sidebar-top {
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  [dir="rtl"] .team-full__sidebar-top {
+    float: right;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+}
+
+@media (min-width: 999px) {
+  .team-full__content {
+    float: right;
+    width: 66.66667%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  [dir="rtl"] .team-full__content {
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
+  }
+}
+
+.team-full__image img {
+  margin: 0 auto 20px;
+}
+
+@media (min-width: 999px) {
+  .team-full__image img {
+    margin: 0 auto;
+  }
+}
+
+.team-full__email {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  text-align: center;
+  display: inline-block;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: color ease .35s, background ease .35s;
+  letter-spacing: 2px;
+}
+
+.team-full__email a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #fff;
+  transition: color ease .35s, background ease .35s;
+  border: 1px solid #000;
+  color: #000;
+  transition: color ease .35s, background ease .35s;
+}
+
+.team-full__email a:hover, .team-full__email a:focus, .team-full__email a:active {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+}
+
+.team-full__email:hover, .team-full__email:focus, .team-full__email:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.team-full__email:hover a, .team-full__email:focus a, .team-full__email:active a {
+  color: #fff;
+}
+
+[dir="rtl"] .team-full__email {
+  text-align: center;
+}

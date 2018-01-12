@@ -1,0 +1,17 @@
+@import 'init';
+
+// Text Paragraph
+//
+// A simple slice of content to display a body of text.
+//
+// Markup: text.twig
+//
+// Style guide: paragraphs.text
+
+.paragraphs__text {
+  margin: 0 auto 45px;
+}
+
+.paragraphs__text__content {
+  max-width: 900px;
+}

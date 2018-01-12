@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Display Suite 2 column template.
+ *
+ * Available variables:
+ * - outer_wrapper: outer wrapper element
+ * - text_wrapper: wrapper element around text region
+ * - media_wrapper: wrapper element around media region
+ * - attributes: layout attributes
+ * - text_attributes: attributes for text region
+ * - media_attributes: attributes for media region
+ * - text: content of text region
+ * - media: content of media region
+ */
+#}
+{{ attach_library('dddlx/article_teaser_small') }}
+
+{%
+  set class = node.bundle|clean_class ~ '-teaser-small'
+%}
+
+<{{ outer_wrapper }}{{ attributes.addClass(class, 'clearfix') }}>
+
+  {{ title_suffix.contextual_links }}
+
+  <{{ text_wrapper }}{{ text_attributes.addClass(class ~ '__text__wrapper') }}>
+    {{ text }}
+  </{{ text_wrapper }}>
+
+</{{ outer_wrapper }}>

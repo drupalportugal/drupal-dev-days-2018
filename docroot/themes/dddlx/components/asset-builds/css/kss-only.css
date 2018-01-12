@@ -1,0 +1,20 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+[id^='kssref-layouts-'] [class^='layout-'][class*='__'] {
+  outline: 1px dotted #999999;
+}
+
+#kssref-layouts-layout-3column .kss-modifier__example {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 730px) {
+  #kssref-layouts-layout-3column .kss-modifier__example {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.kss-modifier__example .navbar__wrapper {
+  position: relative;
+}
