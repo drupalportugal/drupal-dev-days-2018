@@ -20,7 +20,6 @@
   .header__content {
     max-width: 800px;
     margin: 0 auto;
-    overflow: hidden;
     position: relative;
     background: url(../..//components/header/header_pattern.svg) repeat-x center top;
     background-size: contain;

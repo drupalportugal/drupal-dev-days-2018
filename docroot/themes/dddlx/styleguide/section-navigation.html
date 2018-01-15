@@ -788,7 +788,7 @@ side or below the main content.</p>
     {% if menu_level == 0 %}
       &lt;ul{{ attributes.addClass(&#039;nav-primary&#039;) }}&gt;
     {% else %}
-      &lt;ul class=&quot;nav-primary&quot;&gt;
+      &lt;ul class=&quot;nav-primary--sub-menu&quot;&gt;
     {% endif %}
     {% for item in items %}
       {%
@@ -800,10 +800,11 @@ side or below the main content.</p>
         ]
       %}
       &lt;li{{ item.attributes.addClass(classes) }}&gt;
-        &lt;span class=&quot;nav-primary__item__wrapper&quot;&gt;{{ link(item.title, item.url) }}&lt;/span&gt;
+        &lt;span class=&quot;nav-primary__item__wrapper&quot;&gt;{{ link(item.title, item.url) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
+        &lt;/span&gt;
       &lt;/li&gt;
     {% endfor %}
     &lt;/ul&gt;
