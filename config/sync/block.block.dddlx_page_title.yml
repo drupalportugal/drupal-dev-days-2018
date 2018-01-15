@@ -9,7 +9,7 @@ _core:
 id: dddlx_page_title
 theme: dddlx
 region: title
-weight: -50
+weight: -7
 provider: null
 plugin: page_title_block
 settings:
