@@ -36,18 +36,22 @@
   display: block;
 
   @include respond-to(l) {
-    display: none;
+    display: flex;
     background: transparent;
+    position: absolute;
+    flex-wrap: wrap;
+    top: calc(100% - 15px);
+    left: -15px;
+    width: calc(100% + 30px);
+    transition: all .35s ease;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10%);
 
     .nav-primary__item:hover & {
-      display: flex;
-      position: absolute;
-      flex-wrap: wrap;
-      align-items: center;
-      top: 0;
-      left: -10px;
-      width: calc(100% + 20px);
-      height: 100%;
+      visibility: visible;
+      transform: translateY(0%);
+      opacity: 1;
     }
   }
 }
@@ -79,6 +83,7 @@
 
     .nav-primary--sub-menu & {
       width: 100%;
+      background-color: transparent;
     }
   }
 
@@ -117,6 +122,7 @@
       background: color(blue-extra-light);
       border: 1px solid color(blue-extra-light);
       color: color(blue);
+      box-shadow: 0 0 20px 0 rgba(color('black'), .25);
 
       @include respond-to(l) {
         background: color(blue);
@@ -148,7 +154,7 @@
     padding-bottom: 100%;
 
     .nav-primary--sub-menu & {
-      padding-bottom: 50%;
+      padding-bottom: 40%;
     }
   }
 }
@@ -158,8 +164,8 @@
 
   @include zen-layout($columns: 8, $gutters: 0) {
     @include respond-to(l) {
-      display: inline-block;
       @include zen-grid-item(2, 4, right, 7);
+      display: inline-block;
       text-align: right;
       min-height: 120px; // equals li height
       position: relative;
