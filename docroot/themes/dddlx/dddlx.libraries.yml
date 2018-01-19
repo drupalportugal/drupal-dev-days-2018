@@ -297,16 +297,6 @@ partner_teaser:
     component:
       components/asset-builds/css/partner_teaser.css: {}
 
-team_full:
-  css:
-    component:
-      components/asset-builds/css/team_full.css: {}
-
-team_teaser:
-  css:
-    component:
-      components/asset-builds/css/team_teaser.css: {}
-
 list-grid:
   css:
     component:
@@ -327,21 +317,6 @@ featured_full:
     component:
       components/asset-builds/css/featured_full.css: {}
 
-homepage-slider:
-  css:
-    component:
-      components/asset-builds/css/homepage_slider.css: {}
-
-tech_sheet_teaser:
-  css:
-    component:
-      components/asset-builds/css/tech_sheet_teaser.css: {}
-
-tech_sheet_full:
-  css:
-    component:
-      components/asset-builds/css/tech_sheet_full.css: {}
-
 admin-tabs:
   css:
     component:
@@ -356,16 +331,6 @@ field-list:
   css:
     component:
       components/asset-builds/css/field-list.css: {}
-
-forum:
-  css:
-    component:
-      components/asset-builds/css/forum.css: {}
-
-forum-state:
-  css:
-    component:
-      components/asset-builds/css/forum-state.css: {}
 
 
 taxonomy:
@@ -388,3 +353,7 @@ registration:
     component:
       components/asset-builds/css/registration.css: {}
 
+homepage-menu:
+  css:
+    component:
+      components/asset-builds/css/homepage-menu.css: {}

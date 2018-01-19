@@ -33,10 +33,23 @@
 
 @media (min-width: 888px) {
   .navbar__content {
+    float: right;
+    width: 42.85714%;
+    margin-right: 0%;
+    margin-left: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: right;
+    background: transparent;
     overflow: initial;
     max-height: none;
     min-height: 50px;
     opacity: 1;
+  }
+  [dir="rtl"] .navbar__content {
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%;
   }
 }
 

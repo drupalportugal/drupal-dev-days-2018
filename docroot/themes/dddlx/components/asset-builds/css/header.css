@@ -8,11 +8,27 @@
   left: 0;
 }
 
+.is-logged-in-user .header {
+  top: 40px;
+}
+
 @media (min-width: 888px) {
   .header {
+    top: 0;
     position: relative;
     background: url(../..//components/header/header_pattern_2.svg) repeat-x center top;
     background-size: contain;
+  }
+  .is-path-frontpage .header {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    word-wrap: normal;
+  }
+  .is-logged-in-user .header {
+    top: 0;
   }
 }
 
@@ -23,6 +39,15 @@
     position: relative;
     background: url(../..//components/header/header_pattern.svg) repeat-x center top;
     background-size: contain;
+  }
+  .header__content::before {
+    content: '';
+    display: table;
+  }
+  .header__content::after {
+    content: '';
+    display: table;
+    clear: both;
   }
 }
 

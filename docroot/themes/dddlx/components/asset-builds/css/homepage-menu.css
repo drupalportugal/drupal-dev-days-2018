@@ -1,0 +1,92 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.homepage-menu__wrapper {
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: none;
+  z-index: 10;
+  background: url(../..//components/homepage-menu/hp_lisbon_bg.jpg) no-repeat center top;
+  background-size: cover;
+}
+
+@media (min-width: 888px) {
+  .homepage-menu__wrapper {
+    display: block;
+  }
+}
+
+.is-logged-in-user .homepage-menu__wrapper {
+  top: 80px;
+}
+
+@media (min-width: 1111px) {
+  .homepage-menu__content {
+    max-width: 960px;
+    padding: 40px 0;
+    margin: 0 auto;
+  }
+  .homepage-menu__content::before {
+    content: '';
+    display: table;
+  }
+  .homepage-menu__content::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@media (min-width: 888px) {
+  .homepage-menu__logo {
+    float: left;
+    width: 25%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+    padding: 20px;
+    background: #fff;
+  }
+  [dir="rtl"] .homepage-menu__logo {
+    float: right;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+}
+
+.homepage-menu__logo__img__wrapper {
+  position: relative;
+  width: 100%;
+  display: block;
+  padding-bottom: 100%;
+}
+
+.homepage-menu__logo__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.homepage-menu__logo__img svg {
+  height: 100%;
+}
+
+@media (min-width: 888px) {
+  .homepage-menu-nav {
+    float: left;
+    width: 75%;
+    margin-left: 25%;
+    margin-right: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+  }
+  [dir="rtl"] .homepage-menu-nav {
+    float: right;
+    margin-right: 25%;
+    margin-left: -100%;
+  }
+}

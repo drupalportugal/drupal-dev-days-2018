@@ -9,24 +9,6 @@
   background: #fff;
 }
 
-@media (min-width: 888px) {
-  .nav-primary {
-    float: right;
-    width: 42.85714%;
-    margin-right: 0%;
-    margin-left: -100%;
-    padding-left: 0;
-    padding-right: 0;
-    text-align: right;
-    background: transparent;
-  }
-  [dir="rtl"] .nav-primary {
-    float: left;
-    margin-left: 0%;
-    margin-right: -100%;
-  }
-}
-
 .nav-primary--sub-menu {
   display: block;
 }
