@@ -1,4 +1,5 @@
 module:
+  admin_toolbar: 0
   block: 0
   block_visibility_groups: 0
   breakpoint: 0
