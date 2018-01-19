@@ -12,7 +12,7 @@
 <rect x="120" class="st1" width="120" height="120"/>
 <rect x="240" class="st2" width="120" height="120"/>
 <rect x="360" class="st1" width="120" height="120"/>
-<rect x="480" class="st1" width="120" height="120"/>
+<rect x="480" class="st0" width="120" height="120"/>
 <rect x="600" class="st3" width="120" height="120"/>
 <rect x="720" class="st2" width="120" height="120"/>
 <rect x="840" class="st1" width="120" height="120"/>
@@ -24,10 +24,4 @@
 <rect x="600" y="120" class="st2" width="120" height="120"/>
 <rect x="720" y="120" class="st1" width="120" height="120"/>
 <rect x="840" y="120" class="st0" width="120" height="120"/>
-<g>
-	<rect x="479.5" class="st2" width="1" height="120"/>
-</g>
-<g>
-	<rect x="479.5" y="119.5" class="st2" width="120.5" height="1"/>
-</g>
 </svg>

@@ -18,7 +18,7 @@ $image-url-subdirectory: 'components/header';
 
   @include respond-to(l) {
     position: relative;
-    background: image-url('header_pattern.svg') repeat-x center top;
+    background: image-url('header_pattern_2.svg') repeat-x center top;
     background-size: contain;
   }
 }
