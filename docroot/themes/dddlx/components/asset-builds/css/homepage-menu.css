@@ -1,12 +1,13 @@
 /*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .homepage-menu__wrapper {
   width: 100%;
+  min-height: 65vh;
   top: 0;
   left: 0;
   text-align: center;
   display: none;
   z-index: 10;
-  background: url(../..//components/homepage-menu/hp_lisbon_bg.jpg) no-repeat center top;
+  background: url(../..//components/homepage-menu/hp_lisbon_bg.jpg) no-repeat center center;
   background-size: cover;
 }
 
