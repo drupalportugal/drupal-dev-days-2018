@@ -7,7 +7,7 @@
   text-align: center;
   display: none;
   z-index: 10;
-  background: url(../..//components/homepage-menu/hp_lisbon_bg.jpg) no-repeat center center;
+  background: url(../..//components/homepage-menu/hp_lisbon_bg.jpg) no-repeat center top;
   background-size: cover;
 }
 
@@ -21,11 +21,12 @@
   top: 80px;
 }
 
-@media (min-width: 1111px) {
+@media (min-width: 888px) {
   .homepage-menu__content {
     max-width: 960px;
-    padding: 40px 0;
+    padding: 300px 10px 60px;
     margin: 0 auto;
+    position: relative;
   }
   .homepage-menu__content::before {
     content: '';
@@ -39,7 +40,7 @@
 }
 
 @media (min-width: 888px) {
-  .homepage-menu__logo {
+  .homepage-menu__content .branding__wrapper {
     float: left;
     width: 25%;
     margin-left: 0%;
@@ -47,36 +48,17 @@
     padding-left: 0;
     padding-right: 0;
     display: block;
-    padding: 20px;
     background: #fff;
   }
-  [dir="rtl"] .homepage-menu__logo {
+  [dir="rtl"] .homepage-menu__content .branding__wrapper {
     float: right;
     margin-right: 0%;
     margin-left: -100%;
   }
 }
 
-.homepage-menu__logo__img__wrapper {
-  position: relative;
-  width: 100%;
-  display: block;
-  padding-bottom: 100%;
-}
-
-.homepage-menu__logo__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-}
-
-.homepage-menu__logo__img svg {
-  height: 100%;
-}
-
 @media (min-width: 888px) {
-  .homepage-menu-nav {
+  .homepage-menu__content .navigation {
     float: left;
     width: 75%;
     margin-left: 25%;
@@ -85,7 +67,54 @@
     padding-right: 0;
     display: block;
   }
-  [dir="rtl"] .homepage-menu-nav {
+  [dir="rtl"] .homepage-menu__content .navigation {
+    float: right;
+    margin-right: 25%;
+    margin-left: -100%;
+  }
+}
+
+@media (min-width: 888px) {
+  .homepage-menu__content .branding__logo {
+    padding-bottom: 100%;
+  }
+  .homepage-menu__content .branding__logo-image-text {
+    bottom: auto;
+    top: 105%;
+  }
+  .homepage-menu__content .branding__logo-image-text svg path {
+    fill: #fff;
+  }
+  .homepage-menu__content .nav-primary__item {
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  .homepage-menu__content .nav-primary__item:nth-child(1) {
+    margin-top: -33.333%;
+    margin-left: 33.333%;
+  }
+  .homepage-menu__content .nav-primary--sub-menu .nav-primary__item:nth-child(1) {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 888px) {
+  .homepage-menu__slogan {
+    float: left;
+    width: 25%;
+    margin-left: 25%;
+    margin-right: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 130px;
+    padding: 30px;
+  }
+  [dir="rtl"] .homepage-menu__slogan {
     float: right;
     margin-right: 25%;
     margin-left: -100%;

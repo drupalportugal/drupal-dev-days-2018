@@ -10,7 +10,7 @@ $image-url-subdirectory: 'components/homepage-menu';
   text-align: center;
   display: none;
   z-index: 10;
-  background: image-url('hp_lisbon_bg.jpg') no-repeat center center;
+  background: image-url('hp_lisbon_bg.jpg') no-repeat center top;
   background-size: cover;
 
   @include respond-to(l) {
@@ -25,52 +25,84 @@ $image-url-subdirectory: 'components/homepage-menu';
 .homepage-menu__content {
   @include zen-layout($columns: 8, $gutters: 0) {
 
-    @include respond-to(xxl) {
+    @include respond-to(l) {
       @include clearfix;
       max-width: $canvas-content;
-      padding: 40px 0;
+      padding: 300px 10px 60px;
       margin: 0 auto;
+      position: relative;
+    }
+  }
+
+  .branding__wrapper {
+
+    @include zen-layout($columns: 8, $gutters: 0) {
+      @include respond-to(l) {
+        @include zen-grid-item(1, 1, left, 4);
+        display: block;
+        background: color('white');
+      }
+    }
+  }
+
+  .navigation {
+    @include zen-layout($columns: 8, $gutters: 0) {
+      @include respond-to(l) {
+        @include zen-grid-item(3, 2, left, 4);
+        display: block;
+      }
+    }
+  }
+
+  @include respond-to(l) {
+
+    .branding__logo {
+      padding-bottom: 100%;
+    }
+
+    .branding__logo-image-text {
+      bottom: auto;
+      top: 105%;
+
+      svg path {
+        fill: color('white')
+      }
+    }
+
+    .nav-primary__item {
+      text-transform: uppercase;
+      font-weight: 300;
+
+      &:nth-child(1) {
+        margin-top: -33.333%;
+        margin-left: 33.333%;
+      }
+    }
+
+    .nav-primary--sub-menu {
+
+      .nav-primary__item {
+
+        &:nth-child(1) {
+          margin-top: 0;
+          margin-left: 0;
+        }
+      }
     }
   }
 }
 
-
-.homepage-menu__logo {
+.homepage-menu__slogan {
 
   @include zen-layout($columns: 8, $gutters: 0) {
     @include respond-to(l) {
-      @include zen-grid-item(1, 1, left, 4);
-      display: block;
-      padding: 20px;
-      background: color('white');
-    }
-  }
-}
-
-.homepage-menu__logo__img__wrapper {
-  position: relative;
-  width: 100%;
-  display: block;
-  padding-bottom: 100%;
-}
-
-
-.homepage-menu__logo__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-
-  svg {
-    height: 100%;
-  }
-}
-
-.homepage-menu-nav {
-  @include zen-layout($columns: 8, $gutters: 0) {
-    @include respond-to(l) {
-      @include zen-grid-item(3, 2, left, 4);
-      display: block;
+      @include zen-grid-item(1, 2, left, 4);
+      background: transparent;
+      text-transform: uppercase;
+      color: color('white');
+      position: absolute;
+      top: 130px;
+      padding: 30px;
     }
   }
 }

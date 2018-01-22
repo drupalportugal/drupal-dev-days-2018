@@ -357,3 +357,8 @@ homepage-menu:
   css:
     component:
       components/asset-builds/css/homepage-menu.css: {}
+
+homepage-intro:
+  css:
+    component:
+      components/asset-builds/css/homepage-intro.css: {}

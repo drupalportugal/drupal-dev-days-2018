@@ -46,6 +46,8 @@
  #}
 
 {{ attach_library('dddlx/layouts') }}
+{{ attach_library('dddlx/homepage-menu') }}
+{{ attach_library('dddlx/homepage-intro') }}
 
 {% embed "@dddlx/components/header/header.twig" %}
   {% block branding %}
@@ -62,7 +64,27 @@
   {% endblock %}
 {% endembed %}
 
-<div class="homepage-menu">{{ page.homepage_menu }}</div>
+<div class="homepage-menu__wrapper">
+
+  <div class="homepage-menu__content">
+    {{ page.header }}
+
+    <div class="homepage-menu__slogan"><span>Monday 2nd July Friday 6th July at ISCTE</span></div>
+    <div class="homepage-menu">
+      {{ page.primary_menu }}
+    </div>
+
+  </div>
+</div>
+
+<div class="homepage-intro__wrapper">
+
+  <div class="homepage-intro">
+    <a class="homepage-intro__btn" href="#">Get Your Tickets</a>
+    <a class="homepage-intro__btn" href="#">Become a Sponsor</a>
+  </div>
+
+</div>
 
 <div class="clearfix layout-center">
 
