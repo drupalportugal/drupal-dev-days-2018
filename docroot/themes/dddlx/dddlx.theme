@@ -66,7 +66,9 @@ function dddlx_preprocess_page(&$variables, $hook) {
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function dddlx_micro_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+function dddlx_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // $path_matcher = Drupal::service('path.matcher');
+
   // If on an individual node page, add the node type to theme suggestions.
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     $first_suggestion = array_shift($suggestions);
@@ -77,13 +79,11 @@ function dddlx_micro_theme_suggestions_page_alter(array &$suggestions, array $va
     if (in_array('page__node__edit', $suggestions)) {
       $suggestions[] = 'page__node__edit__' . $node->bundle();
     }
-
-    $suggestions[] = 'page__full_width';
   }
 
-  if ($path_matcher->isFrontPage()) {
-    $suggestions[] = 'page__full_width';
-  }
+  // if ($path_matcher->isFrontPage()) {
+  //   $suggestions[] = 'page__full_width';
+  // }
 }
 
 /**
@@ -92,7 +92,7 @@ function dddlx_micro_theme_suggestions_page_alter(array &$suggestions, array $va
  * Use preprocess hook to convert menu_local_task into variables needed by the
  * tabs component.
  */
-function dddlx_micro_preprocess_menu_local_tasks(&$variables) {
+function dddlx_preprocess_menu_local_tasks(&$variables) {
   foreach (array('primary', 'secondary') as $type) {
     $tabs = array();
 
