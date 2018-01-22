@@ -33,10 +33,8 @@
 
 @media (min-width: 888px) {
   .header__content {
-    max-width: 800px;
     margin: 0 auto;
     position: relative;
-    background: url(../..//components/header/header_pattern.svg) repeat-x center top;
     background-size: contain;
   }
   .header__content::before {
@@ -47,12 +45,6 @@
     content: '';
     display: table;
     clear: both;
-  }
-}
-
-@media (min-width: 1111px) {
-  .header__content {
-    max-width: 960px;
   }
 }
 

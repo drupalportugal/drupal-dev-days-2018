@@ -1,7 +1,7 @@
 @media (min-width: 888px) {
   .branding__wrapper {
     float: left;
-    width: 12.5%;
+    width: 8.33333%;
     margin-left: 0%;
     margin-right: -100%;
     padding-left: 0;
@@ -57,12 +57,19 @@
     display: block;
     position: absolute;
     z-index: 1;
-    width: 90%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    width: 100%;
+    left: 0;
+    top: 50%;
+    padding: 0 10px 100%;
+  }
+  .branding__logo-image-text svg {
+    position: absolute;
     left: 50%;
-    bottom: 45px;
+    top: 10%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    width: calc(100% - 20px);
   }
 }
 

@@ -156,30 +156,38 @@
 @media (min-width: 888px) {
   .nav-primary__slogan {
     float: right;
-    width: 28.57143%;
-    margin-right: 42.85714%;
+    width: 9.09091%;
+    margin-right: 54.54545%;
     margin-left: -100%;
     padding-left: 0;
     padding-right: 0;
     display: inline-block;
     text-align: right;
-    min-height: 120px;
     position: relative;
   }
   [dir="rtl"] .nav-primary__slogan {
     float: left;
-    margin-left: 42.85714%;
+    margin-left: 54.54545%;
     margin-right: -100%;
   }
-  .nav-primary__slogan span {
-    width: 100%;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
-            align-items: center;
-    top: 0;
-    height: 100%;
-    position: absolute;
-    padding-right: 20px;
-  }
+}
+
+.nav-primary__slogan__inner {
+  padding-bottom: 100%;
+}
+
+.nav-primary__slogan__inner span {
+  width: 300%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  padding: 0 20px;
+  font-weight: bold;
+  color: #004b79;
 }

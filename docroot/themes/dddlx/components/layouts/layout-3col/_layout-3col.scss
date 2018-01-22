@@ -109,27 +109,23 @@
 
   @include zen-respond-to(xl) {
     &__full {
-      @include zen-grid-item(3, 1);
+      @include zen-grid-item(12, 1);
     }
 
     &__left-content {
-      @include zen-grid-item(2, 1);
+      @include zen-grid-item(8, 1);
     }
 
     &__right-content {
-      @include zen-grid-item(2, 2);
+      @include zen-grid-item(8, 1);
     }
 
     &__left-sidebar,
     &__first-left-sidebar,
-    &__second-left-sidebar {
-      @include zen-new-row(right);
-      @include zen-grid-item(1, 3, right);
-    }
-
+    &__second-left-sidebar,
     &__right-sidebar {
       @include zen-new-row(right);
-      @include zen-grid-item(1, 1, right);
+      @include zen-grid-item(4, 1, right);
     }
 
     &__col-1,
@@ -160,9 +156,3 @@
     @include zen-grid-container($context: grid-item);
   }
 }
-
-// dddlx custom styles
-.layout-3col__left-sidebar {
-  padding-top: 30px;
-}
-

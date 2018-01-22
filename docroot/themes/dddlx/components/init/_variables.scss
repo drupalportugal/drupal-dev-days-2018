@@ -170,8 +170,14 @@ $zen-layouts: (
     columns: 2,
     // The gutters in the layouts are larger on mobile.
   ),
+  l: (
+    columns: 12,
+  ),
   xl: (
-    columns: 6,
+    columns: 12,
+  ),
+  xxl: (
+    columns: 12,
   ),
 );
 

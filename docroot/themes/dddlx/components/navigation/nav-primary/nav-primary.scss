@@ -155,23 +155,28 @@
 .nav-primary__slogan {
   display: none;
 
-  @include zen-layout($columns: 8, $gutters: 0) {
-    @include respond-to(l) {
-      @include zen-grid-item(2, 4, right, 7);
-      display: inline-block;
-      text-align: right;
-      min-height: 120px; // equals li height
-      position: relative;
+  @include zen-respond-to(l) {
+    @include zen-grid-item(1, 7, right, 11, $gutters: 0);
+    display: inline-block;
+    text-align: right;
+    position: relative;
+  }
+}
 
-      span {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        top: 0;
-        height: 100%;
-        position: absolute;
-        padding-right: 20px;
-      }
-    }
+.nav-primary__slogan__inner {
+  padding-bottom: 100%;
+
+  span {
+    width: 300%;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    padding: 0 20px;
+    font-weight: bold;
+    color: color(blue-dark);
   }
 }

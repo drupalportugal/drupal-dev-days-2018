@@ -202,7 +202,7 @@
 
 <header class="header  clearfix" role="banner" >
 
-  <div class="header__content">
+  <div class="header__content layout-center">
       
 
 
@@ -226,7 +226,11 @@
     <span class="navbar__mobile-menu__icon"></span>
   </div>
 
-  <div class="nav-primary__slogan"><span>Monday 2nd July Friday 6th July at ISCTE</span></div>
+  <div class="nav-primary__slogan">
+    <div class="nav-primary__slogan__inner">
+      <span>Monday 2nd July Friday 6th July at ISCTE</span>
+    </div>
+  </div>
 
             
 </div>
@@ -256,7 +260,7 @@
 {{ attach_library(&#039;dddlx/header&#039;) }}
 &lt;header class=&quot;header {{ modifier_class }} clearfix&quot; role=&quot;banner&quot; {{ attributes }}&gt;
 
-  &lt;div class=&quot;header__content&quot;&gt;
+  &lt;div class=&quot;header__content layout-center&quot;&gt;
   {% block branding %}
     {% include &quot;branding.twig&quot; %}
   {% endblock %}

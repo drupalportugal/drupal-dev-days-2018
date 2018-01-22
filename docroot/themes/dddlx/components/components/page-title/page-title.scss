@@ -8,7 +8,6 @@
   @include margin-bottom(2);
   text-transform: uppercase;
   letter-spacing: 3px;
-  text-align: center;
 
   @include respond-to(l) {
     @include type-layout(55px, 3);

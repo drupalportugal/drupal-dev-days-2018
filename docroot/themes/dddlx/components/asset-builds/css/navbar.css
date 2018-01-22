@@ -9,8 +9,8 @@
 @media (min-width: 888px) {
   .navbar__wrapper {
     float: left;
-    width: 87.5%;
-    margin-left: 12.5%;
+    width: 91.66667%;
+    margin-left: 8.33333%;
     margin-right: -100%;
     padding-left: 0;
     padding-right: 0;
@@ -19,7 +19,7 @@
   }
   [dir="rtl"] .navbar__wrapper {
     float: right;
-    margin-right: 12.5%;
+    margin-right: 8.33333%;
     margin-left: -100%;
   }
 }
@@ -33,7 +33,7 @@
 @media (min-width: 888px) {
   .navbar__content {
     float: right;
-    width: 42.85714%;
+    width: 27.27273%;
     margin-right: 0%;
     margin-left: -100%;
     padding-left: 0;

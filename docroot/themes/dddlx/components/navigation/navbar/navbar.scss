@@ -13,14 +13,12 @@
   z-index: 100;
   background-color: color('white');
 
-  @include zen-layout($columns: 8, $gutters: 0) {
-    @include respond-to(l) {
-      @include zen-grid-item(7, 2);
-      background: transparent;
-      //width: 100%;
-      text-align: center;
-      //clear: both;
-    }
+  @include zen-respond-to(l) {
+    @include zen-grid-item(11, 2, $gutters: 0);
+    background: transparent;
+    //width: 100%;
+    text-align: center;
+    //clear: both;
   }
 }
 
@@ -29,16 +27,14 @@
   max-height: 0;
   overflow: hidden;
 
-  @include zen-layout($columns: 8, $gutters: 0) {
-    @include respond-to(l) {
-      @include zen-grid-item(3, 1, right, 7);
-      text-align: right;
-      background: transparent;
-      overflow: initial;
-      max-height: none;
-      min-height: 50px;
-      opacity: 1;
-    }
+  @include zen-respond-to(l) {
+    @include zen-grid-item(3, 1, right, 11, $gutters: 0);
+    text-align: right;
+    background: transparent;
+    overflow: initial;
+    max-height: none;
+    min-height: 50px;
+    opacity: 1;
   }
 
   .is-open & {
