@@ -2,6 +2,9 @@ uuid: f1823c9a-d57e-4c97-823b-f98ce279df7b
 langcode: en
 status: true
 dependencies:
+  module:
+    - block_visibility_groups
+    - system
   theme:
     - dddlx
 _core:
@@ -9,7 +12,7 @@ _core:
 id: dddlx_page_title
 theme: dddlx
 region: title
-weight: -50
+weight: -7
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +20,14 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

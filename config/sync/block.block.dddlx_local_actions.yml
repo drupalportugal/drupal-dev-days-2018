@@ -9,7 +9,7 @@ _core:
 id: dddlx_local_actions
 theme: dddlx
 region: content
-weight: -20
+weight: -7
 provider: null
 plugin: local_actions_block
 settings:

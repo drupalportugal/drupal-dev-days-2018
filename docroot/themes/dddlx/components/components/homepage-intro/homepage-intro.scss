@@ -1,0 +1,45 @@
+@import 'init';
+
+$image-url-subdirectory: 'components/footer';
+
+.homepage-intro__wrapper {
+  background: color(blue) image-url('footer_pattern.svg') repeat-x center top;
+  width: 100%;
+  padding: 150px 10px 60px;
+}
+
+.homepage-intro {
+  max-width: $canvas-content;
+  margin: 70px auto 0;
+  text-align: center;
+
+  @include respond-to(l) {
+    margin: 0 auto;
+  }
+}
+
+.homepage-intro__btn {
+  display: inline-block;
+  background: color('white');
+  padding: 10px 20px;
+  color: color(blue);
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  transition: color ease .25s, background ease .25s;
+  margin: 10px auto;
+
+  @include respond-to(l) {
+    margin: 0 auto;
+
+    &:nth-child(2) {
+      margin-left: 20px;
+    }
+  }
+
+  &:hover {
+    color: color('white');
+    background: color(blue-xdark);
+  }
+}

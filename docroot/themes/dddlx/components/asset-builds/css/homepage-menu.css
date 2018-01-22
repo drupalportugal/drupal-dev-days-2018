@@ -1,0 +1,122 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.homepage-menu__wrapper {
+  width: 100%;
+  min-height: 65vh;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: none;
+  z-index: 10;
+  background: url(../..//components/homepage-menu/hp_lisbon_bg.jpg) no-repeat center top;
+  background-size: cover;
+}
+
+@media (min-width: 888px) {
+  .homepage-menu__wrapper {
+    display: block;
+  }
+}
+
+.is-logged-in-user .homepage-menu__wrapper {
+  top: 80px;
+}
+
+@media (min-width: 888px) {
+  .homepage-menu__content {
+    max-width: 960px;
+    padding: 300px 10px 60px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .homepage-menu__content::before {
+    content: '';
+    display: table;
+  }
+  .homepage-menu__content::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@media (min-width: 888px) {
+  .homepage-menu__content .branding__wrapper {
+    float: left;
+    width: 25%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+    background: #fff;
+  }
+  [dir="rtl"] .homepage-menu__content .branding__wrapper {
+    float: right;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+}
+
+@media (min-width: 888px) {
+  .homepage-menu__content .navigation {
+    float: left;
+    width: 75%;
+    margin-left: 25%;
+    margin-right: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+  }
+  [dir="rtl"] .homepage-menu__content .navigation {
+    float: right;
+    margin-right: 25%;
+    margin-left: -100%;
+  }
+}
+
+@media (min-width: 888px) {
+  .homepage-menu__content .branding__logo {
+    padding-bottom: 100%;
+  }
+  .homepage-menu__content .branding__logo-image-text {
+    bottom: auto;
+    top: 105%;
+  }
+  .homepage-menu__content .branding__logo-image-text svg path {
+    fill: #fff;
+  }
+  .homepage-menu__content .nav-primary__item {
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  .homepage-menu__content .nav-primary__item:nth-child(1) {
+    margin-top: -33.333%;
+    margin-left: 33.333%;
+  }
+  .homepage-menu__content .nav-primary--sub-menu .nav-primary__item:nth-child(1) {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 888px) {
+  .homepage-menu__slogan {
+    float: left;
+    width: 25%;
+    margin-left: 25%;
+    margin-right: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 130px;
+    padding: 30px;
+  }
+  [dir="rtl"] .homepage-menu__slogan {
+    float: right;
+    margin-right: 25%;
+    margin-left: -100%;
+  }
+}

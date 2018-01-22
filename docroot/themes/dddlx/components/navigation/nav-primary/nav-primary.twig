@@ -21,7 +21,6 @@
 {% import _self as menus %}
 {{ attach_library('dddlx/nav-primary') }}
 
-<div class="nav-primary__slogan"><span>Monday 2nd July Friday 6th July at ISCTE</span></div>
 
 {#
   We call a macro which calls itself to render the full tree.
@@ -35,7 +34,7 @@
     {% if menu_level == 0 %}
       <ul{{ attributes.addClass('nav-primary') }}>
     {% else %}
-      <ul class="nav-primary">
+      <ul class="nav-primary--sub-menu">
     {% endif %}
     {% for item in items %}
       {%
@@ -47,10 +46,11 @@
         ]
       %}
       <li{{ item.attributes.addClass(classes) }}>
-        <span class="nav-primary__item__wrapper">{{ link(item.title, item.url) }}</span>
+        <span class="nav-primary__item__wrapper">{{ link(item.title, item.url) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
+        </span>
       </li>
     {% endfor %}
     </ul>

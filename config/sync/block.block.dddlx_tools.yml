@@ -5,6 +5,7 @@ dependencies:
   config:
     - system.menu.tools
   module:
+    - block_visibility_groups
     - system
   theme:
     - dddlx
@@ -23,4 +24,14 @@ settings:
   label_display: visible
   level: 1
   depth: 0
-visibility: {  }
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

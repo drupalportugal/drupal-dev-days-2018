@@ -16,10 +16,23 @@ $image-url-subdirectory: 'components/header';
   top: 0;
   left: 0;
 
+  .is-logged-in-user & {
+    top: 40px;
+  }
+
   @include respond-to(l) {
+    top: 0;
     position: relative;
-    background: image-url('header_pattern.svg') repeat-x center top;
+    background: image-url('header_pattern_2.svg') repeat-x center top;
     background-size: contain;
+
+    .is-path-frontpage & {
+      @include visually-hidden;
+    }
+
+    .is-logged-in-user & {
+      top: 0;
+    }
   }
 }
 
@@ -27,9 +40,9 @@ $image-url-subdirectory: 'components/header';
   @include zen-layout($columns: 8, $gutters: 0) {
 
     @include respond-to(l) {
+      @include clearfix;
       max-width: 800px;
       margin: 0 auto;
-      overflow: hidden;
       position: relative;
       background: image-url('header_pattern.svg') repeat-x center top;
       background-size: contain;

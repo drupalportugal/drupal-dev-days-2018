@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display a single page with full width.
+ * Theme override to display a single page.
  *
  * The doctype, html, head and body tags are not in this template. Instead they
  * can be found in the html.html.twig template in this directory.
@@ -43,9 +43,11 @@
  * @see template_preprocess_page()
  * @see html.html.twig
  */
-#}
+ #}
 
 {{ attach_library('dddlx/layouts') }}
+{{ attach_library('dddlx/homepage-menu') }}
+{{ attach_library('dddlx/homepage-intro') }}
 
 {% embed "@dddlx/components/header/header.twig" %}
   {% block branding %}
@@ -62,33 +64,72 @@
   {% endblock %}
 {% endembed %}
 
-{% set content_class = 'layout-center--main' %}
+<div class="homepage-menu__wrapper">
 
-<main class="{{ content_class }}" role="main">
+  <div class="homepage-menu__content">
+    {{ page.header }}
 
-  <div class="layout-center">
-    {{ page.highlighted }}
+    <div class="homepage-menu__slogan"><span>Monday 2nd July Friday 6th July at ISCTE</span></div>
+    <div class="homepage-menu">
+      {{ page.primary_menu }}
+    </div>
+
   </div>
-  <div class="homepage-menu">{{ page.homepage_menu }}</div>
-  {{ page.breadcrumb }}
-  <a href="#skip-link" class="visually-hidden visually-hidden--focusable" id="main-content">Back to top</a>{# link target is in html.html.twig #}
-  {{ page.title }}
-  {{ page.help }}
-  {{ page.content }}
+</div>
 
-</main>
+<div class="homepage-intro__wrapper">
 
-{% if page.sidebar_first %}
-  <aside class="{{ sidebar_first_class }}" role="complementary">
-    {{ page.sidebar_first }}
-  </aside>
-{% endif %}
+  <div class="homepage-intro">
+    <a class="homepage-intro__btn" href="#">Get Your Tickets</a>
+    <a class="homepage-intro__btn" href="#">Become a Sponsor</a>
+  </div>
 
-{% if page.sidebar_second %}
-  <aside class="{{ sidebar_second_class }}" role="complementary">
-    {{ page.sidebar_second }}
-  </aside>
-{% endif %}
+</div>
+
+<div class="clearfix layout-center">
+
+  {# Decide on layout classes by checking if sidebars have content. #}
+  {% if page.sidebar_first and page.sidebar_second %}
+    {% set content_class        = 'layout-2colm' %}
+    {% set sidebar_first_class  = 'layout-2colm__right-sidebar' %}
+    {% set sidebar_second_class = '' %}
+  {% elseif (page.sidebar_second) %}
+    {% set content_class        = 'layout-2colm__full' %}
+    {% set sidebar_first_class  = '' %}
+    {% set sidebar_second_class = '' %}
+  {% elseif (page.sidebar_first) %}
+    {% set content_class        = 'layout-2colm' %}
+    {% set sidebar_first_class  = 'layout-2colm__right-sidebar' %}
+    {% set sidebar_second_class = '' %}
+  {% else %}
+    {% set content_class        = 'layout-center--main' %} 
+    {% set sidebar_first_class  = '' %}
+    {% set sidebar_second_class = '' %}
+  {% endif %}
+
+  <main class="layout-center {{ content_class }}" role="main">
+
+    {{ page.highlighted }}
+    {{ page.breadcrumb }}
+    <a href="#skip-link" class="visually-hidden visually-hidden--focusable" id="main-content">Back to top</a>{# link target is in html.html.twig #}
+    {{ page.title }}
+    {{ page.help }}
+    {{ page.content }}
+  </main>
+
+  {% if page.sidebar_first %}
+    <aside class="{{ sidebar_first_class }}" role="complementary">
+      {{ page.sidebar_first }}
+    </aside>
+  {% endif %}
+
+  {% if page.sidebar_second %}
+    <aside class="{{ sidebar_second_class }}" role="complementary">
+      {{ page.sidebar_second }}
+    </aside>
+  {% endif %}
+
+</div>
 
 {{ page.footer }}
 
