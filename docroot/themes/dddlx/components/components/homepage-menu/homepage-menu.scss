@@ -27,10 +27,11 @@ $image-url-subdirectory: 'components/homepage-menu';
 
     @include respond-to(l) {
       @include clearfix;
-      max-width: $canvas-content;
+      max-width: 800px;
       padding: 300px 10px 60px;
       margin: 0 auto;
       position: relative;
+      min-height: 100vh;
     }
   }
 
