@@ -20,7 +20,7 @@ $image-url-subdirectory: 'components/header';
     top: 40px;
   }
 
-  @include respond-to(l) {
+  @include respond-to(xl) {
     top: 0;
     position: relative;
     background: image-url('header_pattern_2.svg') repeat-x center top;
@@ -39,12 +39,10 @@ $image-url-subdirectory: 'components/header';
 .header__content {
   @include zen-layout($gutters: 0) {
 
-    @include respond-to(l) {
+    @include respond-to(xl) {
       @include clearfix;
       margin: 0 auto;
       position: relative;
-      //background: image-url('header_pattern.svg') repeat-x center top;
-      background-size: contain;
     }
   }
 }
@@ -55,7 +53,7 @@ $image-url-subdirectory: 'components/header';
   top: 0;
   left: 0;
 
-  @include respond-to(l) {
+  @include respond-to(xl) {
 
   }
 

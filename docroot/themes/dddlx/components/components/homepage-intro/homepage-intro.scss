@@ -13,7 +13,7 @@ $image-url-subdirectory: 'components/footer';
   margin: 70px auto 0;
   text-align: center;
 
-  @include respond-to(l) {
+  @include respond-to(xl) {
     margin: 0 auto;
   }
 }
@@ -30,7 +30,7 @@ $image-url-subdirectory: 'components/footer';
   transition: color ease .25s, background ease .25s;
   margin: 10px auto;
 
-  @include respond-to(l) {
+  @include respond-to(xl) {
     margin: 0 auto;
 
     &:nth-child(2) {

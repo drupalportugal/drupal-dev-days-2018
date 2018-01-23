@@ -1,3 +1,4 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .navbar__wrapper {
   text-align: left;
   text-transform: uppercase;
@@ -6,7 +7,7 @@
   background-color: #fff;
 }
 
-@media (min-width: 888px) {
+@media (min-width: 999px) {
   .navbar__wrapper {
     float: left;
     width: 91.66667%;
@@ -30,7 +31,7 @@
   overflow: hidden;
 }
 
-@media (min-width: 888px) {
+@media (min-width: 999px) {
   .navbar__content {
     float: right;
     width: 27.27273%;
@@ -68,7 +69,7 @@
   padding: 0 15px;
 }
 
-@media (min-width: 888px) {
+@media (min-width: 999px) {
   .navbar__mobile-menu__toggle {
     display: none;
   }

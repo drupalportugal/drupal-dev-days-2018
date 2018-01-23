@@ -6,7 +6,7 @@
 // Style guide: components.branding
 
 .branding__wrapper {
-    @include zen-respond-to(l) {
+    @include zen-respond-to(xl) {
       @include zen-grid-item(1, 1, $gutters: 0);
     }
 }
@@ -19,7 +19,7 @@
   margin-top: 10px;
   margin-left: 10px;
 
-  @include respond-to(l) {
+  @include respond-to(xl) {
     overflow: visible;
     width: 100%;
     padding-bottom: 200%;
@@ -36,7 +36,7 @@
   height: 45px;
   max-width: none;
 
-  @include respond-to(l) {
+  @include respond-to(xl) {
     height: auto;
     width: 100%;
   }
@@ -46,7 +46,7 @@
 .branding__logo-image-text {
   display: none;
 
-  @include respond-to(l) {
+  @include respond-to(xl) {
     display: block;
     position: absolute;
     z-index: 1;

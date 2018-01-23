@@ -1,27 +1,36 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .homepage-menu__wrapper {
   width: 100%;
   min-height: 65vh;
   top: 0;
   left: 0;
   text-align: center;
-  display: none;
+  position: relative;
   z-index: 10;
   background: url(../..//components/homepage-menu/hp_lisbon_bg.jpg) no-repeat center top;
   background-size: cover;
-}
-
-@media (min-width: 888px) {
-  .homepage-menu__wrapper {
-    display: block;
-  }
 }
 
 .is-logged-in-user .homepage-menu__wrapper {
   top: 80px;
 }
 
-@media (min-width: 888px) {
+.homepage-menu__content {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 999px) {
   .homepage-menu__content {
+    display: block;
+    height: auto;
     max-width: 800px;
     padding: 300px 10px 60px;
     margin: 0 auto;
@@ -39,7 +48,11 @@
   }
 }
 
-@media (min-width: 888px) {
+.homepage-menu__content .branding__wrapper {
+  display: none;
+}
+
+@media (min-width: 999px) {
   .homepage-menu__content .branding__wrapper {
     float: left;
     width: 25%;
@@ -57,7 +70,11 @@
   }
 }
 
-@media (min-width: 888px) {
+.homepage-menu__content .navigation {
+  display: none;
+}
+
+@media (min-width: 999px) {
   .homepage-menu__content .navigation {
     float: left;
     width: 75%;
@@ -74,7 +91,7 @@
   }
 }
 
-@media (min-width: 888px) {
+@media (min-width: 999px) {
   .homepage-menu__content .branding__logo {
     padding-bottom: 100%;
   }
@@ -99,7 +116,14 @@
   }
 }
 
-@media (min-width: 888px) {
+.homepage-menu__slogan {
+  background: transparent;
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+}
+
+@media (min-width: 999px) {
   .homepage-menu__slogan {
     float: left;
     width: 25%;
@@ -107,10 +131,6 @@
     margin-right: -100%;
     padding-left: 0;
     padding-right: 0;
-    background: transparent;
-    text-transform: uppercase;
-    color: #fff;
-    position: absolute;
     top: 130px;
     padding: 30px;
   }
@@ -118,5 +138,21 @@
     float: right;
     margin-right: 25%;
     margin-left: -100%;
+  }
+}
+
+.homepage-menu__slogan-mobile {
+  display: block;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 32px;
+  font-size: 7vw;
+  line-height: 8vw;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 999px) {
+  .homepage-menu__slogan-mobile {
+    display: none;
   }
 }

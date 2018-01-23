@@ -25,7 +25,7 @@
   $tab-height: 1.25;
   @include line-height($tab-height);
   //background-image: linear-gradient(to top, color(tabs-border) 1px, transparent 1px);
-  margin: 0;
+  margin: 0 0 20px;
   padding: 0;
   list-style: none;
   white-space: nowrap;
@@ -58,7 +58,7 @@
     &.is-active {
       // Cover the tabs gradient with the same color as the background.
       //border-bottom-color: color(tabs-bg);
-      background: color('black');
+      background: color(blue-xdark);
       color: (white);
     }
   }

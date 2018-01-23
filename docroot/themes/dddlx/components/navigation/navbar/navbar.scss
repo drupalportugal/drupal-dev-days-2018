@@ -13,7 +13,7 @@
   z-index: 100;
   background-color: color('white');
 
-  @include zen-respond-to(l) {
+  @include zen-respond-to(xl) {
     @include zen-grid-item(11, 2, $gutters: 0);
     background: transparent;
     //width: 100%;
@@ -27,7 +27,7 @@
   max-height: 0;
   overflow: hidden;
 
-  @include zen-respond-to(l) {
+  @include zen-respond-to(xl) {
     @include zen-grid-item(3, 1, right, 11, $gutters: 0);
     text-align: right;
     background: transparent;
@@ -53,7 +53,7 @@
   float: right;
   padding: 0 15px;
 
-  @include respond-to(l) {
+  @include respond-to(xl) {
     display: none;
   }
 }
