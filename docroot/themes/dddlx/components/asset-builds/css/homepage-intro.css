@@ -43,3 +43,22 @@
   color: #fff;
   background: #1F2E44;
 }
+
+.hero__text {
+  text-align: center;
+  padding: 10px 10px 20px;
+  font-size: 25px;
+}
+
+@media (min-width: 999px) {
+  .hero__text {
+    padding: 40px 10px;
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 999px) {
+  .hero__text span {
+    display: block;
+  }
+}

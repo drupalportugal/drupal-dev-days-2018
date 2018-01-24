@@ -19,6 +19,10 @@ $image-url-subdirectory: 'navigation/nav-primary';
   padding: 0;
   text-align: center;
   background: color('white');
+
+  li {
+    list-style-type: none;
+  }
 }
 
 .nav-primary {

@@ -62,3 +62,10 @@ h6,
   @include margin-bottom(1, xs);
 }
 
+h1,
+h2,
+h3 {
+  .layout-center & {
+    color: color(title);
+  }
+}

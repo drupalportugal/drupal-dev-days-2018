@@ -9,6 +9,10 @@
   background: #fff;
 }
 
+.nav-primary li, .nav-primary--sub-menu li {
+  list-style-type: none;
+}
+
 .nav-primary--sub-menu {
   display: block;
 }

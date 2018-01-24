@@ -15,6 +15,7 @@
 
 .tabs__tab {
   float: left;
+  list-style-type: none;
   overflow: hidden;
   background: #dddddd;
   border-right: solid 1px #cccccc;

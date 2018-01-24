@@ -239,8 +239,8 @@
   padding-right: 0;
 }
 
-.layout-center--main {
-  padding-top: 60px;
+.layout-center iframe {
+  width: 100%;
 }
 
 @media (min-width: 730px) {

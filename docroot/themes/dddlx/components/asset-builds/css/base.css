@@ -148,6 +148,12 @@ h6 {
   margin-bottom: 1.5rem;
 }
 
+.layout-center h1, .layout-center
+h2, .layout-center
+h3 {
+  color: #5776b7;
+}
+
 abbr[title] {
   border-bottom: 0;
   text-decoration: underline;
@@ -230,6 +236,13 @@ menu,
 ol,
 ul {
   margin: 1.5rem 0;
+}
+
+dl li,
+menu li,
+ol li,
+ul li {
+  list-style-type: square;
 }
 
 ol ol,

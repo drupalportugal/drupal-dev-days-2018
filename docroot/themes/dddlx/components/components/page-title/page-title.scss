@@ -9,6 +9,7 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 300;
+  //color: color(title);
 
   @include respond-to(l) {
     @include type-layout(55px, 3);
