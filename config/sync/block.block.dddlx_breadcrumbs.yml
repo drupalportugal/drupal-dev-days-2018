@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   module:
+    - block_visibility_groups
+    - ctools
     - system
   theme:
     - dddlx
@@ -19,4 +21,16 @@ settings:
   label: Breadcrumbs
   provider: system
   label_display: '0'
-visibility: {  }
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      basic_page: basic_page
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

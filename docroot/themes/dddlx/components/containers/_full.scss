@@ -10,6 +10,17 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 50px;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+
+  @include respond-to(xl) {
+    height: 45vh;
+  }
+}
+
+%full__header__wrapper--with-background {
+  color: color(white);
 }
 
 %full__image {
@@ -21,8 +32,16 @@
   transform: translate3d(-50%, -50%, 0);
 }
 
+%full__header {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  z-index: 10;
+  position: relative;
+}
 
 %full__title {
+
   h1 {
     @include type-layout(xxl, 1.5);
 
@@ -30,8 +49,9 @@
       @include type-layout(45px, 2.5);
     }
 
-    text-align: left;
-    font-weight: normal;
+    color: color('white');
+    text-align: center;
+    font-weight: 300;
   }
 }
 
@@ -42,7 +62,7 @@
 
 %full__content-wrapper {
 
-  @include respond-to(xl) {
+  @include zen-respond-to(xl) {
     margin: 0 (-(zen-half-gutter()));
   }
 }

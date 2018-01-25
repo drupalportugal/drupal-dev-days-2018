@@ -19,7 +19,8 @@
 #}
 {{ attach_library('dddlx/page_full') }}
 
-{% set class = node.bundle|clean_class ~ '-full' %}
+{# {% set class = node.bundle|clean_class ~ '-full' %} #}
+{% set class = 'page-full' %}
 {% set background_class = has_background_image ? class ~ '__header__wrapper--with-background' : '' %}
 
 <{{ outer_wrapper }}{{ attributes.addClass(class, 'clearfix') }}>
@@ -32,10 +33,6 @@
 
     <div {{ create_attribute({'class': [class ~ '__header', 'layout-center']}) }}>
       {{ header }}
-    </div>
-
-    <div {{ create_attribute({'class': [class ~ '__header-tip__wrapper', 'layout-center']}) }}>
-      <span {{ create_attribute({'class': [class ~ '__header-tip']}) }}></span>
     </div>
 
   </{{ header_wrapper }}>

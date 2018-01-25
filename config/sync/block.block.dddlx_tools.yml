@@ -6,6 +6,7 @@ dependencies:
     - system.menu.tools
   module:
     - block_visibility_groups
+    - ctools
     - system
   theme:
     - dddlx
@@ -35,3 +36,10 @@ visibility:
     pages: '<front>'
     negate: true
     context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      basic_page: basic_page
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

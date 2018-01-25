@@ -7,6 +7,17 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 50px;
+  min-height: 65vh;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+@media (min-width: 999px) {
+  .article-full__header__wrapper {
+    height: 45vh;
+  }
 }
 
 .article-full__image {
@@ -22,8 +33,9 @@
 .article-full__title h1 {
   font-size: 2rem;
   line-height: 2.25rem;
-  text-align: left;
-  font-weight: normal;
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
 }
 
 @media (min-width: 888px) {

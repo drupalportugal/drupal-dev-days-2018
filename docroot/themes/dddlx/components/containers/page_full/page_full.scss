@@ -1,5 +1,7 @@
 @import '../full';
 
+$image-url-subdirectory: 'containers/page_full';
+
 // Page Full view mode
 //
 // A full view mode to display the basic page content
@@ -17,6 +19,28 @@
 
 .page-full__image {
   @extend %full__image;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: -1px;
+    z-index: 8;
+    width: calc(100% + 2px);
+    padding-bottom: 100%;
+    background: image-url('image_pattern.svg') repeat-x center top;
+    background-size: contain;
+
+    @include respond-to(xl) {
+      top: 0;
+    }
+  }
+}
+
+.page-full__header {
+  @extend %full__header;
+  @extend %full__title;
 }
 
 .page-full__title {
@@ -33,21 +57,21 @@
 }
 
 .page-full__content {
-  @include respond-to(xl) {
-    @include zen-grid-item(4, 1);
+  @include zen-respond-to(xl) {
+    @include zen-grid-item(8, 1);
   }
 }
 
 .page-full__sidebar-bottom {
-  @include respond-to(xl) {
-    @include zen-grid-item(2, 1, right);
+  @include zen-respond-to(xl) {
+    @include zen-grid-item(4, 1, right);
   }
 }
 
 .page-full__footer__wrapper {
-  @include respond-to(xl) {
+  @include zen-respond-to(xl) {
     @include zen-new-row();
-    @include zen-grid-item(6, 1);
+    @include zen-grid-item(12, 1);
   }
 }
 
