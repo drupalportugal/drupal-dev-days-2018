@@ -7,6 +7,19 @@
   padding: 0;
   text-align: center;
   background: #fff;
+  font-size: 16px;
+}
+
+@media (min-width: 999px) {
+  .nav-primary, .nav-primary--sub-menu {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1111px) {
+  .nav-primary, .nav-primary--sub-menu {
+    font-size: 16px;
+  }
 }
 
 .nav-primary li, .nav-primary--sub-menu li {
@@ -66,6 +79,7 @@
     text-align: center;
     position: relative;
     border: 0;
+    font-size: .85em;
   }
   .nav-primary__item:last-child {
     border-bottom: 0;
@@ -81,10 +95,16 @@
   }
 }
 
+@media (min-width: 1111px) {
+  .nav-primary__item {
+    font-size: 1em;
+  }
+}
+
 .nav-primary__item a {
   padding: 15px 20px;
   margin: 0 auto;
-  color: #000;
+  color: #5776b7;
   text-decoration: none;
   width: 100%;
   display: block;
@@ -113,13 +133,47 @@
   }
 }
 
-.nav-primary__item a:hover, .nav-primary__item a.is-active {
+.nav-primary__item a.is-active {
+  color: #fff;
+  background-color: #5776b7;
+  border: 1px solid #5776b7;
+}
+
+@media (min-width: 999px) {
+  .nav-primary__item a.is-active {
+    border: 0;
+    color: #fff;
+    background-color: #3c4b82;
+  }
+}
+
+.nav-primary__item a.is-active:hover {
+  color: #fff;
+  background-color: #3c4b82;
+}
+
+@media (min-width: 999px) {
+  .nav-primary__item a.is-active:hover {
+    color: #5776b7;
+    background-color: #e6ebf4;
+  }
+}
+
+.nav-primary__item a:hover {
   color: #5776b7;
   background-color: #e6ebf4;
+  border: 1px solid #e6ebf4;
+}
+
+@media (min-width: 999px) {
+  .nav-primary__item a:hover {
+    border: 0;
+  }
 }
 
 .nav-primary--sub-menu .nav-primary__item a {
   background-color: #e6ebf4;
+  border: 1px solid #e6ebf4;
   color: #5776b7;
 }
 
@@ -129,6 +183,7 @@
     background: none;
     background-color: #5776b7;
     color: #fff;
+    border: 0;
   }
 }
 
@@ -138,6 +193,7 @@
 
 @media (min-width: 999px) {
   .nav-primary--sub-menu .nav-primary__item a:hover, .nav-primary--sub-menu .nav-primary__item a.is-active {
+    border: 0;
     color: #5776b7;
     background-color: #e6ebf4;
   }
@@ -198,5 +254,5 @@
   text-align: center;
   padding: 0 20px;
   font-weight: bold;
-  color: #004b79;
+  color: #3c4b82;
 }

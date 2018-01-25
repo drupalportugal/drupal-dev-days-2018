@@ -58,6 +58,8 @@
   overflow: initial;
   max-height: 100vh;
   clear: both;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 .navbar__mobile-menu__toggle {
@@ -66,7 +68,6 @@
   height: 60px;
   cursor: pointer;
   float: right;
-  padding: 0 15px;
 }
 
 @media (min-width: 999px) {

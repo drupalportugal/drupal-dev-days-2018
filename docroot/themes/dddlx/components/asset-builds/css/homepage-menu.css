@@ -1,18 +1,18 @@
 /*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .homepage-menu__wrapper {
   width: 100%;
-  min-height: 65vh;
-  top: 0;
-  left: 0;
   text-align: center;
   position: relative;
   z-index: 10;
   background: url(../..//components/homepage-menu/hp_lisbon_bg.jpg) no-repeat center top;
   background-size: cover;
+  min-height: 65vh;
 }
 
-.is-logged-in-user .homepage-menu__wrapper {
-  top: 80px;
+@media (min-width: 999px) {
+  .homepage-menu__wrapper {
+    min-height: 100vh;
+  }
 }
 
 .homepage-menu__content {
@@ -35,7 +35,6 @@
     padding: 300px 10px 60px;
     margin: 0 auto;
     position: relative;
-    min-height: 100vh;
   }
   .homepage-menu__content::before {
     content: '';
@@ -105,10 +104,14 @@
   .homepage-menu__content .nav-primary__item {
     text-transform: uppercase;
     font-weight: 300;
+    font-size: 1.5em;
   }
   .homepage-menu__content .nav-primary__item:nth-child(1) {
     margin-top: -33.333%;
     margin-left: 33.333%;
+  }
+  .homepage-menu__content .nav-primary--sub-menu .nav-primary__item {
+    font-size: 1em;
   }
   .homepage-menu__content .nav-primary--sub-menu .nav-primary__item:nth-child(1) {
     margin-top: 0;
@@ -120,7 +123,6 @@
   background: transparent;
   text-transform: uppercase;
   color: #fff;
-  position: absolute;
 }
 
 @media (min-width: 999px) {
@@ -131,7 +133,9 @@
     margin-right: -100%;
     padding-left: 0;
     padding-right: 0;
+    position: absolute;
     top: 130px;
+    left: 0;
     padding: 30px;
   }
   [dir="rtl"] .homepage-menu__slogan {

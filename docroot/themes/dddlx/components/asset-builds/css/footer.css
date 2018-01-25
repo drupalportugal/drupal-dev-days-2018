@@ -98,7 +98,7 @@
 
 .footer-tag__wrapper {
   width: 100%;
-  background: #004b79;
+  background: #3c4b82;
   padding: 30px 10px;
 }
 
@@ -107,7 +107,7 @@
 */
 .footer-branding__wrapper {
   width: 100%;
-  background: #1F2E44;
+  background: #29314b;
   padding: 40px 10px 10px;
 }
 
@@ -133,7 +133,7 @@
 }
 
 .footer__powered-by {
-  background: #1F2E44;
+  background: #29314b;
   text-align: center;
   padding: 10px 10px 40px;
   color: #e6ebf4;

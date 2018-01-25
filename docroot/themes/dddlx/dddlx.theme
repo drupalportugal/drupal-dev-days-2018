@@ -294,3 +294,10 @@ function dddlx_preprocess_event_teaser_small(&$variables, $hook) {
     $variables['attributes']['class'][] = 'is-happening';
   }
 }
+
+// make available site name and slogan in page.html.twig
+function dddlx_preprocess_page(&$variables, $hook) {
+  $site_config = \Drupal::config('system.site');
+  $variables['dddlx_name'] = $site_config->get('name');
+  $variables['dddlx_slogan'] = $site_config->get('slogan');
+}
