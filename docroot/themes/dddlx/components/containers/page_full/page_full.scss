@@ -1,7 +1,5 @@
 @import '../full';
 
-$image-url-subdirectory: 'containers/page_full';
-
 // Page Full view mode
 //
 // A full view mode to display the basic page content
@@ -19,23 +17,6 @@ $image-url-subdirectory: 'containers/page_full';
 
 .page-full__image {
   @extend %full__image;
-
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 60px;
-    left: -1px;
-    z-index: 8;
-    width: calc(100% + 2px);
-    padding-bottom: 100%;
-    background: image-url('image_pattern.svg') repeat-x center top;
-    background-size: contain;
-
-    @include respond-to(xl) {
-      top: 0;
-    }
-  }
 }
 
 .page-full__header {

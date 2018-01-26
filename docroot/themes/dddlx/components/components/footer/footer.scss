@@ -88,6 +88,95 @@ $image-url-subdirectory: 'components/footer';
   }
 }
 
+/*
+** footer organization
+*/
+.footer-follow__wrapper {
+  width: 100%;
+  background: color(blue-dark);
+  text-align: center;
+  color: color('white');
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+
+  @include respond-to(l) {
+    flex-wrap: nowrap;
+    padding: 20px 10px;
+  }
+
+  p {
+    text-transform: uppercase;
+   font-size: 14px;
+  }
+}
+
+.footer-follow-organization__wrapper {
+  text-align: center;
+  padding: 20px;
+  
+    @include respond-to(l) {
+      padding: 20px 40px 20px 20px;
+    }
+
+  p {
+    margin-bottom: 5px;
+    color: color('white');
+  }
+}
+
+.footer-follow-organization__logo {
+  width: 200px;
+  display: block;
+}
+/*
+** end organization
+*/
+
+/*
+** footer social media
+*/
+.footer-follow-social__wrapper {
+  padding: 20px;
+
+  @include respond-to(l) {
+    padding: 20px 20px 20px 40px;
+  }
+}
+
+.footer-follow-drupal-social__wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.footer-follow-drupal-social {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.footer-follow-drupal-social li {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 50px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a span {
+    color: color('white');
+    transition: color ease 0.3s;
+
+    &:hover {
+      color: color(blue-light);
+    }
+  }
+}
+/*
+** end social media
+*/
+
 .footer-tag__wrapper {
   width: 100%;
   background: color(blue-dark);
