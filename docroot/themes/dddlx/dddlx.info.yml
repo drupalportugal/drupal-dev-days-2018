@@ -116,7 +116,6 @@ regions:
   sidebar_second : Second sidebar
   footer: Footer
   bottom: Page bottom
-  powered_by_drupal: Powered By Drupal
   # The page_top and page_bottom regions are hidden, which means they will not
   # show up on the block layout page. But they are required in order for the
   # html.html.twig to work properly, so do not delete them.

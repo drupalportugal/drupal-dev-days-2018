@@ -99,6 +99,7 @@
 ** footer organization
 */
 .footer-follow__wrapper {
+  position: relative;
   width: 100%;
   background: #3c4b82;
   text-align: center;
@@ -109,6 +110,17 @@
   -webkit-box-pack: center;
           justify-content: center;
   padding: 10px;
+}
+
+.footer-follow__wrapper::before {
+  content: '';
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #29314b;
+  background: linear-gradient(to bottom, rgba(41, 49, 75, 0.35) 0%, rgba(41, 49, 75, 0) 100%);
 }
 
 @media (min-width: 888px) {
@@ -130,7 +142,7 @@
 
 @media (min-width: 888px) {
   .footer-follow-organization__wrapper {
-    padding: 20px 40px 20px 20px;
+    padding: 20px 40px 0 20px;
   }
 }
 
@@ -199,49 +211,6 @@
 }
 
 /*
-** footer branding logo and slogan
-*/
-.footer-branding__wrapper {
-  width: 100%;
-  background: #29314b;
-  padding: 40px 10px 10px;
-}
-
-.footer-branding {
-  margin: 0 auto;
-}
-
-.footer-branding__logo__primary {
-  display: block;
-  margin: 0 auto;
-  background-image: url(../..//components/footer/DDD_2018_horizontal_version.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 50px;
-  height: 50px;
-}
-
-.footer-branding__slogan {
-  display: block;
-  margin: 20px auto 10px;
-  text-transform: uppercase;
-}
-
-.footer__powered-by {
-  background: #29314b;
-  text-align: center;
-  padding: 10px 10px 40px;
-  color: #e6ebf4;
-  font-size: 0.875rem;
-}
-
-.footer__powered-by a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/*
 ** This is the azulejo mosaic containing the azulejo logo
 */
 .footer-section__azulejo {
@@ -252,6 +221,17 @@
   display: -webkit-box;
   display: flex;
   justify-content: space-around;
+}
+
+.footer-section__azulejo::before {
+  content: '';
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #29314b;
+  background: linear-gradient(to bottom, #29314b 0%, rgba(41, 49, 75, 0) 100%);
 }
 
 .footer-section__azulejo__center {
