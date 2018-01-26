@@ -11,7 +11,7 @@ $image-url-subdirectory: 'components/footer';
 .footer,
 %footer {
   @include type-layout(s, 1);
-  //padding-top: 90px;
+  margin-top: 40px;
   text-align: center;
   //background: color(blue) image-url('footer_pattern.svg') repeat-x center top;
   background: color(blue);
