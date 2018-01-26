@@ -1,3 +1,4 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .page-full {
   overflow: hidden;
 }
@@ -5,28 +6,66 @@
 .page-full__header__wrapper {
   position: relative;
   overflow: hidden;
+  margin-top: 60px;
+  min-height: 140px;
+}
+
+@media (min-width: 999px) {
+  .page-full__header__wrapper {
+    margin-top: 0;
+  }
+}
+
+.page-full__header__wrapper--with-background {
   margin-bottom: 50px;
 }
 
-.page-full__image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-          transform: translate3d(-50%, -50%, 0);
+.page-full__header__wrapper--with-background h1 {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  text-align: center;
 }
 
-.page-full__title h1 {
+.page-full__image {
+  z-index: 1;
+  position: relative;
+}
+
+.page-full__image::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  width: 100%;
+  padding-bottom: 100%;
+  background: url(../..//containers/page_full/image_pattern.svg) repeat-x center top;
+  background-size: contain;
+}
+
+.page-full__header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.page-full__header h1, .page-full__title h1 {
   font-size: 2rem;
   line-height: 2.25rem;
-  text-align: left;
-  font-weight: normal;
+  font-weight: 300;
 }
 
 @media (min-width: 888px) {
-  .page-full__title h1 {
+  .page-full__header h1, .page-full__title h1 {
     font-size: 2.8125rem;
     line-height: 3.75rem;
   }
@@ -56,11 +95,20 @@
   margin: 0 5px 10px;
 }
 
+.page-full__header__wrapper--with-background .page-full__header {
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
 /* Sidebar & content */
+.page-full__content {
+  padding-bottom: 40px;
+}
+
 @media (min-width: 999px) {
   .page-full__content {
     float: left;
-    width: 400%;
+    width: 66.66667%;
     margin-left: 0%;
     margin-right: -100%;
     padding-left: 20px;
@@ -76,7 +124,7 @@
 @media (min-width: 999px) {
   .page-full__sidebar-bottom {
     float: right;
-    width: 200%;
+    width: 33.33333%;
     margin-right: 0%;
     margin-left: -100%;
     padding-left: 20px;
@@ -93,7 +141,7 @@
   .page-full__footer__wrapper {
     clear: left;
     float: left;
-    width: 600%;
+    width: 100%;
     margin-left: 0%;
     margin-right: -100%;
     padding-left: 20px;

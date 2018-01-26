@@ -47,7 +47,6 @@
 
 {{ attach_library('dddlx/layouts') }}
 {{ attach_library('dddlx/homepage-menu') }}
-{{ attach_library('dddlx/homepage-intro') }}
 
 {% embed "@dddlx/components/header/header.twig" %}
   {% block branding %}
@@ -55,7 +54,14 @@
   {% endblock %}
   {% block navigation %}
     {% embed "@dddlx/navigation/navbar/navbar.twig" %}
-      {% block content %}   
+      {% block content %}
+
+        <div class="nav-primary__slogan">
+          <div class="nav-primary__slogan__inner">
+            <span>{{ dddlx_slogan }}</span>
+          </div>
+        </div>
+
         <div class="navbar__content">
           {{ page.primary_menu }}
         </div>
@@ -69,7 +75,15 @@
   <div class="homepage-menu__content">
     {{ page.header }}
 
-    <div class="homepage-menu__slogan"><span>Monday 2nd July Friday 6th July at ISCTE</span></div>
+    <div class="homepage-menu__slogan">
+      <span class="homepage-menu__slogan-mobile">
+        {{ dddlx_name }}
+      </span>
+      <span>
+        {{ dddlx_slogan }}
+      </span>
+    </div>
+
     <div class="homepage-menu">
       {{ page.primary_menu }}
     </div>
@@ -77,14 +91,7 @@
   </div>
 </div>
 
-<div class="homepage-intro__wrapper">
-
-  <div class="homepage-intro">
-    <a class="homepage-intro__btn" href="#">Get Your Tickets</a>
-    <a class="homepage-intro__btn" href="#">Become a Sponsor</a>
-  </div>
-
-</div>
+{{ page.highlighted }}
 
 <div class="clearfix layout-center">
 
@@ -108,8 +115,6 @@
   {% endif %}
 
   <main class="layout-center {{ content_class }}" role="main">
-
-    {{ page.highlighted }}
     {{ page.breadcrumb }}
     <a href="#skip-link" class="visually-hidden visually-hidden--focusable" id="main-content">Back to top</a>{# link target is in html.html.twig #}
     {{ page.title }}

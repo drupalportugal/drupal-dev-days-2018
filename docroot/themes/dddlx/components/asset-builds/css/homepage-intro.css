@@ -1,3 +1,4 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .homepage-intro__wrapper {
   background: #5776b7 url(../..//components/footer/footer_pattern.svg) repeat-x center top;
   width: 100%;
@@ -10,7 +11,7 @@
   text-align: center;
 }
 
-@media (min-width: 888px) {
+@media (min-width: 999px) {
   .homepage-intro {
     margin: 0 auto;
   }
@@ -18,9 +19,6 @@
 
 .homepage-intro__btn {
   display: inline-block;
-  background: #fff;
-  padding: 10px 20px;
-  color: #5776b7;
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
@@ -29,7 +27,7 @@
   margin: 10px auto;
 }
 
-@media (min-width: 888px) {
+@media (min-width: 999px) {
   .homepage-intro__btn {
     margin: 0 auto;
   }
@@ -38,7 +36,15 @@
   }
 }
 
-.homepage-intro__btn:hover {
+.homepage-intro__btn a {
+  display: block;
+  padding: 10px 20px;
+  background: #fff;
+  color: #5776b7;
+  text-decoration: none;
+}
+
+.homepage-intro__btn a:hover {
   color: #fff;
-  background: #1F2E44;
+  background: #29314b;
 }

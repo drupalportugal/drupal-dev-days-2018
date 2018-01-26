@@ -11,7 +11,7 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access site-wide contact form'
-  - 'use text format filtered_html'
   - 'access user profiles'
-  - 'view own field_room'
+  - 'use text format filtered_html'
   - 'view field_room'
+  - 'view own field_room'

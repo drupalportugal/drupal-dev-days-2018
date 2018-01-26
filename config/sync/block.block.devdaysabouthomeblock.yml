@@ -1,29 +1,24 @@
-uuid: 82d24371-5441-4e54-9eed-814107802113
+uuid: 86092f23-b226-47bb-a8c3-5069185cc09e
 langcode: en
 status: true
 dependencies:
-  config:
-    - system.menu.tools
   module:
     - block_visibility_groups
+    - dddlx_home
     - system
   theme:
     - dddlx
-_core:
-  default_config_hash: Spxr_7Aoq0N6haJjF03aEqL-olw7Z6iB7ZbKX8bU5YM
-id: dddlx_tools
+id: devdaysabouthomeblock
 theme: dddlx
-region: sidebar_first
-weight: 0
+region: content
+weight: -3
 provider: null
-plugin: 'system_menu_block:tools'
+plugin: dev_days_about_home_block
 settings:
-  id: 'system_menu_block:tools'
-  label: Tools
-  provider: system
-  label_display: visible
-  level: 1
-  depth: 0
+  id: dev_days_about_home_block
+  label: 'Dev days about home block'
+  provider: dddlx_home
+  label_display: '0'
 visibility:
   condition_group:
     id: condition_group
@@ -33,5 +28,5 @@ visibility:
   request_path:
     id: request_path
     pages: '<front>'
-    negate: true
+    negate: false
     context_mapping: {  }

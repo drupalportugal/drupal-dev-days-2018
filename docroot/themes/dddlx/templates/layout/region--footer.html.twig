@@ -17,7 +17,8 @@
     include "@dddlx/components/footer/footer.twig" with {
       modifier_class: attributes.class|safe_join(' '),
       attributes: attributes.removeAttribute('class'),
-      content: content
+      content: content,
+      directory: directory
     } only
   %}
 {% endif %}

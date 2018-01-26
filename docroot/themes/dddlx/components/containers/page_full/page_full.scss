@@ -15,8 +15,21 @@
   @extend %full__header__wrapper;
 }
 
+.page-full__header__wrapper--with-background {
+  @extend %full__header__wrapper--with-background;
+}
+
 .page-full__image {
   @extend %full__image;
+}
+
+.page-full__header {
+  @extend %full__header;
+  @extend %full__title;
+
+  .page-full__header__wrapper--with-background & {
+    justify-content: center;
+  }
 }
 
 .page-full__title {
@@ -33,21 +46,23 @@
 }
 
 .page-full__content {
-  @include respond-to(xl) {
-    @include zen-grid-item(4, 1);
+  padding-bottom: 40px;
+
+  @include zen-respond-to(xl) {
+    @include zen-grid-item(8, 1);
   }
 }
 
 .page-full__sidebar-bottom {
-  @include respond-to(xl) {
-    @include zen-grid-item(2, 1, right);
+  @include zen-respond-to(xl) {
+    @include zen-grid-item(4, 1, right);
   }
 }
 
 .page-full__footer__wrapper {
-  @include respond-to(xl) {
+  @include zen-respond-to(xl) {
     @include zen-new-row();
-    @include zen-grid-item(6, 1);
+    @include zen-grid-item(12, 1);
   }
 }
 

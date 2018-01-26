@@ -249,7 +249,8 @@
 #}
 {{ attach_library(&#039;dddlx/page_full&#039;) }}
 
-{% set class = node.bundle|clean_class ~ &#039;-full&#039; %}
+{# {% set class = node.bundle|clean_class ~ &#039;-full&#039; %} #}
+{% set class = &#039;page-full&#039; %}
 {% set background_class = has_background_image ? class ~ &#039;__header__wrapper--with-background&#039; : &#039;&#039; %}
 
 &lt;{{ outer_wrapper }}{{ attributes.addClass(class, &#039;clearfix&#039;) }}&gt;
@@ -260,17 +261,13 @@
     
     {{ background }}
 
-    &lt;div {{ create_attribute({&#039;class&#039;: [class ~ &#039;__header&#039;, &#039;layout-center&#039;]}) }}&gt;
+    &lt;div {{ create_attribute({&#039;class&#039;: [class ~ &#039;__header&#039;]}) }}&gt;
       {{ header }}
-    &lt;/div&gt;
-
-    &lt;div {{ create_attribute({&#039;class&#039;: [class ~ &#039;__header-tip__wrapper&#039;, &#039;layout-center&#039;]}) }}&gt;
-      &lt;span {{ create_attribute({&#039;class&#039;: [class ~ &#039;__header-tip&#039;]}) }}&gt;&lt;/span&gt;
     &lt;/div&gt;
 
   &lt;/{{ header_wrapper }}&gt;
 
-  &lt;div {{ create_attribute({&#039;class&#039;: [class ~ &#039;__content-outer-wrapper&#039;, &#039;layout-center&#039;]}) }}&gt;
+  &lt;div {{ create_attribute({&#039;class&#039;: [class ~ &#039;__content-outer-wrapper&#039;]}) }}&gt;
 
     {{ admin }}
 

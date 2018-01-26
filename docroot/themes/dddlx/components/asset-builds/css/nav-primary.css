@@ -1,3 +1,4 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 /* .nav-primary__block-wrapper {
 
 } */
@@ -6,13 +7,30 @@
   padding: 0;
   text-align: center;
   background: #fff;
+  font-size: 16px;
+}
+
+@media (min-width: 999px) {
+  .nav-primary, .nav-primary--sub-menu {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1111px) {
+  .nav-primary, .nav-primary--sub-menu {
+    font-size: 16px;
+  }
+}
+
+.nav-primary li, .nav-primary--sub-menu li {
+  list-style-type: none;
 }
 
 .nav-primary--sub-menu {
   display: block;
 }
 
-@media (min-width: 888px) {
+@media (min-width: 999px) {
   .nav-primary--sub-menu {
     display: -webkit-box;
     display: flex;
@@ -51,9 +69,8 @@
   border-bottom: 1px solid #cccccc;
 }
 
-@media (min-width: 888px) {
+@media (min-width: 999px) {
   .nav-primary__item {
-    border: 0;
     display: block;
     float: left;
     width: 33.333%;
@@ -61,31 +78,45 @@
     padding: 0;
     text-align: center;
     position: relative;
+    border: 0;
+    font-size: .85em;
   }
   .nav-primary__item:last-child {
-    border: 0;
+    border-bottom: 0;
+  }
+  .nav-primary__item:last-child a {
+    background: url(../..//navigation/nav-primary/nav_bg_last.svg) no-repeat center center;
+    background-size: cover;
   }
   .nav-primary--sub-menu .nav-primary__item {
     width: 100%;
     background-color: transparent;
+    border: 0;
+  }
+}
+
+@media (min-width: 1111px) {
+  .nav-primary__item {
+    font-size: 1em;
   }
 }
 
 .nav-primary__item a {
   padding: 15px 20px;
   margin: 0 auto;
-  color: #000;
+  color: #5776b7;
   text-decoration: none;
   width: 100%;
   display: block;
   position: relative;
   border: 1px solid #fff;
   transition: all ease .35s;
-  background: #fff;
+  background-color: #fff;
 }
 
-@media (min-width: 888px) {
+@media (min-width: 999px) {
   .nav-primary__item a {
+    border: 0;
     padding: 0;
     margin: 0 auto;
     display: -webkit-box;
@@ -97,40 +128,74 @@
     text-decoration: none;
     position: absolute;
     height: 100%;
-    border: 1px solid #c4cfe5;
+    background: url(../..//navigation/nav-primary/nav_bg.svg) no-repeat center center;
+    background-size: cover;
   }
 }
 
-.nav-primary__item a:hover, .nav-primary__item a.is-active {
-  color: #5776b7;
+.nav-primary__item a.is-active {
+  color: #fff;
+  background-color: #5776b7;
   border: 1px solid #5776b7;
-  background: #e6ebf4;
+}
+
+@media (min-width: 999px) {
+  .nav-primary__item a.is-active {
+    border: 0;
+    color: #fff;
+    background-color: #3c4b82;
+  }
+}
+
+.nav-primary__item a.is-active:hover {
+  color: #fff;
+  background-color: #3c4b82;
+}
+
+@media (min-width: 999px) {
+  .nav-primary__item a.is-active:hover {
+    color: #5776b7;
+    background-color: #e6ebf4;
+  }
+}
+
+.nav-primary__item a:hover {
+  color: #5776b7;
+  background-color: #e6ebf4;
+  border: 1px solid #e6ebf4;
+}
+
+@media (min-width: 999px) {
+  .nav-primary__item a:hover {
+    border: 0;
+  }
 }
 
 .nav-primary--sub-menu .nav-primary__item a {
-  background: #e6ebf4;
+  background-color: #e6ebf4;
   border: 1px solid #e6ebf4;
   color: #5776b7;
 }
 
-@media (min-width: 888px) {
+@media (min-width: 999px) {
   .nav-primary--sub-menu .nav-primary__item a {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
-    background: #5776b7;
+    background: none;
+    background-color: #5776b7;
     color: #fff;
+    border: 0;
   }
 }
 
 .nav-primary--sub-menu .nav-primary__item a:hover, .nav-primary--sub-menu .nav-primary__item a.is-active {
-  background: #c4cfe5;
-  border: 1px solid #c4cfe5;
+  background-color: #c4cfe5;
 }
 
-@media (min-width: 888px) {
+@media (min-width: 999px) {
   .nav-primary--sub-menu .nav-primary__item a:hover, .nav-primary--sub-menu .nav-primary__item a.is-active {
+    border: 0;
     color: #5776b7;
-    border: 1px solid #5776b7;
-    background: #e6ebf4;
+    background-color: #e6ebf4;
   }
 }
 
@@ -140,7 +205,7 @@
   position: relative;
 }
 
-@media (min-width: 888px) {
+@media (min-width: 999px) {
   .nav-primary__item__wrapper {
     padding-bottom: 100%;
   }
@@ -153,7 +218,7 @@
   display: none;
 }
 
-@media (min-width: 888px) {
+@media (min-width: 999px) {
   .nav-primary__slogan {
     float: right;
     width: 9.09091%;
@@ -189,5 +254,5 @@
   text-align: center;
   padding: 0 20px;
   font-weight: bold;
-  color: #004b79;
+  color: #3c4b82;
 }

@@ -61,10 +61,14 @@
   &.layout-3col {
     @extend %layout-center--shared-grid;
   }
+
+  iframe {
+    width: 100%;
+  }
 }
 
 .layout-center--main {
-  padding-top: 60px;
+  //padding-top: 60px;
 
   @include respond-to(m) {
     padding-top: 0;

@@ -214,6 +214,39 @@
     </ul>
   </div>
 
+  <div class="footer-follow__wrapper">
+
+    <div class="footer-follow-organization__wrapper">
+      <p>Organization</p>
+      <a class="footer-follow-organization__logo" href="http://drupal-pt.org/" target="_blank">
+        Template &quot;/components/components/footer/logo_drupal_pt.svg&quot; is not defined.
+      </a>
+    </div>
+
+    <div class="footer-follow-social__wrapper">
+      <p>Follow us</p>
+
+      <div class="footer-follow-drupal-social__wrapper">
+
+        <ul class="footer-follow-drupal-social">
+
+          <li>
+            <a href="https://twitter.com/drupaldevdays" target="_blank">
+              <span class="drupalday-twitter"></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.facebook.com/drupaldevdays/" target="_blank">
+              <span class="drupalday-facebook"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
   <div class="footer-tag__wrapper">
       <strong><a href="https://www.drupal.org/" target="_blank">Drupal.org</a></strong> issue queue tag: <strong>DevDaysLisboa</strong> <br/ >
       Social media hashtag: <strong>#drupaldevdays</strong>
@@ -258,6 +291,39 @@
     {% block content %}
       {{ content }}
     {% endblock %}
+  &lt;/div&gt;
+
+  &lt;div class=&quot;footer-follow__wrapper&quot;&gt;
+
+    &lt;div class=&quot;footer-follow-organization__wrapper&quot;&gt;
+      &lt;p&gt;Organization&lt;/p&gt;
+      &lt;a class=&quot;footer-follow-organization__logo&quot; href=&quot;http://drupal-pt.org/&quot; target=&quot;_blank&quot;&gt;
+        {{ source(directory ~ &#039;/components/components/footer/logo_drupal_pt.svg&#039;) }}
+      &lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;footer-follow-social__wrapper&quot;&gt;
+      &lt;p&gt;Follow us&lt;/p&gt;
+
+      &lt;div class=&quot;footer-follow-drupal-social__wrapper&quot;&gt;
+
+        &lt;ul class=&quot;footer-follow-drupal-social&quot;&gt;
+
+          &lt;li&gt;
+            &lt;a href=&quot;https://twitter.com/drupaldevdays&quot; target=&quot;_blank&quot;&gt;
+              &lt;span class=&quot;drupalday-twitter&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+
+          &lt;li&gt;
+            &lt;a href=&quot;https://www.facebook.com/drupaldevdays/&quot; target=&quot;_blank&quot;&gt;
+              &lt;span class=&quot;drupalday-facebook&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
   &lt;/div&gt;
 
   &lt;div class=&quot;footer-tag__wrapper&quot;&gt;

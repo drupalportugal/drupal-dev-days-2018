@@ -1,3 +1,4 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .footer {
   font-size: 0.875rem;
   line-height: 1.5rem;
@@ -95,9 +96,106 @@
   color: #e6ebf4;
 }
 
+/*
+** footer organization
+*/
+.footer-follow__wrapper {
+  width: 100%;
+  background: #3c4b82;
+  text-align: center;
+  color: #fff;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding: 10px;
+}
+
+@media (min-width: 888px) {
+  .footer-follow__wrapper {
+    flex-wrap: nowrap;
+    padding: 20px 10px;
+  }
+}
+
+.footer-follow__wrapper p {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.footer-follow-organization__wrapper {
+  text-align: center;
+  padding: 20px;
+}
+
+@media (min-width: 888px) {
+  .footer-follow-organization__wrapper {
+    padding: 20px 40px 20px 20px;
+  }
+}
+
+.footer-follow-organization__wrapper p {
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.footer-follow-organization__logo {
+  width: 200px;
+  display: block;
+}
+
+/*
+** end organization
+*/
+/*
+** footer social media
+*/
+.footer-follow-social__wrapper {
+  padding: 20px;
+}
+
+@media (min-width: 888px) {
+  .footer-follow-social__wrapper {
+    padding: 20px 20px 20px 40px;
+  }
+}
+
+.footer-follow-drupal-social__wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.footer-follow-drupal-social {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.footer-follow-drupal-social li {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 50px;
+}
+
+.footer-follow-drupal-social li:last-child {
+  margin-right: 0;
+}
+
+.footer-follow-drupal-social li a span {
+  color: #fff;
+  transition: color ease 0.3s;
+}
+
+.footer-follow-drupal-social li a span:hover {
+  color: #c4cfe5;
+}
+
+/*
+** end social media
+*/
 .footer-tag__wrapper {
   width: 100%;
-  background: #004b79;
+  background: #3c4b82;
   padding: 30px 10px;
 }
 
@@ -106,7 +204,7 @@
 */
 .footer-branding__wrapper {
   width: 100%;
-  background: #1F2E44;
+  background: #29314b;
   padding: 40px 10px 10px;
 }
 
@@ -132,7 +230,7 @@
 }
 
 .footer__powered-by {
-  background: #1F2E44;
+  background: #29314b;
   text-align: center;
   padding: 10px 10px 40px;
   color: #e6ebf4;

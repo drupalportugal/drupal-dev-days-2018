@@ -1,6 +1,7 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .tabs {
   line-height: 1.875rem;
-  margin: 0;
+  margin: 0 0 20px;
   padding: 0;
   list-style: none;
   white-space: nowrap;
@@ -14,6 +15,7 @@
 
 .tabs__tab {
   float: left;
+  list-style-type: none;
   overflow: hidden;
   background: #dddddd;
   border-right: solid 1px #cccccc;
@@ -28,7 +30,7 @@
 }
 
 .tabs__tab.is-active {
-  background: #000;
+  background: #29314b;
   color: white;
 }
 

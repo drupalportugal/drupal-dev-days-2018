@@ -4,41 +4,44 @@ $image-url-subdirectory: 'components/homepage-menu';
 
 .homepage-menu__wrapper {
   width: 100%;
-  min-height: 65vh;
-  top: 0;
-  left: 0;
   text-align: center;
-  display: none;
+  position: relative;
   z-index: 10;
   background: image-url('hp_lisbon_bg.jpg') no-repeat center top;
   background-size: cover;
+  min-height: 65vh;
 
-  @include respond-to(l) {
-    display: block;
-  }
-
-  .is-logged-in-user & {
-    top: 80px;
+  @include respond-to(xl) {
+    min-height: 100vh;
   }
 }
 
 .homepage-menu__content {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @include zen-layout($columns: 8, $gutters: 0) {
 
-    @include respond-to(l) {
+    @include respond-to(xl) {
       @include clearfix;
+      display: block;
+      height: auto;
       max-width: 800px;
       padding: 300px 10px 60px;
       margin: 0 auto;
       position: relative;
-      min-height: 100vh;
     }
   }
 
   .branding__wrapper {
+    display: none;
 
     @include zen-layout($columns: 8, $gutters: 0) {
-      @include respond-to(l) {
+      @include respond-to(xl) {
         @include zen-grid-item(1, 1, left, 4);
         display: block;
         background: color('white');
@@ -47,15 +50,17 @@ $image-url-subdirectory: 'components/homepage-menu';
   }
 
   .navigation {
+    display: none;
+
     @include zen-layout($columns: 8, $gutters: 0) {
-      @include respond-to(l) {
+      @include respond-to(xl) {
         @include zen-grid-item(3, 2, left, 4);
         display: block;
       }
     }
   }
 
-  @include respond-to(l) {
+  @include respond-to(xl) {
 
     .branding__logo {
       padding-bottom: 100%;
@@ -66,13 +71,14 @@ $image-url-subdirectory: 'components/homepage-menu';
       top: 105%;
 
       svg path {
-        fill: color('white')
+        fill: color('white');
       }
     }
 
     .nav-primary__item {
       text-transform: uppercase;
       font-weight: 300;
+      font-size: 1.5em;
 
       &:nth-child(1) {
         margin-top: -33.333%;
@@ -83,6 +89,7 @@ $image-url-subdirectory: 'components/homepage-menu';
     .nav-primary--sub-menu {
 
       .nav-primary__item {
+        font-size: 1em;
 
         &:nth-child(1) {
           margin-top: 0;
@@ -94,16 +101,68 @@ $image-url-subdirectory: 'components/homepage-menu';
 }
 
 .homepage-menu__slogan {
+  background: transparent;
+  text-transform: uppercase;
+  color: color('white');
 
   @include zen-layout($columns: 8, $gutters: 0) {
-    @include respond-to(l) {
+    @include respond-to(xl) {
       @include zen-grid-item(1, 2, left, 4);
-      background: transparent;
-      text-transform: uppercase;
-      color: color('white');
       position: absolute;
       top: 130px;
+      left: 0;
       padding: 30px;
     }
   }
 }
+
+.homepage-menu__slogan-mobile {
+  display: block;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 32px;
+  font-size: 7vw;
+  line-height: 8vw;
+  margin-bottom: 15px;
+
+  @include respond-to(xl) {
+    display: none;
+  }
+}
+
+// TO BE PLACED ON PROPER LOCATION
+
+.hero__text {
+  text-align: center;
+  padding: 10px 10px 0;
+  font-size: 25px;
+
+  @include respond-to(xl) {
+    padding: 40px 10px 0;
+    font-size: 34px;
+    line-height: 2.65rem;
+  }
+
+  span {
+
+    @include respond-to(xl) {
+      display: block;
+    }
+  }
+}
+
+.quick-info__title {
+  text-align: center;
+  font-size: 18px;
+
+  @include respond-to(xl) {
+    font-size: 25px;
+  }
+}
+
+.quick-info__text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+

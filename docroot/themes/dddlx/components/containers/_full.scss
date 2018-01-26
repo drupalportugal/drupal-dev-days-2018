@@ -1,5 +1,7 @@
 @import 'init';
 
+$image-url-subdirectory: 'containers/page_full';
+
 // Shared scss for the full view modes
 
 %full {
@@ -9,29 +11,64 @@
 %full__header__wrapper {
   position: relative;
   overflow: hidden;
+  margin-top: 60px;
+  min-height: 140px;
+
+  @include respond-to(xl) {
+    margin-top: 0;
+  }
+}
+
+%full__header__wrapper--with-background {
   margin-bottom: 50px;
+
+  h1 {
+    background: rgba(color('white'), .85);
+    box-shadow: 0 0 20px 0 rgba(color('black'), .25);
+    padding: 20px;
+    text-align: center;
+  }
 }
 
 %full__image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
+  z-index: 1;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    width: 100%;
+    padding-bottom: 100%;
+    background: image-url('image_pattern.svg') repeat-x center top;
+    background-size: contain;
+  }
 }
 
+%full__header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  //justify-content: center;
+}
 
 %full__title {
+
   h1 {
     @include type-layout(xxl, 1.5);
+    font-weight: 300;
 
     @include respond-to(l) {
       @include type-layout(45px, 2.5);
     }
-
-    text-align: left;
-    font-weight: normal;
   }
 }
 
@@ -42,7 +79,7 @@
 
 %full__content-wrapper {
 
-  @include respond-to(xl) {
+  @include zen-respond-to(xl) {
     margin: 0 (-(zen-half-gutter()));
   }
 }

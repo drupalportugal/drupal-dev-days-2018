@@ -23,8 +23,8 @@ $chroma: add-colors((
   grey-extra-lighter:       #f8f8f8,
   white:                  #fff,
 
-  blue-xdark:               #1F2E44,
-  blue-dark:                #004b79,
+  blue-xdark:               #29314b,
+  blue-dark:                #3c4b82,
   blue:                   #5776b7,
   blue-light:               #c4cfe5,
   blue-extra-light:         #e6ebf4,
@@ -38,6 +38,7 @@ $chroma: add-colors('functional', (
   // Colors used in the main content area.
   text:                   'black',
   text-bg:                'white',
+  title:                  'blue',
 
   link:                   'blue',
   link-visited:           ('blue' darken 20%),

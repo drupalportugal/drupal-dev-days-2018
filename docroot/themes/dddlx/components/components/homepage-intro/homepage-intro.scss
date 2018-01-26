@@ -13,16 +13,13 @@ $image-url-subdirectory: 'components/footer';
   margin: 70px auto 0;
   text-align: center;
 
-  @include respond-to(l) {
+  @include respond-to(xl) {
     margin: 0 auto;
   }
 }
 
 .homepage-intro__btn {
   display: inline-block;
-  background: color('white');
-  padding: 10px 20px;
-  color: color(blue);
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
@@ -30,7 +27,7 @@ $image-url-subdirectory: 'components/footer';
   transition: color ease .25s, background ease .25s;
   margin: 10px auto;
 
-  @include respond-to(l) {
+  @include respond-to(xl) {
     margin: 0 auto;
 
     &:nth-child(2) {
@@ -38,8 +35,16 @@ $image-url-subdirectory: 'components/footer';
     }
   }
 
-  &:hover {
-    color: color('white');
-    background: color(blue-xdark);
+  a {
+    display: block;
+    padding: 10px 20px;
+    background: color('white');
+    color: color(blue);
+    text-decoration: none;
+
+    &:hover {
+      color: color('white');
+      background: color(blue-xdark);
+    }
   }
 }
