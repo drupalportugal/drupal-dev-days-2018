@@ -1,3 +1,4 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .homepage-intro__wrapper {
   background: #5776b7 url(../..//components/footer/footer_pattern.svg) repeat-x center top;
   width: 100%;
@@ -46,23 +47,4 @@
 .homepage-intro__btn a:hover {
   color: #fff;
   background: #29314b;
-}
-
-.hero__text {
-  text-align: center;
-  padding: 10px 10px 20px;
-  font-size: 25px;
-}
-
-@media (min-width: 999px) {
-  .hero__text {
-    padding: 40px 10px;
-    font-size: 34px;
-  }
-}
-
-@media (min-width: 999px) {
-  .hero__text span {
-    display: block;
-  }
 }

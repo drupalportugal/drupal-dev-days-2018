@@ -15,6 +15,10 @@
   @extend %full__header__wrapper;
 }
 
+.page-full__header__wrapper--with-background {
+  @extend %full__header__wrapper--with-background;
+}
+
 .page-full__image {
   @extend %full__image;
 }
@@ -22,6 +26,10 @@
 .page-full__header {
   @extend %full__header;
   @extend %full__title;
+
+  .page-full__header__wrapper--with-background & {
+    justify-content: center;
+  }
 }
 
 .page-full__title {
@@ -38,6 +46,8 @@
 }
 
 .page-full__content {
+  padding-bottom: 40px;
+
   @include zen-respond-to(xl) {
     @include zen-grid-item(8, 1);
   }

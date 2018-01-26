@@ -1,3 +1,4 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .homepage-menu__wrapper {
   width: 100%;
   text-align: center;
@@ -158,4 +159,41 @@
   .homepage-menu__slogan-mobile {
     display: none;
   }
+}
+
+.hero__text {
+  text-align: center;
+  padding: 10px 10px 0;
+  font-size: 25px;
+}
+
+@media (min-width: 999px) {
+  .hero__text {
+    padding: 40px 10px 0;
+    font-size: 34px;
+    line-height: 2.65rem;
+  }
+}
+
+@media (min-width: 999px) {
+  .hero__text span {
+    display: block;
+  }
+}
+
+.quick-info__title {
+  text-align: center;
+  font-size: 18px;
+}
+
+@media (min-width: 999px) {
+  .quick-info__title {
+    font-size: 25px;
+  }
+}
+
+.quick-info__text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
 }

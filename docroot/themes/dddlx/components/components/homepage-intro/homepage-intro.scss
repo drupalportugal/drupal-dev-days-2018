@@ -48,23 +48,3 @@ $image-url-subdirectory: 'components/footer';
     }
   }
 }
-
-// TO BE PLACED ON PROPER LOCATION
-
-.hero__text {
-  text-align: center;
-  padding: 10px 10px 20px;
-  font-size: 25px;
-
-  @include respond-to(xl) {
-    padding: 40px 10px;
-    font-size: 34px;
-  }
-
-  span {
-
-    @include respond-to(xl) {
-      display: block;
-    }
-  }
-}
