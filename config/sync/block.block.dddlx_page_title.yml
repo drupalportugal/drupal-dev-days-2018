@@ -2,6 +2,8 @@ uuid: f1823c9a-d57e-4c97-823b-f98ce279df7b
 langcode: en
 status: true
 dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.not_on_basic_pages
   module:
     - block_visibility_groups
     - system
@@ -12,7 +14,7 @@ _core:
 id: dddlx_page_title
 theme: dddlx
 region: title
-weight: -7
+weight: -6
 provider: null
 plugin: page_title_block
 settings:
@@ -24,7 +26,7 @@ visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: ''
+    block_visibility_group: not_on_basic_pages
     context_mapping: {  }
   request_path:
     id: request_path
