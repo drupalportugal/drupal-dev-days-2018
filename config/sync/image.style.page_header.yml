@@ -1,0 +1,14 @@
+uuid: c6f12467-2c35-405f-89e4-b883376c4273
+langcode: en
+status: true
+dependencies: {  }
+name: page_header
+label: 'Page Header'
+effects:
+  336966f3-3b46-4dec-935e-30d38bb9afd2:
+    uuid: 336966f3-3b46-4dec-935e-30d38bb9afd2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1360
+      height: 400

@@ -1,0 +1,41 @@
+uuid: cef8ab89-fd8b-46e6-a729-d1f52994229c
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - system
+id: not_on_basic_pages
+label: 'not on basic pages'
+logic: or
+conditions:
+  8f37c536-33de-4898-b916-41e60eb3a866:
+    id: 'entity_bundle:node'
+    bundles:
+      job_offer: job_offer
+      keynote: keynote
+      news: news
+      schedule_page: schedule_page
+      session: session
+      sponsor: sponsor
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    uuid: 8f37c536-33de-4898-b916-41e60eb3a866
+  b474439a-3ce9-4d21-9b18-44554389ac0b:
+    id: 'entity_bundle:contact_message'
+    bundles:
+      contact_us: contact_us
+      mentors: mentors
+      personal: personal
+      volunteers: volunteers
+    negate: false
+    context_mapping: {  }
+    uuid: b474439a-3ce9-4d21-9b18-44554389ac0b
+  35b0d636-7ffa-4019-b3e8-109447332b2d:
+    id: request_path
+    pages: "<front>\r\n/contact\r\n/node/*/edit"
+    negate: false
+    context_mapping: {  }
+    uuid: 35b0d636-7ffa-4019-b3e8-109447332b2d
+allow_other_conditions: false
