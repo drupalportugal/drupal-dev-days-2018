@@ -11,9 +11,10 @@ $image-url-subdirectory: 'components/footer';
 .footer,
 %footer {
   @include type-layout(s, 1);
-  padding-top: 90px;
+  //padding-top: 90px;
   text-align: center;
-  background: color(blue) image-url('footer_pattern.svg') repeat-x center top;
+  //background: color(blue) image-url('footer_pattern.svg') repeat-x center top;
+  background: color(blue);
   color: color(blue-extra-light);
 
   a {
@@ -88,10 +89,12 @@ $image-url-subdirectory: 'components/footer';
   }
 }
 
+
 /*
 ** footer organization
 */
 .footer-follow__wrapper {
+  position: relative;
   width: 100%;
   background: color(blue-dark);
   text-align: center;
@@ -101,9 +104,20 @@ $image-url-subdirectory: 'components/footer';
   justify-content: center;
   padding: 10px;
 
+  &::before {
+    content: '';
+    width: 100%;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: color(blue-xdark);
+    background: linear-gradient(to bottom, rgba(color(blue-xdark),0.35) 0%,rgba(color(blue-xdark),0) 100%);
+  }
+
   @include respond-to(l) {
     flex-wrap: nowrap;
-    padding: 20px 10px;
+    padding: 20px 10px 0;
   }
 
   p {
@@ -117,7 +131,7 @@ $image-url-subdirectory: 'components/footer';
   padding: 20px;
   
     @include respond-to(l) {
-      padding: 20px 40px 20px 20px;
+      padding: 20px 40px 0 20px;
     }
 
   p {
@@ -180,49 +194,59 @@ $image-url-subdirectory: 'components/footer';
 .footer-tag__wrapper {
   width: 100%;
   background: color(blue-dark);
-  padding: 30px 10px;
+  padding: 15px 10px 30px;
 }
+
 
 /*
-** footer branding logo and slogan
+** This is the azulejo mosaic containing the azulejo logo
 */
 
-.footer-branding__wrapper {
+.footer-section__azulejo {
+  background: color(blue-xdark);
+  position: relative;
+  z-index: 10;
   width: 100%;
-  background: color(blue-xdark);
-  padding: 40px 10px 10px;
-}
+  display: flex;
+  justify-content: space-around;
 
-.footer-branding {
-  margin: 0 auto;
-}
-
-.footer-branding__logo__primary {
-  display: block;
-  margin: 0 auto;
-  background-image: image-url('DDD_2018_horizontal_version.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 50px;
-  height: 50px;
-}
-
-.footer-branding__slogan {
-  display: block;
-  margin: 20px auto 10px;
-  text-transform: uppercase;
-}
-
-.footer__powered-by {
-  background: color(blue-xdark);
-  text-align: center;
-  padding: 10px 10px 40px;
-  color: color(blue-extra-light);
-  @include font-size(s);
-
-  a {
-    text-decoration: none;
-    color: color('white');
+  &::before {
+    content: '';
+    width: 100%;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: color(blue-xdark);
+    background: linear-gradient(to bottom, rgba(color(blue-xdark),1) 0%,rgba(color(blue-xdark),0) 100%);
   }
+}
+
+.footer-section__azulejo__center {
+  height: 276px;
+  width: 459px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+%footer-section__azulejo_sides {
+  height: 276px;
+  flex: 1 0 auto;
+  margin: 0;
+  padding: 0;
+  background-repeat: repeat-x;
+  background-size: 275px 276px;
+}
+
+.footer-section__azulejo__left {
+  @extend %footer-section__azulejo_sides;
+  background: image-url('pattern_azulejo_left.svg');
+  background-position: top right;
+}
+
+.footer-section__azulejo__right {
+  @extend %footer-section__azulejo_sides;
+  background: image-url('pattern_azulejo_right.svg');
+  background-position: top left;
 }

@@ -1,0 +1,36 @@
+uuid: 0267c53b-2a47-40b5-8082-6b9366faf892
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - ctools
+    - system
+  theme:
+    - dddlx
+_core:
+  default_config_hash: _nhDzEKkSz_A4FwyoTuEMstEbB3RPhJqizKgcVV9I-k
+id: dddlx_breadcrumbs
+theme: dddlx
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      basic_page: basic_page
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

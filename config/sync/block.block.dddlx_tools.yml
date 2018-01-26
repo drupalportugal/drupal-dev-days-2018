@@ -1,0 +1,45 @@
+uuid: 82d24371-5441-4e54-9eed-814107802113
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - block_visibility_groups
+    - ctools
+    - system
+  theme:
+    - dddlx
+_core:
+  default_config_hash: Spxr_7Aoq0N6haJjF03aEqL-olw7Z6iB7ZbKX8bU5YM
+id: dddlx_tools
+theme: dddlx
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      basic_page: basic_page
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

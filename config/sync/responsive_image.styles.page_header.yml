@@ -1,0 +1,21 @@
+uuid: b104d4bc-5558-4b3c-9448-908a8f910cb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.page_header
+    - image.style.page_header_mobile
+id: page_header
+label: 'Page Header'
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: '(max-width: 998px) 998px, (min-width: 999px) 1360px, 100vw.'
+      sizes_image_styles:
+        - page_header
+        - page_header_mobile
+breakpoint_group: responsive_image
+fallback_image_style: page_header
