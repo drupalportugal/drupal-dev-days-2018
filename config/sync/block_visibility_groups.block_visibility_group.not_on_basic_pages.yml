@@ -34,7 +34,7 @@ conditions:
     uuid: b474439a-3ce9-4d21-9b18-44554389ac0b
   35b0d636-7ffa-4019-b3e8-109447332b2d:
     id: request_path
-    pages: "<front>\r\n/contact"
+    pages: "<front>\r\n/contact\r\n/node/*/edit"
     negate: false
     context_mapping: {  }
     uuid: 35b0d636-7ffa-4019-b3e8-109447332b2d
