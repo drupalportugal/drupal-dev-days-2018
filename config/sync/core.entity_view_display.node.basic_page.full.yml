@@ -8,10 +8,11 @@ dependencies:
     - field.field.node.basic_page.field_file
     - field.field.node.basic_page.field_image
     - node.type.basic_page
+    - responsive_image.styles.page_header
   module:
     - ds
     - file
-    - image
+    - responsive_image
     - text
     - user
 third_party_settings:
@@ -80,12 +81,12 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_image:
-    type: image
+    type: responsive_image
     weight: 0
     region: background
     label: hidden
     settings:
-      image_style: ''
+      responsive_image_style: page_header
       image_link: ''
     third_party_settings: {  }
 hidden:

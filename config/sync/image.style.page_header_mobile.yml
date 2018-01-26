@@ -1,0 +1,14 @@
+uuid: 8b469004-1742-41ba-85e2-94ca4a03a8b1
+langcode: en
+status: true
+dependencies: {  }
+name: page_header_mobile
+label: 'Page Header Mobile'
+effects:
+  e2c5703a-9fa8-4c6d-b8f6-f0022e7fad41:
+    uuid: e2c5703a-9fa8-4c6d-b8f6-f0022e7fad41
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 998
+      height: 562
