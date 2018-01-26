@@ -1,3 +1,4 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .page-full {
   overflow: hidden;
 }
@@ -5,14 +6,25 @@
 .page-full__header__wrapper {
   position: relative;
   overflow: hidden;
-  margin-bottom: 50px;
   margin-top: 60px;
+  min-height: 140px;
 }
 
 @media (min-width: 999px) {
   .page-full__header__wrapper {
     margin-top: 0;
   }
+}
+
+.page-full__header__wrapper--with-background {
+  margin-bottom: 50px;
+}
+
+.page-full__header__wrapper--with-background h1 {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  text-align: center;
 }
 
 .page-full__image {
@@ -44,17 +56,11 @@
   display: flex;
   -webkit-box-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
 }
 
 .page-full__header h1, .page-full__title h1 {
   font-size: 2rem;
   line-height: 2.25rem;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
-  padding: 20px;
-  text-align: center;
   font-weight: 300;
 }
 
@@ -89,7 +95,16 @@
   margin: 0 5px 10px;
 }
 
+.page-full__header__wrapper--with-background .page-full__header {
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
 /* Sidebar & content */
+.page-full__content {
+  padding-bottom: 40px;
+}
+
 @media (min-width: 999px) {
   .page-full__content {
     float: left;
