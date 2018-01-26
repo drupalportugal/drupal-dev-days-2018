@@ -11,7 +11,7 @@ dependencies:
 id: devdaysabouthomeblock
 theme: dddlx
 region: content
-weight: 0
+weight: -3
 provider: null
 plugin: dev_days_about_home_block
 settings:

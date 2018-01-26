@@ -877,7 +877,8 @@ input[data-drupal-selector='edit-submit-tech-forum-list']:hover {
   background: #000;
 }
 
-.form-item .form-checkbox {
+.form-item .form-checkbox,
+.form-item .form-radio {
   width: auto;
 }
 

@@ -321,7 +321,8 @@ $image-url-subdirectory: 'base/forms';
   @extend %dddlx-form-item-input;
 }
 
-.form-item .form-checkbox {
+.form-item .form-checkbox,
+.form-item .form-radio {
   width: auto;
 }
 
