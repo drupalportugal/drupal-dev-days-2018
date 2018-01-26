@@ -1,0 +1,32 @@
+uuid: 86092f23-b226-47bb-a8c3-5069185cc09e
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - dddlx_home
+    - system
+  theme:
+    - dddlx
+id: devdaysabouthomeblock
+theme: dddlx
+region: content
+weight: 0
+provider: null
+plugin: dev_days_about_home_block
+settings:
+  id: dev_days_about_home_block
+  label: 'Dev days about home block'
+  provider: dddlx_home
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

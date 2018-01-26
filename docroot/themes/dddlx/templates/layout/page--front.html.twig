@@ -47,7 +47,6 @@
 
 {{ attach_library('dddlx/layouts') }}
 {{ attach_library('dddlx/homepage-menu') }}
-{{ attach_library('dddlx/homepage-intro') }}
 
 {% embed "@dddlx/components/header/header.twig" %}
   {% block branding %}
@@ -92,14 +91,7 @@
   </div>
 </div>
 
-<div class="homepage-intro__wrapper">
-
-  <div class="homepage-intro">
-    <a class="homepage-intro__btn" href="#">Get Your Tickets</a>
-    <a class="homepage-intro__btn" href="#">Become a Sponsor</a>
-  </div>
-
-</div>
+{{ page.highlighted }}
 
 <div class="clearfix layout-center">
 
@@ -123,8 +115,6 @@
   {% endif %}
 
   <main class="layout-center {{ content_class }}" role="main">
-
-    {{ page.highlighted }}
     {{ page.breadcrumb }}
     <a href="#skip-link" class="visually-hidden visually-hidden--focusable" id="main-content">Back to top</a>{# link target is in html.html.twig #}
     {{ page.title }}

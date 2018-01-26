@@ -1,0 +1,37 @@
+uuid: 0f8832e5-276f-44e1-9eff-fd414b98dc4a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:call_to_action:344dbce3-5659-490b-b8cc-f340a28aff7b'
+  module:
+    - block_content
+    - block_visibility_groups
+    - system
+  theme:
+    - dddlx
+id: calltoaction
+theme: dddlx
+region: highlighted
+weight: 0
+provider: null
+plugin: 'block_content:344dbce3-5659-490b-b8cc-f340a28aff7b'
+settings:
+  id: 'block_content:344dbce3-5659-490b-b8cc-f340a28aff7b'
+  label: 'Call to action'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
