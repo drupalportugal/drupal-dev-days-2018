@@ -14,8 +14,4 @@
   @include respond-to(l) {
     @include type-layout(55px, 3);
   }
-
-  .is-page-node-type-basic-page & {
-    display: none;
-  }
 }

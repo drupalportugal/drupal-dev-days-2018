@@ -50,7 +50,7 @@ $image-url-subdirectory: 'navigation/nav-primary';
     top: calc(100% - 15px);
     left: -15px;
     width: calc(100% + 30px);
-    transition: all .35s ease;
+    transition: all .15s ease;
     visibility: hidden;
     opacity: 0;
     transform: translateY(-10%);
@@ -59,6 +59,7 @@ $image-url-subdirectory: 'navigation/nav-primary';
     .nav-primary__item:hover & {
       visibility: visible;
       transform: translateY(0%);
+      transition: all .35s ease;
       opacity: 1;
     }
   }

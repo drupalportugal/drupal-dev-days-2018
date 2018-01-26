@@ -5,7 +5,13 @@ $image-url-subdirectory: 'components/footer';
 .homepage-intro__wrapper {
   background: color(blue) image-url('footer_pattern.svg') repeat-x center top;
   width: 100%;
-  padding: 150px 10px 60px;
+  padding: 60px 10px;
+  margin: 0;
+
+  @include respond-to(xl) {
+    margin: 40px auto 0;
+    padding: 150px 10px 60px;
+  }
 }
 
 .homepage-intro {
@@ -24,18 +30,15 @@ $image-url-subdirectory: 'components/footer';
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  transition: color ease .25s, background ease .25s;
   margin: 10px auto;
+  padding: 0 10px;
 
   @include respond-to(xl) {
-    margin: 0 auto;
-
-    &:nth-child(2) {
-      margin-left: 20px;
-    }
+    margin: 0 auto 10px;
   }
 
   a {
+    transition: color ease .25s, background ease .25s;
     display: block;
     padding: 10px 20px;
     background: color('white');
