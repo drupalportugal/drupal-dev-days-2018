@@ -1,6 +1,6 @@
 uuid: 6c5b2866-ee3a-41ec-abf1-c5720799d23c
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,7 +10,7 @@ _core:
   default_config_hash: l1R_iU_ltG4s79h-NVBjRmsHyemhOd2pB9n_i1fG7YI
 id: dddlx_powered
 theme: dddlx
-region: powered_by_drupal
+region: header
 weight: -6
 provider: null
 plugin: system_powered_by_block
