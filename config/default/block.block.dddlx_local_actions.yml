@@ -1,0 +1,20 @@
+uuid: f4853925-43ce-4c16-baee-4267f5cadc10
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dddlx
+_core:
+  default_config_hash: mHM3Ck3Um3tAmW_8RIUka2qSBfrf3qSFGW5czLB5Ok8
+id: dddlx_local_actions
+theme: dddlx
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,7 @@
+uuid: 804b0de0-ef3d-4826-baae-a88881a7b89b
+langcode: en
+status: false
+dependencies: {  }
+formId: contact_message_personal_form
+captchaType: default
+label: null

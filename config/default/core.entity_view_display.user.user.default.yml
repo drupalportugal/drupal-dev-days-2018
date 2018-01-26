@@ -1,0 +1,54 @@
+uuid: f53c88c6-7f75-41bd-a1f9-5c417d3272c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_gender
+    - field.field.user.user.field_gender_write_in
+    - field.field.user.user.field_register_drupal_link
+    - field.field.user.user.field_register_drupal_name
+    - field.field.user.user.field_register_name
+    - field.field.user.user.field_register_picture
+  module:
+    - image
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_register_drupal_name:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      linked_field:
+        linked: '1'
+        type: custom
+        destination: '[user:field_register_drupal_link:uri]'
+        advanced: {  }
+    type: string
+    region: content
+  field_register_name:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_register_picture:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  field_gender: true
+  field_gender_write_in: true
+  field_register_drupal_link: true
+  member_for: true

@@ -1,0 +1,6 @@
+zen_rebuild_registry: 0
+logo:
+  path: themes/dddlx/logo.svg
+  use_default: false
+_core:
+  default_config_hash: zwtym2G4irSJtWwkzqUb5YgBVo3nbHNSWtAdTeOP7Uw

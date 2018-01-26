@@ -1,0 +1,23 @@
+uuid: 9ae8ad98-2975-44c3-b8e6-8c28273ab8dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action
+    - field.storage.block_content.field_action_link
+  module:
+    - link
+id: block_content.call_to_action.field_action_link
+field_name: field_action_link
+entity_type: block_content
+bundle: call_to_action
+label: 'Action link'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link
