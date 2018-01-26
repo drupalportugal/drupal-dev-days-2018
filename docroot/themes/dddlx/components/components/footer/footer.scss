@@ -11,9 +11,10 @@ $image-url-subdirectory: 'components/footer';
 .footer,
 %footer {
   @include type-layout(s, 1);
-  padding-top: 90px;
+  //padding-top: 90px;
   text-align: center;
-  background: color(blue) image-url('footer_pattern.svg') repeat-x center top;
+  //background: color(blue) image-url('footer_pattern.svg') repeat-x center top;
+  background: color(blue);
   color: color(blue-extra-light);
 
   a {
@@ -103,7 +104,7 @@ $image-url-subdirectory: 'components/footer';
 
   @include respond-to(l) {
     flex-wrap: nowrap;
-    padding: 20px 10px;
+    padding: 20px 10px 0;
   }
 
   p {
@@ -180,7 +181,7 @@ $image-url-subdirectory: 'components/footer';
 .footer-tag__wrapper {
   width: 100%;
   background: color(blue-dark);
-  padding: 30px 10px;
+  padding: 15px 10px 30px;
 }
 
 /*
@@ -225,4 +226,47 @@ $image-url-subdirectory: 'components/footer';
     text-decoration: none;
     color: color('white');
   }
+}
+
+
+/*
+** This is the azulejo mosaic containing the azulejo logo
+*/
+
+.footer-section__azulejo {
+  background: color(blue-xdark);
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-section__azulejo__center {
+  height: 276px;
+  width: 459px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+%footer-section__azulejo_sides {
+  height: 276px;
+  flex: 1 0 auto;
+  margin: 0;
+  padding: 0;
+  background-repeat: repeat-x;
+  background-size: 275px 276px;
+}
+
+.footer-section__azulejo__left {
+  @extend %footer-section__azulejo_sides;
+  background: image-url('pattern_azulejo_left.svg');
+  background-position: top right;
+}
+
+.footer-section__azulejo__right {
+  @extend %footer-section__azulejo_sides;
+  background: image-url('pattern_azulejo_right.svg');
+  background-position: top left;
 }
