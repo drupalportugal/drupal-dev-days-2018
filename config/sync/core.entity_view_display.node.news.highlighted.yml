@@ -7,12 +7,46 @@ dependencies:
     - field.field.node.news.body
     - field.field.node.news.field_image
     - field.field.node.news.field_meta_tags
-    - image.style.thumbnail_crop
+    - image.style.medium
     - node.type.news
   module:
+    - ds
     - image
     - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: article_teaser
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          text: div
+          media: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      text:
+        - node_title
+        - body
+      media:
+        - field_image
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
 id: node.news.highlighted
 targetEntityType: node
 bundle: news
@@ -25,16 +59,16 @@ content:
     settings:
       trim_length: 125
     third_party_settings: {  }
-    region: content
+    region: text
   field_image:
-    weight: 0
+    weight: 2
     label: hidden
     settings:
-      image_style: thumbnail_crop
+      image_style: medium
       image_link: content
     third_party_settings: {  }
     type: image
-    region: content
+    region: media
 hidden:
   field_meta_tags: true
   links: true

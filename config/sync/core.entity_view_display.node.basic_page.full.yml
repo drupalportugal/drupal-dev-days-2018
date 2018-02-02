@@ -8,11 +8,10 @@ dependencies:
     - field.field.node.basic_page.field_file
     - field.field.node.basic_page.field_image
     - node.type.basic_page
-    - responsive_image.styles.page_header
   module:
     - ds
     - file
-    - responsive_image
+    - image
     - text
     - user
 third_party_settings:
@@ -45,10 +44,10 @@ third_party_settings:
         - body
         - field_file
       asidefirst:
-        - node_links
+        - 'dynamic_block_field:node-call_to_action'
     fields:
-      node_links:
-        plugin_id: node_links
+      'dynamic_block_field:node-call_to_action':
+        plugin_id: 'dynamic_block_field:node-call_to_action'
         weight: 4
         label: hidden
         formatter: default
@@ -81,12 +80,12 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_image:
-    type: responsive_image
+    type: image
     weight: 0
     region: background
     label: hidden
     settings:
-      responsive_image_style: page_header
+      image_style: ''
       image_link: ''
     third_party_settings: {  }
 hidden:

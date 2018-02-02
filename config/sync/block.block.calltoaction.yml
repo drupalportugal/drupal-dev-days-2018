@@ -1,4 +1,4 @@
-uuid: f9121bff-d897-4b81-b73a-7da0f7146070
+uuid: 4fc3c80c-f76b-40f3-9972-53549710bcac
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ dependencies:
 id: calltoaction
 theme: dddlx
 region: sidebar_first
-weight: 0
+weight: -6
 provider: null
 plugin: 'block_content:1ad96532-b06a-417b-9fc9-7aff14261aae'
 settings:

@@ -2,10 +2,9 @@ uuid: f1823c9a-d57e-4c97-823b-f98ce279df7b
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.not_on_basic_pages
   module:
     - block_visibility_groups
+    - ctools
     - system
   theme:
     - dddlx
@@ -26,10 +25,17 @@ visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: not_on_basic_pages
+    block_visibility_group: ''
     context_mapping: {  }
   request_path:
     id: request_path
     pages: '<front>'
     negate: true
     context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      basic_page: basic_page
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
