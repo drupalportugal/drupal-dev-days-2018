@@ -1,0 +1,41 @@
+@import 'init';
+
+
+.hero__text {
+  font-size: 25px;
+  text-align: center;
+
+  @include respond-to(xl) {
+    text-align: left;
+    padding: 40px 0 0;
+    font-size: 34px;
+    line-height: 2.65rem;
+  }
+
+  span {
+
+    @include respond-to(xl) {
+      display: block;
+    }
+  }
+}
+
+.quick-info__title {
+  font-size: 18px;
+  text-align: center;
+
+  @include respond-to(xl) {
+    font-size: 25px;
+    text-align: left;
+  }
+}
+
+.quick-info__text {
+  text-align: center;
+  margin: 0 auto 60px;
+
+  @include respond-to(xl) {
+    text-align: left;
+  }
+}
+

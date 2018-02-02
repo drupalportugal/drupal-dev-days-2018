@@ -37,6 +37,8 @@
 <link rel="stylesheet" href="../components/asset-builds/css/hidden.css">
 <link rel="stylesheet" href="../components/asset-builds/css/highlight-mark.css">
 <link rel="stylesheet" href="../components/asset-builds/css/homepage_slider.css">
+<link rel="stylesheet" href="../components/asset-builds/css/homepage-feature-news.css">
+<link rel="stylesheet" href="../components/asset-builds/css/homepage-featured-news.css">
 <link rel="stylesheet" href="../components/asset-builds/css/homepage-intro.css">
 <link rel="stylesheet" href="../components/asset-builds/css/homepage-menu.css">
 <link rel="stylesheet" href="../components/asset-builds/css/inline-links.css">
@@ -532,7 +534,7 @@ class names specified in the component.</p>
 {{ attach_library(&#039;dddlx/article_teaser&#039;) }}
 
 {%
-  set class = node.bundle|clean_class ~ &#039;-teaser&#039;
+  set class = &#039;article-teaser&#039;
 %}
 
 &lt;{{ outer_wrapper }}{{ attributes.addClass(class, &#039;clearfix&#039;) }}&gt;
@@ -708,7 +710,7 @@ class names specified in the component.</p>
 {{ attach_library(&#039;dddlx/article_teaser&#039;) }}
 
 {%
-  set class = node.bundle|clean_class ~ &#039;-teaser&#039;
+  set class = &#039;article-teaser&#039;
 %}
 
 &lt;{{ outer_wrapper }}{{ attributes.addClass(class, &#039;clearfix&#039;) }}&gt;
