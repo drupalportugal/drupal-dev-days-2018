@@ -1,13 +1,12 @@
-/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .hero__text {
   font-size: 25px;
   text-align: center;
+  margin-top: 0;
 }
 
 @media (min-width: 999px) {
   .hero__text {
     text-align: left;
-    padding: 40px 0 0;
     font-size: 34px;
     line-height: 2.65rem;
   }

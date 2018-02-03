@@ -273,18 +273,6 @@ function dddlx_preprocess_field(&$variables, $hook) {
   }
 }
 
-
-function dddlx_preprocess_views_view__news__page(&$variables, $hook) {
-
-  $page = $variables['view']->getCurrentPage();
-
-  if ($page === 0) {
-    $variables['with_highlighted'] = 'with_highlighted';
-    $variables['rows']['0']['#rows']['0']['highlighted'] = 'highlighted';
-  }
-}
-
-
 function dddlx_preprocess_event_teaser_small(&$variables, $hook) {
 
   $event_date = strtotime($variables['content']['#node']->get('field_event_start_date')->getValue()[0]['value']);

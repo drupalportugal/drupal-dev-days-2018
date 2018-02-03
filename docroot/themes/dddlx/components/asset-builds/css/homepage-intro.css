@@ -1,4 +1,3 @@
-/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .homepage-intro__wrapper {
   background: #5776b7 url(../..//components/footer/footer_pattern.svg) repeat-x center top;
   width: 100%;
@@ -8,7 +7,7 @@
 
 @media (min-width: 999px) {
   .homepage-intro__wrapper {
-    margin: 40px auto 0;
+    margin: 0 auto;
     padding: 150px 10px 60px;
   }
 }
