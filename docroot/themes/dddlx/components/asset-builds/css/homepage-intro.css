@@ -7,7 +7,7 @@
 
 @media (min-width: 999px) {
   .homepage-intro__wrapper {
-    margin: 40px auto 0;
+    margin: 0 auto;
     padding: 150px 10px 60px;
   }
 }

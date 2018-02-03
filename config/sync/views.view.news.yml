@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.highlighted
-    - core.entity_view_mode.node.teaser
     - node.type.news
   module:
     - node
@@ -207,6 +206,9 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      use_more: true
+      use_more_always: true
+      use_more_text: 'More News'
     cache_metadata:
       max-age: -1
       contexts:
@@ -332,28 +334,14 @@ display:
           items_per_page: 2
           offset: 0
       block_description: 'Featured news'
-      footer:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content: '<a href="/news">More news</a>'
-          plugin_id: text_custom
+      footer: {  }
       block_hide_empty: true
       style:
-        type: html_list
+        type: default
         options:
           row_class: news-list__item
           default_row_class: true
           uses_fields: false
-          type: ul
-          wrapper_class: ''
-          class: 'news-list__list news-list__list--featured'
       row:
         type: 'entity:node'
         options:
@@ -377,22 +365,25 @@ display:
       path: news
       display_description: ''
       style:
-        type: html_list
+        type: default
         options:
           row_class: news-list__item
           default_row_class: true
           uses_fields: false
-          type: ul
-          wrapper_class: ''
-          class: 'news-list__list news-list__list--featured'
       defaults:
         style: false
         row: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
       row:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: teaser
+          view_mode: highlighted
+      use_more: false
+      use_more_always: true
+      use_more_text: 'More News'
     cache_metadata:
       max-age: -1
       contexts:

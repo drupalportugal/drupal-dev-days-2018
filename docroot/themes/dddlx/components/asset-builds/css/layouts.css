@@ -65,6 +65,9 @@
     margin-right: 0%;
     margin-left: -100%;
   }
+  .layout-3col__left-content, .layout-3col__right-content, .layout-3col__left-sidebar, .layout-3col__right-sidebar {
+    padding-top: 40px;
+  }
   .layout-3col__first-left-sidebar, .layout-3col__col-1, .layout-3col__col-3, .layout-3col__col-x:nth-child(2n + 1) {
     float: left;
     width: 50%;

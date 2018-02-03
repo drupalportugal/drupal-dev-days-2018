@@ -130,39 +130,3 @@ $image-url-subdirectory: 'components/homepage-menu';
   }
 }
 
-// TO BE PLACED ON PROPER LOCATION
-
-.hero__text {
-  text-align: center;
-  padding: 10px 10px 0;
-  font-size: 25px;
-
-  @include respond-to(xl) {
-    padding: 40px 10px 0;
-    font-size: 34px;
-    line-height: 2.65rem;
-  }
-
-  span {
-
-    @include respond-to(xl) {
-      display: block;
-    }
-  }
-}
-
-.quick-info__title {
-  text-align: center;
-  font-size: 18px;
-
-  @include respond-to(xl) {
-    font-size: 25px;
-  }
-}
-
-.quick-info__text {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 60px;
-}
-

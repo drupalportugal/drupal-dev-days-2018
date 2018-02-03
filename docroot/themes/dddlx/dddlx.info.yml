@@ -59,6 +59,7 @@ libraries:
   - dddlx/base
   - dddlx/fonts
   - dddlx/page-title
+  - dddlx/homepage-text-elements
   # @TODO Remove these libraries and use attach_library() for all component styles.
   - dddlx/box
   - dddlx/comment

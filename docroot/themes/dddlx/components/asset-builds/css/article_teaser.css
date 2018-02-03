@@ -1,16 +1,19 @@
 .article-teaser {
   text-align: center;
+  padding-bottom: 10px;
 }
 
 @media (min-width: 0) and (max-width: 887px) {
   .article-teaser {
-    padding: 0 20px;
+    padding: 0 20px 10px;
   }
 }
 
 @media (min-width: 888px) {
   .article-teaser {
     text-align: left;
+    display: -webkit-box;
+    display: flex;
   }
   .article-teaser:before {
     content: "";
@@ -29,56 +32,27 @@
 
 @media (min-width: 888px) {
   .article-teaser__text__wrapper {
-    float: left;
-    width: 300%;
-    margin-left: 0%;
-    margin-right: -100%;
     padding-left: 20px;
-    padding-right: 20px;
-  }
-  [dir="rtl"] .article-teaser__text__wrapper {
-    float: right;
-    margin-right: 0%;
-    margin-left: -100%;
+    padding-top: 0;
   }
 }
 
-@media (min-width: 888px) {
-  .article-teaser__image__wrapper {
-    float: left;
-    width: 300%;
-    margin-left: 300%;
-    margin-right: -100%;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  [dir="rtl"] .article-teaser__image__wrapper {
-    float: right;
-    margin-right: 300%;
-    margin-left: -100%;
-  }
-}
-
-
-.article-teaser__title h2 {
+.article-teaser__title h2, .article-teaser .field--name-node-title h2 {
   font-size: 1.5rem;
   text-align: center;
-  margin: 0 auto 20px;
+  margin: 0 auto;
   text-transform: uppercase;
 }
 
 @media (min-width: 888px) {
-  
-  .article-teaser__title h2 {
+  .article-teaser__title h2, .article-teaser .field--name-node-title h2 {
     text-align: left;
   }
 }
 
-
-.article-teaser__title h2 a {
+.article-teaser__title h2 a, .article-teaser .field--name-node-title h2 a {
   text-decoration: none;
 }
-
 
 .article-teaser__subtitle {
   margin-bottom: 20px;
@@ -123,34 +97,11 @@
   text-align: center;
 }
 
-.article-teaser__image {
+.article-teaser__image, .article-teaser .field--type-image {
   position: relative;
 }
 
-.article-teaser__image::before {
-  position: absolute;
-  display: block;
-  content: '';
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate3d(-50%, 0, 0);
-          transform: translate3d(-50%, 0, 0);
-  width: 0;
-  height: 0;
-  z-index: 10;
-  border-style: solid;
-  border-width: 0 15px 10px;
-  border-color: transparent transparent #fff;
-}
-
-@media (min-width: 888px) {
-  .article-teaser__image::before {
-    bottom: auto;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translate3d(0, -50%, 0);
-            transform: translate3d(0, -50%, 0);
-    border-width: 20px 0 20px 15px;
-    border-color: transparent transparent transparent #fff;
-  }
+.article-teaser__image a, .article-teaser .field--type-image a {
+  width: 200px;
+  display: inline-block;
 }

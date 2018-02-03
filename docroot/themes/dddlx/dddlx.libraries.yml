@@ -362,3 +362,13 @@ homepage-intro:
   css:
     component:
       components/asset-builds/css/homepage-intro.css: {}
+
+homepage-featured-news:
+  css:
+    component:
+      components/asset-builds/css/homepage-featured-news.css: {}
+
+homepage-text-elements:
+  css:
+    component:
+      components/asset-builds/css/homepage-text-elements.css: {}

@@ -87,6 +87,13 @@
       @include zen-apply-gutter-padding();
     }
 
+    &__left-content,
+    &__right-content,
+    &__left-sidebar,
+    &__right-sidebar {
+      padding-top: 40px;
+    }
+
     &__first-left-sidebar,
     &__col-1,
     &__col-3,

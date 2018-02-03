@@ -9,7 +9,7 @@ $image-url-subdirectory: 'components/footer';
   margin: 0;
 
   @include respond-to(xl) {
-    margin: 40px auto 0;
+    margin: 0 auto;
     padding: 150px 10px 60px;
   }
 }
