@@ -1,8 +1,8 @@
 country:
-  default: ES
+  default: PT
 first_day: 1
 timezone:
-  default: Europe/Madrid
+  default: Europe/Lisbon
   user:
     configurable: true
     warn: false

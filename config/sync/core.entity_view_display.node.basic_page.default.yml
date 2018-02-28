@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_attachment
     - field.field.node.basic_page.field_file
     - field.field.node.basic_page.field_image
     - node.type.basic_page
   module:
+    - file
     - image
     - text
     - user
@@ -22,6 +24,13 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_attachment:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
     region: content
   field_image:
     weight: 3

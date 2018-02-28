@@ -1,5 +1,5 @@
-site_key: xxxx
-secret_key: xxxx
+site_key: 6LcTRkQUAAAAALMfswa-fIPiAIDGEQTMW9xRo52J
+secret_key: 6LcTRkQUAAAAABi8k_zG36sYbPIA6iRR2knOc8dP
 widget:
   theme: dark
   type: image
