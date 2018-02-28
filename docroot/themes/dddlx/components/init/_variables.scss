@@ -125,7 +125,7 @@ $rem-fallback:      false;
 @include add-breakpoint(xxs,  (444px, 'no-query' true));
 @include add-breakpoint(xs,   (555px, 'no-query' true));
 @include add-breakpoint(s,    (666px, 'no-query' true));
-//@include add-breakpoint(m,    (777px, 'no-query' true));
+@include add-breakpoint(until-m,    (0 729px, 'no-query' true));
 @include add-breakpoint(m,    (730px, 'no-query' true));
 @include add-breakpoint(until-l,    (0 887px, 'no-query' true));
 @include add-breakpoint(l,    (888px, 'no-query' true));

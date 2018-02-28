@@ -80,6 +80,7 @@ libraries:
   - dddlx/table-drag
   - dddlx/navbar
   - dddlx/pager
+  - dddlx/sponsors
 
 # This section is used by the contrib module, Component Libraries. It allows you
 # to reference .twig files in your sass/ directory by using the Twig namespace:
@@ -117,6 +118,7 @@ regions:
   sidebar_second : Second sidebar
   footer: Footer
   bottom: Page bottom
+  sponsors: Sponsors
   # The page_top and page_bottom regions are hidden, which means they will not
   # show up on the block layout page. But they are required in order for the
   # html.html.twig to work properly, so do not delete them.
