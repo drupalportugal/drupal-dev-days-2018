@@ -5,7 +5,7 @@ dependencies: {  }
 id: volunteers
 label: Volunteers
 recipients:
-  - info@drupal.pt
+  - ddd@drupal.pt
 reply: "Thanks for being a volunteer at Drupal Dev Days! We added you to our list. We will contact you before the event to give you more information.\r\n\r\nThanks a lot!"
 weight: 0
 message: 'Your message was submitted successfully. We will get in touch shortly.'
