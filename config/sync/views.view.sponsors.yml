@@ -7,7 +7,6 @@ dependencies:
     - core.entity_view_mode.node.gold_sponsor
     - core.entity_view_mode.node.platinum_sponsor
     - core.entity_view_mode.node.silver_sponsor
-    - core.entity_view_mode.node.teaser
     - field.storage.node.field_logo
     - field.storage.node.field_webpage
     - image.style.bronze_width_150
@@ -15,7 +14,6 @@ dependencies:
     - image.style.coffee_width_200
     - image.style.gold_width_250
     - image.style.lunch_width_200
-    - image.style.platinum_width_300
     - image.style.silver_width_200
     - node.type.sponsor
   module:
@@ -70,19 +68,23 @@ display:
           items_per_page: 2
           offset: 0
       style:
-        type: html_list
+        type: grid
         options:
-          row_class: sponsors-list__item
-          default_row_class: false
-          uses_fields: false
-          type: ul
-          wrapper_class: ''
-          class: sponsors-list__list
+          grouping: {  }
+          columns: 4
+          automatic_width: true
+          alignment: horizontal
+          col_class_default: true
+          col_class_custom: ''
+          row_class_default: true
+          row_class_custom: ''
       row:
-        type: 'entity:node'
+        type: fields
         options:
-          relationship: none
-          view_mode: teaser
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       fields:
         field_webpage:
           id: field_webpage
@@ -202,8 +204,8 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: platinum_width_300
-            image_link: ''
+            image_style: silver_width_200
+            image_link: content
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -862,8 +864,8 @@ display:
         filters: false
         filter_groups: false
         fields: false
-        style: false
-        row: false
+        style: true
+        row: true
         pager: false
       filters:
         status:
@@ -1063,20 +1065,6 @@ display:
           field_api_classes: false
           plugin_id: field
       block_hide_empty: true
-      style:
-        type: html_list
-        options:
-          row_class: sponsors-list__item
-          default_row_class: false
-          uses_fields: false
-          type: ul
-          wrapper_class: ''
-          class: sponsors-list__list
-      row:
-        type: 'entity:node'
-        options:
-          relationship: none
-          view_mode: silver_sponsor
       pager:
         type: none
         options:

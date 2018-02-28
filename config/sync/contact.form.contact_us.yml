@@ -5,7 +5,7 @@ dependencies: {  }
 id: contact_us
 label: 'Contact us'
 recipients:
-  - ddd@drupal.pt
+  - info@drupal.pt
 reply: "Thanks for contacting us! We'll reply you as soon as possible.\r\n\r\nBest!\r\nThe Drupal Dev Days 2017 team."
 weight: 0
 message: 'Your contact message was submitted successfully in a bottle. It will cross the sea until it gets to our secret island.'

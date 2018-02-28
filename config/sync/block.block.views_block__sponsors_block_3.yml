@@ -1,23 +1,22 @@
-uuid: 33ecb0cf-11d8-40a8-abed-c5f9acf4e4c1
+uuid: cab56fb3-06ce-4c85-ae79-b57b7ab0bd13
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.news
+    - views.view.sponsors
   module:
     - block_visibility_groups
-    - system
     - views
   theme:
     - dddlx
-id: views_block__news_block_featured_news_2
+id: views_block__sponsors_block_3
 theme: dddlx
-region: content
-weight: -3
+region: footer
+weight: -5
 provider: null
-plugin: 'views_block:news-block_featured_news'
+plugin: 'views_block:sponsors-block_3'
 settings:
-  id: 'views_block:news-block_featured_news'
+  id: 'views_block:sponsors-block_3'
   label: ''
   provider: views
   label_display: visible
@@ -28,9 +27,4 @@ visibility:
     id: condition_group
     negate: false
     block_visibility_group: ''
-    context_mapping: {  }
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: false
     context_mapping: {  }
