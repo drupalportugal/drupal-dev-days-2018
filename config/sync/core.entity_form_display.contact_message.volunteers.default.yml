@@ -1,0 +1,50 @@
+uuid: 59cd96a6-6136-403d-82e1-ae00eba4ff14
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.volunteers
+    - field.field.contact_message.volunteers.field_markup
+  module:
+    - markup
+id: contact_message.volunteers.default
+targetEntityType: contact_message
+bundle: volunteers
+mode: default
+content:
+  copy:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_markup:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  mail:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  message:
+    type: string_textarea
+    weight: 3
+    settings:
+      rows: 12
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  name:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  preview:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  subject: true

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_attachment
     - field.field.node.basic_page.field_file
     - field.field.node.basic_page.field_image
     - image.style.thumbnail
@@ -32,6 +33,13 @@ content:
     weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_attachment:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
     region: content
   field_file:
     weight: 8
