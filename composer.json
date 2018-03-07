@@ -27,7 +27,7 @@
         "drupal/config_split": "~1.0",
         "drupal/console": "^1.0.2",
         "drupal/contact_storage": "~1.0",
-        "drupal/core": "~8.4.5",
+        "drupal/core": "~8.5",
         "drupal/cors": "~1.0",
         "drupal/devel": "~1.2",
         "drupal/ds": "^3.1",
