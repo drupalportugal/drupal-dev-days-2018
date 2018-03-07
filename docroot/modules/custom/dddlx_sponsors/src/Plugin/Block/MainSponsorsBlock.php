@@ -98,6 +98,7 @@ class MainSponsorsBlock extends BlockBase implements ContainerFactoryPluginInter
 
     $build = [
       '#theme_wrappers' => ['sponsors_wrapper'],
+      /*
       'diamond' => [
         '#theme' => 'sponsors',
         '#title' => 'Diamond sponsors',
@@ -116,6 +117,7 @@ class MainSponsorsBlock extends BlockBase implements ContainerFactoryPluginInter
         '#sponsor_type' => 'gold',
         '#sponsors' => $gold_sponsors,
       ],
+      */
       /*
       'silver' => [
         '#theme' => 'sponsors',
@@ -135,17 +137,6 @@ class MainSponsorsBlock extends BlockBase implements ContainerFactoryPluginInter
         'contexts' => ['url.path']
       ]
     ];
-
-
-    if (empty($platinum_sponsors)) {
-      unset($build['platinum']);
-    }
-    else if (empty($diamond_sponsors)) {
-      unset($build['diamond']);
-    }
-    else if (empty($gold_sponsors)) {
-      unset($build['gold']);
-    }
 
     return $build;
   }

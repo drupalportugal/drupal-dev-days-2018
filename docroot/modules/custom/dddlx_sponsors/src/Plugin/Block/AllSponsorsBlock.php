@@ -62,6 +62,14 @@ class AllSponsorsBlock extends BlockBase implements ContainerFactoryPluginInterf
    * {@inheritdoc}
    */
   public function build() {
+
+    $diamond_sponsors = [
+      '#type' => 'view',
+      '#name' => 'sponsors',
+      '#display_id' => 'block_4',
+      '#arguments' => [],
+    ];
+
     $platinum_sponsors = [
       '#type' => 'view',
       '#name' => 'sponsors',
@@ -82,38 +90,11 @@ class AllSponsorsBlock extends BlockBase implements ContainerFactoryPluginInterf
       '#display_id' => 'block_3',
       '#arguments' => [],
     ];
-    $bronze_sponsors = [
-      '#type' => 'view',
-      '#name' => 'sponsors',
-      '#display_id' => 'block_4',
-      '#arguments' => [],
-    ];
 
-    $bull_sponsors = [
-      '#type' => 'view',
-      '#name' => 'sponsors',
-      '#display_id' => 'block_8',
-      '#arguments' => [],
-    ];
-
-    $food_sponsors = [
+    $carrier_partner_sponsors = [
       '#type' => 'view',
       '#name' => 'sponsors',
       '#display_id' => 'block_6',
-      '#arguments' => [],
-    ];
-
-    $social_sponsors = [
-      '#type' => 'view',
-      '#name' => 'sponsors',
-      '#display_id' => 'block_7',
-      '#arguments' => [],
-    ];
-
-    $coffee_sponsors = [
-      '#type' => 'view',
-      '#name' => 'sponsors',
-      '#display_id' => 'block_5',
       '#arguments' => [],
     ];
 
@@ -124,23 +105,15 @@ class AllSponsorsBlock extends BlockBase implements ContainerFactoryPluginInterf
       '#arguments' => [],
     ];
 
-    $media_partner_sponsors = [
-      '#type' => 'view',
-      '#name' => 'sponsors',
-      '#display_id' => 'block_10',
-      '#arguments' => [],
-    ];
-
-    $special_partner_sponsors = [
-      '#type' => 'view',
-      '#name' => 'sponsors',
-      '#display_id' => 'block_11',
-      '#arguments' => [],
-    ];
-
     $build = [
       '#theme_wrappers' => ['sponsors_wrapper'],
       /*
+      'diamond' => [
+        '#theme' => 'sponsors',
+        '#title' => 'Diamond sponsors',
+        '#sponsor_type' => 'diamond',
+        '#sponsors' => $diamond_sponsors,
+      ],
       'platinum' => [
         '#theme' => 'sponsors',
         '#title' => 'Platinum sponsors',
@@ -153,60 +126,25 @@ class AllSponsorsBlock extends BlockBase implements ContainerFactoryPluginInterf
         '#sponsor_type' => 'gold',
         '#sponsors' => $gold_sponsors,
       ],
+      */
       'silver' => [
         '#theme' => 'sponsors',
         '#title' => 'Silver sponsors',
         '#sponsor_type' => 'silver',
         '#sponsors' => $silver_sponsors,
       ],
-      'bronze' => [
-        '#theme' => 'sponsors',
-        '#title' => 'Bronze sponsors',
-        '#sponsor_type' => 'bronze',
-        '#sponsors' => $bronze_sponsors,
-      ],
       'special_partner' => [
         '#theme' => 'sponsors',
-        '#title' => 'With the special collaboration',
+        '#title' => 'Official carrier',
         '#sponsor_type' => 'bronze',
-        '#sponsors' => $special_partner_sponsors,
+        '#sponsors' => $carrier_partner_sponsors,
       ],
       'partner' => [
         '#theme' => 'sponsors',
-        '#title' => 'Partners',
+        '#title' => 'Official hosting partners',
         '#sponsor_type' => 'bronze',
         '#sponsors' => $partner_sponsors,
-      ],
-      'media_partner' => [
-        '#theme' => 'sponsors',
-        '#title' => 'Media partners',
-        '#sponsor_type' => 'bronze',
-        '#sponsors' => $media_partner_sponsors,
-      ],
-      'food_sponsors' => [
-        '#theme' => 'sponsors',
-        '#title' => 'Food sponsors',
-        '#sponsor_type' => 'silver',
-        '#sponsors' => $food_sponsors,
-      ],
-      'bull' => [
-        '#theme' => 'sponsors',
-        '#title' => 'Bull sponsors',
-        '#sponsor_type' => 'silver',
-        '#sponsors' => $bull_sponsors,
-      ],
-      'social_event' => [
-        '#theme' => 'sponsors',
-        '#title' => 'Social event sponsors',
-        '#sponsor_type' => 'silver',
-        '#sponsors' => $social_sponsors,
-      ],
-      'coffee' => [
-        '#theme' => 'sponsors',
-        '#title' => 'Coffee sponsors',
-        '#sponsor_type' => 'bronze',
-        '#sponsors' => $coffee_sponsors,
-      ],
+      ]
     ];
 
     return $build;
