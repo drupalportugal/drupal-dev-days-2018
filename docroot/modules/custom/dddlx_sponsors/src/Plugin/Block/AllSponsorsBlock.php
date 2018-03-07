@@ -140,6 +140,7 @@ class AllSponsorsBlock extends BlockBase implements ContainerFactoryPluginInterf
 
     $build = [
       '#theme_wrappers' => ['sponsors_wrapper'],
+      /*
       'platinum' => [
         '#theme' => 'sponsors',
         '#title' => 'Platinum sponsors',

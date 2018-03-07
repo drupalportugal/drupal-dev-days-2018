@@ -62,6 +62,13 @@ class MainSponsorsBlock extends BlockBase implements ContainerFactoryPluginInter
    * {@inheritdoc}
    */
   public function build() {
+    $diamond_sponsors = [
+      '#type' => 'view',
+      '#name' => 'sponsors',
+      '#display_id' => 'block_4',
+      '#arguments' => [],
+    ];
+
     $platinum_sponsors = [
       '#type' => 'view',
       '#name' => 'sponsors',
@@ -91,6 +98,12 @@ class MainSponsorsBlock extends BlockBase implements ContainerFactoryPluginInter
 
     $build = [
       '#theme_wrappers' => ['sponsors_wrapper'],
+      'diamond' => [
+        '#theme' => 'sponsors',
+        '#title' => 'Diamond sponsors',
+        '#sponsor_type' => 'diamond',
+        '#sponsors' => $diamond_sponsors,
+      ],
       'platinum' => [
         '#theme' => 'sponsors',
         '#title' => 'Platinum sponsors',
@@ -103,6 +116,7 @@ class MainSponsorsBlock extends BlockBase implements ContainerFactoryPluginInter
         '#sponsor_type' => 'gold',
         '#sponsors' => $gold_sponsors,
       ],
+      /*
       'silver' => [
         '#theme' => 'sponsors',
         '#title' => 'Silver sponsors',
@@ -115,11 +129,23 @@ class MainSponsorsBlock extends BlockBase implements ContainerFactoryPluginInter
         '#sponsor_type' => 'bronze',
         '#sponsors' => $bronze_sponsors,
       ],
+      */
 
       '#cache' => [
         'contexts' => ['url.path']
       ]
     ];
+
+
+    if (empty($platinum_sponsors)) {
+      unset($build['platinum']);
+    }
+    else if (empty($diamond_sponsors)) {
+      unset($build['diamond']);
+    }
+    else if (empty($gold_sponsors)) {
+      unset($build['gold']);
+    }
 
     return $build;
   }
