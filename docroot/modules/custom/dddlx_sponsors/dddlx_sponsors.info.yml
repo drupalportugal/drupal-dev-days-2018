@@ -1,0 +1,5 @@
+name: dddlx_sponsors
+type: module
+description: Custom module for the sponsors feature at the dddlx
+core: 8.x
+package: dddlx

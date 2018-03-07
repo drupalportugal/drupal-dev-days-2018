@@ -194,6 +194,11 @@ skip-link:
     component:
       components/asset-builds/css/skip-link.css: {}
 
+sponsors:
+  css:
+    component:
+      components/asset-builds/css/sponsors.css: {}
+
 table-drag:
   css:
     component:
