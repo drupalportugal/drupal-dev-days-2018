@@ -32,6 +32,10 @@ function ddd_attendee_theme() {
     'ddd_attendee' => [
       'render element' => 'children',
     ],
+    'ddd_attendees_number' => [
+      'variables' => ['attendees' => 0],
+      'render element' => 'children',
+    ],
   ];
 }
 
