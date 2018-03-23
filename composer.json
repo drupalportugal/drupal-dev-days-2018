@@ -34,6 +34,7 @@
         "drupal/ds": "^3.1",
         "drupal/field_group": "~3.0",
         "drupal/field_permissions": "~1.0",
+        "drupal/google_analytics": "~2.0",
         "drupal/linked_field": "~1.0",
         "drupal/markup": "~1.0",
         "drupal/metatag": "~1.0",
