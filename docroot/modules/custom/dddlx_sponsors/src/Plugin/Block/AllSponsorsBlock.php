@@ -119,14 +119,13 @@ class AllSponsorsBlock extends BlockBase implements ContainerFactoryPluginInterf
         '#title' => 'Platinum sponsors',
         '#sponsor_type' => 'platinum',
         '#sponsors' => $platinum_sponsors,
-      ],
+      ],*/
       'gold' => [
         '#theme' => 'sponsors',
         '#title' => 'Gold sponsors',
         '#sponsor_type' => 'gold',
         '#sponsors' => $gold_sponsors,
       ],
-      */
       'silver' => [
         '#theme' => 'sponsors',
         '#title' => 'Silver sponsors',
