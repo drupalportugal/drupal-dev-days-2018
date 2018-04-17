@@ -179,12 +179,19 @@ $image-url-subdirectory: 'components/footer';
     margin-right: 0;
   }
 
-  a span {
-    color: color('white');
+  a span.drupalday {
+    font-family: FontAwesome !important;
+    border-radius: 25px;
+    color: color(blue-dark);
+    background-color: color(white);
+    padding: 12.5px;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
     transition: color ease 0.3s;
 
     &:hover {
-      color: color(blue-light);
+      background-color: color(blue-light);
     }
   }
 }

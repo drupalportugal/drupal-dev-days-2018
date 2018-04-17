@@ -22,6 +22,7 @@ fonts:
   css:
     theme:
       '//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700': {type: external} # external font
+      '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css': {type: external} # external font
 
 layouts:
   css:
