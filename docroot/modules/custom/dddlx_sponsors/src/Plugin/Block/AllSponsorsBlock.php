@@ -66,42 +66,42 @@ class AllSponsorsBlock extends BlockBase implements ContainerFactoryPluginInterf
     $diamond_sponsors = [
       '#type' => 'view',
       '#name' => 'sponsors',
-      '#display_id' => 'block_4',
+      '#display_id' => 'diamond_sponsors',
       '#arguments' => [],
     ];
 
     $platinum_sponsors = [
       '#type' => 'view',
       '#name' => 'sponsors',
-      '#display_id' => 'block_1',
+      '#display_id' => 'platinum_sponsors',
       '#arguments' => [],
     ];
 
     $gold_sponsors = [
       '#type' => 'view',
       '#name' => 'sponsors',
-      '#display_id' => 'block_2',
+      '#display_id' => 'gold_sponsors',
       '#arguments' => [],
     ];
 
     $silver_sponsors = [
       '#type' => 'view',
       '#name' => 'sponsors',
-      '#display_id' => 'block_3',
+      '#display_id' => 'silver_sponsors',
       '#arguments' => [],
     ];
 
     $carrier_partner_sponsors = [
       '#type' => 'view',
       '#name' => 'sponsors',
-      '#display_id' => 'block_6',
+      '#display_id' => 'carrier_sponsors',
       '#arguments' => [],
     ];
 
     $partner_sponsors = [
       '#type' => 'view',
       '#name' => 'sponsors',
-      '#display_id' => 'block_9',
+      '#display_id' => 'partner_sponsors',
       '#arguments' => [],
     ];
 
@@ -113,7 +113,7 @@ class AllSponsorsBlock extends BlockBase implements ContainerFactoryPluginInterf
         '#title' => 'Diamond sponsors',
         '#sponsor_type' => 'diamond',
         '#sponsors' => $diamond_sponsors,
-      ],
+      ],*/
       'platinum' => [
         '#theme' => 'sponsors',
         '#title' => 'Platinum sponsors',
@@ -126,7 +126,6 @@ class AllSponsorsBlock extends BlockBase implements ContainerFactoryPluginInterf
         '#sponsor_type' => 'gold',
         '#sponsors' => $gold_sponsors,
       ],
-      */
       'silver' => [
         '#theme' => 'sponsors',
         '#title' => 'Silver sponsors',

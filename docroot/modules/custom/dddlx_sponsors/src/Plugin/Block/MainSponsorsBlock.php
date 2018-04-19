@@ -65,21 +65,21 @@ class MainSponsorsBlock extends BlockBase implements ContainerFactoryPluginInter
     $diamond_sponsors = [
       '#type' => 'view',
       '#name' => 'sponsors',
-      '#display_id' => 'block_4',
+      '#display_id' => 'diamond_sponsors',
       '#arguments' => [],
     ];
 
     $platinum_sponsors = [
       '#type' => 'view',
       '#name' => 'sponsors',
-      '#display_id' => 'block_1',
+      '#display_id' => 'platinum_sponsors',
       '#arguments' => [],
     ];
 
     $gold_sponsors = [
       '#type' => 'view',
       '#name' => 'sponsors',
-      '#display_id' => 'block_2',
+      '#display_id' => 'gold_sponsors',
       '#arguments' => [],
     ];
 
@@ -104,7 +104,7 @@ class MainSponsorsBlock extends BlockBase implements ContainerFactoryPluginInter
         '#title' => 'Diamond sponsors',
         '#sponsor_type' => 'diamond',
         '#sponsors' => $diamond_sponsors,
-      ],
+      ],*/
       'platinum' => [
         '#theme' => 'sponsors',
         '#title' => 'Platinum sponsors',
@@ -117,7 +117,6 @@ class MainSponsorsBlock extends BlockBase implements ContainerFactoryPluginInter
         '#sponsor_type' => 'gold',
         '#sponsors' => $gold_sponsors,
       ],
-      */
       /*
       'silver' => [
         '#theme' => 'sponsors',
