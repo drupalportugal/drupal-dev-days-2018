@@ -1,8 +1,9 @@
-uuid: 323003dd-0328-438d-9b1b-63ee8a620f16
+uuid: 845e7462-cfa1-418f-b78a-1313ba46e88d
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.session.body
     - field.field.node.session.field_file
     - field.field.node.session.field_room
@@ -14,80 +15,70 @@ dependencies:
     - node.type.session
   module:
     - file
+    - options
     - text
-id: node.session.default
+    - user
+id: node.session.full
 targetEntityType: node
 bundle: session
-mode: default
+mode: full
 content:
   body:
-    type: text_textarea_with_summary
-    weight: 1
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
+    label: inline
+    type: text_default
+    weight: 7
+    settings: {  }
     third_party_settings: {  }
     region: content
   field_file:
-    weight: 6
+    weight: 8
+    label: above
     settings:
-      progress_indicator: throbber
+      use_description_as_link_text: true
     third_party_settings: {  }
-    type: file_generic
+    type: file_default
+    region: content
+  field_room:
+    type: list_default
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
     region: content
   field_session_level:
     weight: 4
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
+    type: list_default
     region: content
   field_session_track_type:
     weight: 5
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
+    type: list_default
     region: content
   field_session_type:
     weight: 3
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
+    type: list_default
     region: content
   field_user_ref:
+    type: entity_reference_entity_view
     weight: 2
+    label: inline
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      view_mode: teaser
+      link: false
     third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
-  session_intro:
-    weight: 0
+  links:
+    weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-  status:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 7
-    region: content
-    third_party_settings: {  }
-  title:
-    type: string_textfield
-    weight: 0
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
 hidden:
-  created: true
-  field_room: true
   field_session_status: true
-  path: true
-  promote: true
-  sticky: true
-  uid: true

@@ -1,0 +1,25 @@
+uuid: 5b15469a-4731-4b29-b819-3febaa880c7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.volunteers
+    - field.storage.contact_message.field_help
+  module:
+    - markup
+id: contact_message.volunteers.field_help
+field_name: field_help
+entity_type: contact_message
+bundle: volunteers
+label: Help
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>We are looking for volunteers to help us during the days of the event. If you are willing to help please send us your contact information and we will get in touch.</p>\r\n\r\n<p>If you have any preference please indicate the areas where you would like to help.</p>\r\n\r\n<p>The organization reserves the right for volunteer acceptance</p>\r\n"
+    format: filtered_html
+field_type: markup

@@ -1,0 +1,10 @@
+uuid: 59892e0f-8692-49b7-8adf-43ccdd2eec3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.diamond
+label: 'Diamond sponsor'
+targetEntityType: node
+cache: true
