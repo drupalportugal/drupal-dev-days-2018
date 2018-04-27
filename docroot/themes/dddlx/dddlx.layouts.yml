@@ -40,6 +40,16 @@ article_full:
     footer:
       label: Footer area
 
+session_teaser:
+  label: Session Teaser
+  category: Teasers
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/session_teaser
+  regions:
+    text:
+      label: Text Area
+
 event_teaser:
   label: Event Teaser
   category: Teasers

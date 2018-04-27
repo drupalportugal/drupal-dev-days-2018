@@ -1,3 +1,4 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .sponsors-list {
   padding: 20px 30px;
   text-align: center;
@@ -67,9 +68,11 @@
 }
 
 .sponsors-list__title--gold .sponsors-list__list {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .sponsors-list__title--gold .sponsors-list__list li {
@@ -166,22 +169,25 @@
 }
 
 .sponsors-list__top-frame {
-  -ms-transform: rotate(180deg);
-      transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .sponsors-list__top-frame::before {
   left: 0;
   background: #fff url("../images/frame__corner-right.svg") no-repeat right bottom;
-  -ms-transform: scaleX(-1);
-      transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 .sponsors-list__top-frame::after {
   right: 0;
   background: #fff url("../images/frame__corner-left.svg") no-repeat left bottom;
-  -ms-transform: scaleX(-1);
-      transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 img.image-style-bronze-width-150 {

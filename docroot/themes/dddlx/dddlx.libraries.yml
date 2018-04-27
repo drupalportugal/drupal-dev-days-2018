@@ -378,3 +378,8 @@ homepage-text-elements:
   css:
     component:
       components/asset-builds/css/homepage-text-elements.css: {}
+
+session_teaser:
+  css:
+    component:
+      components/asset-builds/css/session_teaser.css: {}

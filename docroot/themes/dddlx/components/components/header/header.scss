@@ -25,6 +25,7 @@ $image-url-subdirectory: 'components/header';
     position: relative;
     background: image-url('header_pattern_2.svg') repeat-x center top;
     background-size: contain;
+    margin-bottom: 40px;
 
     .is-path-frontpage & {
       @include visually-hidden;

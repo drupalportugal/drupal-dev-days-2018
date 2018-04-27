@@ -15,6 +15,8 @@
  * @see template_preprocess_views_view_unformatted()
  */
 #}
+{{ attach_library('dddlx/list-grid') }}
+
 {% set class = 'list-grid__item' %}
 {%
   set modifier = modifier_class ? class ~ '--' ~ modifier_class : ''
