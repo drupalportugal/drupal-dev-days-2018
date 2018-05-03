@@ -1,6 +1,12 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .sponsors-list {
   padding: 20px 30px;
   text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.sponsors-list:last-child {
+  border-bottom: 0;
 }
 
 .sponsors-list--silver {
@@ -31,25 +37,6 @@
   }
 }
 
-.sponsors-list__wrapper::before, .sponsors-list__wrapper::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  height: 100%;
-  width: 17px;
-}
-
-.sponsors-list__wrapper::before {
-  left: 0;
-  background: #fff url("../images/frame__left.svg") repeat-y center bottom;
-}
-
-.sponsors-list__wrapper::after {
-  right: 0;
-  background: #fff url("../images/frame__right.svg") repeat-y center bottom;
-}
-
 .sponsors-list__title {
   text-transform: uppercase;
 }
@@ -67,9 +54,11 @@
 }
 
 .sponsors-list__title--gold .sponsors-list__list {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .sponsors-list__title--gold .sponsors-list__list li {
@@ -130,58 +119,6 @@
     max-width: 200px;
     margin: 0 1rem 1rem;
   }
-}
-
-.sponsors-list__bottom-frame, .sponsors-list__top-frame {
-  position: relative;
-  width: 100%;
-  height: 16px;
-  background: #fff url("../images/frame__bottom.svg") repeat-x center bottom;
-  z-index: 1;
-}
-
-@media (min-width: 0) and (max-width: 729px) {
-  .sponsors-list__bottom-frame, .sponsors-list__top-frame {
-    background-size: 819px;
-  }
-}
-
-.sponsors-list__bottom-frame::before, .sponsors-list__top-frame::before, .sponsors-list__bottom-frame::after, .sponsors-list__top-frame::after {
-  position: absolute;
-  content: "";
-  display: block;
-  bottom: 0;
-  width: 26px;
-  height: 26px;
-}
-
-.sponsors-list__bottom-frame::before, .sponsors-list__top-frame::before {
-  left: 0;
-  background: #fff url("../images/frame__corner-left.svg") no-repeat right bottom;
-}
-
-.sponsors-list__bottom-frame::after, .sponsors-list__top-frame::after {
-  right: 0;
-  background: #fff url("../images/frame__corner-right.svg") no-repeat left bottom;
-}
-
-.sponsors-list__top-frame {
-  -ms-transform: rotate(180deg);
-      transform: rotate(180deg);
-}
-
-.sponsors-list__top-frame::before {
-  left: 0;
-  background: #fff url("../images/frame__corner-right.svg") no-repeat right bottom;
-  -ms-transform: scaleX(-1);
-      transform: scaleX(-1);
-}
-
-.sponsors-list__top-frame::after {
-  right: 0;
-  background: #fff url("../images/frame__corner-left.svg") no-repeat left bottom;
-  -ms-transform: scaleX(-1);
-      transform: scaleX(-1);
 }
 
 img.image-style-bronze-width-150 {
