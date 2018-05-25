@@ -1,0 +1,21 @@
+uuid: eb96ffc0-e3df-49d6-8294-78e95fd94461
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.volunteers
+    - field.storage.contact_message.field_tshirt_size
+  module:
+    - options
+id: contact_message.volunteers.field_tshirt_size
+field_name: field_tshirt_size
+entity_type: contact_message
+bundle: volunteers
+label: 'Tshirt size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
