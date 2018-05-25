@@ -2,6 +2,11 @@
 .sponsors-list {
   padding: 20px 30px;
   text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.sponsors-list:last-child {
+  border-bottom: 0;
 }
 
 .sponsors-list--silver {
@@ -30,25 +35,6 @@
   .sponsors-list__wrapper {
     max-width: 900px;
   }
-}
-
-.sponsors-list__wrapper::before, .sponsors-list__wrapper::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  height: 100%;
-  width: 17px;
-}
-
-.sponsors-list__wrapper::before {
-  left: 0;
-  background: #fff url("../images/frame__left.svg") repeat-y center bottom;
-}
-
-.sponsors-list__wrapper::after {
-  right: 0;
-  background: #fff url("../images/frame__right.svg") repeat-y center bottom;
 }
 
 .sponsors-list__title {

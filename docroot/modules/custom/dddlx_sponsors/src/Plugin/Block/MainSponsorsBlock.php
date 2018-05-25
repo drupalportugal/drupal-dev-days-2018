@@ -98,13 +98,12 @@ class MainSponsorsBlock extends BlockBase implements ContainerFactoryPluginInter
 
     $build = [
       '#theme_wrappers' => ['sponsors_wrapper'],
-      /*
       'diamond' => [
         '#theme' => 'sponsors',
         '#title' => 'Diamond sponsors',
         '#sponsor_type' => 'diamond',
         '#sponsors' => $diamond_sponsors,
-      ],*/
+      ],
       'platinum' => [
         '#theme' => 'sponsors',
         '#title' => 'Platinum sponsors',
