@@ -14,4 +14,5 @@ permissions:
   - 'access user profiles'
   - 'use text format filtered_html'
   - 'view field_room'
+  - 'view media'
   - 'view own field_room'

@@ -12,6 +12,9 @@ type: list_integer
 settings:
   allowed_values:
     -
+      value: 0
+      label: Diamond
+    -
       value: 1
       label: Platinum
     -
@@ -44,6 +47,12 @@ settings:
     -
       value: 11
       label: 'Special partner'
+    -
+      value: 12
+      label: 'Carrier partner'
+    -
+      value: 13
+      label: 'Hosting partner'
   allowed_values_function: ''
 module: options
 locked: false

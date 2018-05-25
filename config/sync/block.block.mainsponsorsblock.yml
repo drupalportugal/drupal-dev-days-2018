@@ -1,0 +1,32 @@
+uuid: ac06b051-9b4f-4b7b-8c03-92042c4babb8
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - dddlx_sponsors
+    - system
+  theme:
+    - dddlx
+id: mainsponsorsblock
+theme: dddlx
+region: sponsors
+weight: 0
+provider: null
+plugin: main_sponsors_block
+settings:
+  id: main_sponsors_block
+  label: 'Main sponsors block'
+  provider: dddlx_sponsors
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: /sponsors
+    negate: true
+    context_mapping: {  }

@@ -23,7 +23,7 @@ bundle: session
 mode: default
 content:
   body:
-    label: hidden
+    label: inline
     type: text_default
     weight: 7
     settings: {  }
@@ -39,27 +39,27 @@ content:
   field_room:
     type: list_default
     weight: 6
-    label: inline
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     region: content
   field_session_level:
     weight: 4
-    label: hidden
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_session_track_type:
     weight: 5
-    label: hidden
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_session_type:
     weight: 3
-    label: hidden
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
@@ -67,7 +67,7 @@ content:
   field_user_ref:
     type: entity_reference_entity_view
     weight: 2
-    label: hidden
+    label: inline
     settings:
       view_mode: teaser
       link: false
@@ -75,8 +75,8 @@ content:
     region: content
   links:
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   field_session_status: true
