@@ -8,5 +8,4 @@ weight: 2
 is_admin: null
 permissions:
   - 'cancel account'
-  - 'edit own session content'
   - 'use text format filtered_html'

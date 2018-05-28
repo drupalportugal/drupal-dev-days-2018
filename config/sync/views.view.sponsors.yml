@@ -924,7 +924,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            4: '4'
+            - '0'
           group: 1
           exposed: false
           expose:
@@ -1104,7 +1104,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: bronze_sponsor
+          view_mode: platinum_sponsor
       pager:
         type: none
         options:
