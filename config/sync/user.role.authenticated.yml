@@ -12,6 +12,8 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'access user profiles'
+  - 'create session content'
+  - 'edit own session content'
   - 'use text format filtered_html'
   - 'view field_room'
   - 'view media'

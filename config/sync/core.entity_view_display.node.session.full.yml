@@ -1,0 +1,84 @@
+uuid: 845e7462-cfa1-418f-b78a-1313ba46e88d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.session.body
+    - field.field.node.session.field_file
+    - field.field.node.session.field_room
+    - field.field.node.session.field_session_level
+    - field.field.node.session.field_session_status
+    - field.field.node.session.field_session_track_type
+    - field.field.node.session.field_session_type
+    - field.field.node.session.field_user_ref
+    - node.type.session
+  module:
+    - file
+    - options
+    - text
+    - user
+id: node.session.full
+targetEntityType: node
+bundle: session
+mode: full
+content:
+  body:
+    label: inline
+    type: text_default
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_file:
+    weight: 8
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_room:
+    type: list_default
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_session_level:
+    weight: 4
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_session_track_type:
+    weight: 5
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_session_type:
+    weight: 3
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_user_ref:
+    type: entity_reference_entity_view
+    weight: 2
+    label: inline
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_session_status: true

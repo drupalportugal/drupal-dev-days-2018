@@ -1,0 +1,69 @@
+.session-teaser {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ededed;
+}
+
+@media (min-width: 0) and (max-width: 887px) {
+  .session-teaser {
+    padding: 0 20px 20px;
+  }
+}
+
+@media (min-width: 888px) {
+  .session-teaser {
+    text-align: left;
+    display: -webkit-box;
+    display: flex;
+  }
+  .session-teaser:before {
+    content: "";
+    display: table;
+  }
+  .session-teaser:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.session-teaser__title h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+@media (min-width: 888px) {
+  .session-teaser__title h2 {
+    text-align: left;
+  }
+}
+
+.session-teaser__title h2 a {
+  text-decoration: none;
+}
+
+.session-teaser__user-ref .field--name-field-register-picture,
+.session-teaser__user-ref .user-default__register-picture {
+  display: none;
+}
+
+.session-teaser__user-ref .user-default__register-drupal-name {
+  display: none;
+}
+
+.session-teaser__user-ref .user-default__register-name {
+  font-size: 21px;
+  font-weight: 300;
+}
+
+.session-teaser__session-level .field__label {
+  display: inline-block;
+  font-weight: 400;
+  color: #5776b7;
+}
+
+.session-teaser__session-level .field__item {
+  display: inline-block;
+}

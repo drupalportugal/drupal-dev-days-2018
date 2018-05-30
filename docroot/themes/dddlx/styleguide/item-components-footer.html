@@ -61,6 +61,7 @@
 <link rel="stylesheet" href="../components/asset-builds/css/progress-throbber.css">
 <link rel="stylesheet" href="../components/asset-builds/css/resizable-textarea.css">
 <link rel="stylesheet" href="../components/asset-builds/css/responsive-video.css">
+<link rel="stylesheet" href="../components/asset-builds/css/session_teaser.css">
 <link rel="stylesheet" href="../components/asset-builds/css/skip-link.css">
 <link rel="stylesheet" href="../components/asset-builds/css/sponsors.css">
 <link rel="stylesheet" href="../components/asset-builds/css/table-drag.css">
@@ -205,9 +206,18 @@
 
     <div class="footer-follow-organization__wrapper">
       <p>Organization</p>
+      <ul class="footer-follow-drupal-social">
+        <li>
       <a class="footer-follow-organization__logo" href="http://drupal-pt.org/" target="_blank">
         Template &quot;/components/components/footer/logo_drupal_pt.svg&quot; is not defined.
       </a>
+        </li>
+        <li>
+      <a class="footer-follow-organization__logo" href="https://www.iscte-iul.pt/" target="_blank">
+          <img src="//components/components/footer/iscte.png" />
+      </a>
+        </li>
+      </ul>
     </div>
 
     <div class="footer-follow-social__wrapper">
@@ -216,16 +226,27 @@
       <div class="footer-follow-drupal-social__wrapper">
 
         <ul class="footer-follow-drupal-social">
-
           <li>
             <a href="https://twitter.com/drupaldevdays" target="_blank">
-              <span class="drupalday-twitter"></span>
+              <span class="drupalday fa fa-twitter"></span>
             </a>
           </li>
 
           <li>
             <a href="https://www.facebook.com/drupaldevdays/" target="_blank">
-              <span class="drupalday-facebook"></span>
+              <span class="drupalday fa fa-facebook"></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/c/DrupalDevDays" target="_blank">
+              <span class="drupalday fa fa-youtube-play"></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/company/drupaldevdays" target="_blank">
+              <span class="drupalday fa fa-linkedin"></span>
             </a>
           </li>
         </ul>
@@ -237,6 +258,8 @@
   <div class="footer-tag__wrapper">
       <strong><a href="https://www.drupal.org/" target="_blank">Drupal.org</a></strong> issue queue tag: <strong>DevDaysLisboa</strong> <br/ >
       Social media hashtag: <strong>#drupaldevdays</strong>
+    <p>DrupalDev Days is organized by a group of <a href="/credits">volunteers</a></p>
+    <p>Design by <a href="https://marzeelabs.org/">marzee labs</a></p>
   </div>
 
 </footer>
@@ -273,9 +296,18 @@
 
     &lt;div class=&quot;footer-follow-organization__wrapper&quot;&gt;
       &lt;p&gt;Organization&lt;/p&gt;
+      &lt;ul class=&quot;footer-follow-drupal-social&quot;&gt;
+        &lt;li&gt;
       &lt;a class=&quot;footer-follow-organization__logo&quot; href=&quot;http://drupal-pt.org/&quot; target=&quot;_blank&quot;&gt;
         {{ source(directory ~ &#039;/components/components/footer/logo_drupal_pt.svg&#039;) }}
       &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+      &lt;a class=&quot;footer-follow-organization__logo&quot; href=&quot;https://www.iscte-iul.pt/&quot; target=&quot;_blank&quot;&gt;
+          &lt;img src=&quot;/{{ directory ~ &#039;/components/components/footer/iscte.png&#039; }}&quot; /&gt;
+      &lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
     &lt;/div&gt;
 
     &lt;div class=&quot;footer-follow-social__wrapper&quot;&gt;
@@ -284,16 +316,27 @@
       &lt;div class=&quot;footer-follow-drupal-social__wrapper&quot;&gt;
 
         &lt;ul class=&quot;footer-follow-drupal-social&quot;&gt;
-
           &lt;li&gt;
             &lt;a href=&quot;https://twitter.com/drupaldevdays&quot; target=&quot;_blank&quot;&gt;
-              &lt;span class=&quot;drupalday-twitter&quot;&gt;&lt;/span&gt;
+              &lt;span class=&quot;drupalday fa fa-twitter&quot;&gt;&lt;/span&gt;
             &lt;/a&gt;
           &lt;/li&gt;
 
           &lt;li&gt;
             &lt;a href=&quot;https://www.facebook.com/drupaldevdays/&quot; target=&quot;_blank&quot;&gt;
-              &lt;span class=&quot;drupalday-facebook&quot;&gt;&lt;/span&gt;
+              &lt;span class=&quot;drupalday fa fa-facebook&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+
+          &lt;li&gt;
+            &lt;a href=&quot;https://www.youtube.com/c/DrupalDevDays&quot; target=&quot;_blank&quot;&gt;
+              &lt;span class=&quot;drupalday fa fa-youtube-play&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+
+          &lt;li&gt;
+            &lt;a href=&quot;https://www.linkedin.com/company/drupaldevdays&quot; target=&quot;_blank&quot;&gt;
+              &lt;span class=&quot;drupalday fa fa-linkedin&quot;&gt;&lt;/span&gt;
             &lt;/a&gt;
           &lt;/li&gt;
         &lt;/ul&gt;
@@ -305,6 +348,8 @@
   &lt;div class=&quot;footer-tag__wrapper&quot;&gt;
       &lt;strong&gt;&lt;a href=&quot;https://www.drupal.org/&quot; target=&quot;_blank&quot;&gt;Drupal.org&lt;/a&gt;&lt;/strong&gt; issue queue tag: &lt;strong&gt;DevDaysLisboa&lt;/strong&gt; &lt;br/ &gt;
       Social media hashtag: &lt;strong&gt;#drupaldevdays&lt;/strong&gt;
+    &lt;p&gt;DrupalDev Days is organized by a group of &lt;a href=&quot;/credits&quot;&gt;volunteers&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;Design by &lt;a href=&quot;https://marzeelabs.org/&quot;&gt;marzee labs&lt;/a&gt;&lt;/p&gt;
   &lt;/div&gt;
 
 &lt;/footer&gt;

@@ -176,6 +176,8 @@ $image-url-subdirectory: 'navigation/nav-primary';
         background-color: color(blue);
         color: color('white');
         border: 0;
+        padding: 0 10px;
+        line-height: 1.2em;
       }
 
       &:hover,
