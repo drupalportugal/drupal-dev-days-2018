@@ -15,7 +15,6 @@ conditions:
       job_offer: job_offer
       keynote: keynote
       news: news
-      schedule_page: schedule_page
       session: session
       sponsor: sponsor
     negate: false
