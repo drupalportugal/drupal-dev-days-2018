@@ -13,13 +13,21 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: layout_onecol
-      library: layout_discovery/onecol
+      id: schedule_full
+      library: null
       disable_css: false
       entity_classes: all_classes
-      settings: {  }
+      settings:
+        wrappers:
+          main: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
     regions:
-      content:
+      main:
         - node_title
         - 'dynamic_block_field:node-schedule_menu'
         - field_sessions
@@ -51,6 +59,6 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    region: content
+    region: main
 hidden:
   links: true

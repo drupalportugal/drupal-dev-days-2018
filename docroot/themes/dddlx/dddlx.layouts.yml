@@ -40,6 +40,16 @@ article_full:
     footer:
       label: Footer area
 
+schedule_full:
+  label: Schedule Full
+  category: Full
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/schedule_full
+  regions:
+    main:
+      label: Content area
+
 session_teaser:
   label: Session Teaser
   category: Teasers

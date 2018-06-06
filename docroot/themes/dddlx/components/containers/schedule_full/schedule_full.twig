@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Display Suite 2 column template.
+ *
+ * Available variables:
+ * - outer_wrapper: outer wrapper element
+ * - header_wrapper: wrapper element around header region
+ * - content_wrapper: wrapper element around content region
+ * - footer_wrapper: wrapper element around footer region
+ * - attributes: layout attributes
+ * - header_attributes: attributes for header region
+ * - content_attributes: attributes for content region
+ * - footer_attributes: attributes for footer region
+ * - header: content of header region
+ * - content: content of content region
+ * - footer: content of footer region
+ */
+#}
+{{ attach_library('dddlx/article_full') }}
+
+{% set class = 'schedule-page-full' %}
+
+<{{ outer_wrapper }}{{ attributes.addClass(class, 'clearfix') }}>
+
+  {{ title_suffix.contextual_links }}
+
+  <div {{ create_attribute({'class': [class ~ '__content-wrapper', 'layout-center']}) }}>
+
+    <{{ main_wrapper }}{{ main_attributes.addClass(class ~ '__content') }}>
+      {{ main }}
+    </{{ main_wrapper }}>
+
+    </div>
+  </div>
+
+</{{ outer_wrapper }}>
