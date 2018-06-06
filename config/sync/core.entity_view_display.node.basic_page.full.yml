@@ -89,4 +89,5 @@ content:
       image_link: ''
     third_party_settings: {  }
 hidden:
+  field_attachment: true
   links: true

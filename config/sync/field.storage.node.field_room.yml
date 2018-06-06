@@ -17,16 +17,16 @@ settings:
   allowed_values:
     -
       value: 1
-      label: Magallanes
+      label: B103
     -
       value: 2
-      label: Elcano
+      label: B104
     -
       value: 3
-      label: 'Main scenario'
+      label: Auditorium
     -
       value: 4
-      label: Victoria
+      label: 'Workshop Room'
   allowed_values_function: ''
 module: options
 locked: false

@@ -1,0 +1,64 @@
+uuid: d5377a45-b526-4f45-9b73-a2dfe59f71bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.schedule_page.field_sessions
+    - node.type.schedule_page
+  module:
+    - ds
+    - entity_reference_revisions
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: schedule_full
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          main: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      main:
+        - node_title
+        - 'dynamic_block_field:node-schedule_menu'
+        - field_sessions
+    fields:
+      'dynamic_block_field:node-schedule_menu':
+        plugin_id: 'dynamic_block_field:node-schedule_menu'
+        weight: 1
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+id: node.schedule_page.full
+targetEntityType: node
+bundle: schedule_page
+mode: full
+content:
+  field_sessions:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: main
+hidden:
+  links: true

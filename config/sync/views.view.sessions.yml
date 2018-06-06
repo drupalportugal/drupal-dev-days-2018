@@ -1083,11 +1083,50 @@ display:
           1: AND
       title: 'Submitted sessions'
       style:
-        type: default
+        type: table
         options:
+          grouping: {  }
           row_class: ''
           default_row_class: true
-          uses_fields: false
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            title: title
+            body: body
+            field_user_ref: field_user_ref
+            field_session_level: field_session_level
+          info:
+            title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            body:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_user_ref:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_session_level:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
       row:
         type: 'entity:node'
         options:
@@ -1219,11 +1258,14 @@ display:
             offset_label: Offset
           quantity: 9
       style:
-        type: default
+        type: html_list
         options:
+          grouping: {  }
           row_class: ''
           default_row_class: true
-          uses_fields: false
+          type: ul
+          wrapper_class: item-list
+          class: ''
       row:
         type: 'entity:node'
         options:

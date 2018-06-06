@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.session.body
-    - field.field.node.session.field_file
     - field.field.node.session.field_room
     - field.field.node.session.field_session_level
     - field.field.node.session.field_session_status
@@ -14,36 +13,8 @@ dependencies:
     - field.field.node.session.field_user_ref
     - node.type.session
   module:
-    - ds
     - options
     - user
-third_party_settings:
-  ds:
-    layout:
-      id: session_teaser
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        wrappers:
-          text: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
-    regions:
-      text:
-        - node_title
-        - field_user_ref
-        - field_session_level
-    fields:
-      node_title:
-        plugin_id: node_title
-        weight: 0
-        label: hidden
-        formatter: default
 id: node.session.teaser
 targetEntityType: node
 bundle: session
@@ -52,24 +23,36 @@ content:
   field_session_level:
     type: list_default
     weight: 2
-    region: text
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_session_track_type:
+    type: list_default
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_session_type:
+    type: list_default
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_user_ref:
     type: entity_reference_entity_view
-    weight: 1
-    region: text
+    weight: 0
     label: hidden
     settings:
-      view_mode: default
+      view_mode: compact
       link: false
     third_party_settings: {  }
+    region: content
 hidden:
   body: true
   field_file: true
   field_room: true
   field_session_status: true
-  field_session_track_type: true
-  field_session_type: true
   links: true

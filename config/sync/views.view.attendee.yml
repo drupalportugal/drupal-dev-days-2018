@@ -75,11 +75,7 @@ display:
             offset_label: Offset
           quantity: 9
       style:
-        type: default
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
+        type: grid
       row:
         type: fields
         options:
