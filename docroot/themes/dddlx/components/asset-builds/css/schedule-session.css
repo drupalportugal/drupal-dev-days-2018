@@ -1,0 +1,58 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.schedule-session__wrapper {
+  border: thin solid blue;
+  display: -webkit-box;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.schedule-session {
+  width: 33%;
+  border: thin solid black;
+  padding: 20px;
+}
+
+.schedule-session h2 {
+  margin-top: 0;
+}
+
+/*
+* Type of session
+*/
+.schedule-session-type {
+  border: thin solid burlywood;
+}
+
+/*
+* Speakers
+*/
+.schedule-session-speakers__wrapper {
+  display: -webkit-box;
+  display: flex;
+  border: thin solid hotpink;
+}
+
+.schedule-session-speakers {
+  display: inline-block;
+}
+
+/*
+* Room Name
+*/
+.schedule-session-room {
+  border: thin solid paleturquoise;
+}
+
+/*
+* Track Type Name
+*/
+.schedule-session-track-type {
+  border: thin solid yellowgreen;
+}
+
+/*
+* Level
+*/
+.schedule-session-level {
+  border: thin solid teal;
+}

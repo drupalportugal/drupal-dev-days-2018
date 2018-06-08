@@ -388,3 +388,15 @@ session_teaser:
   css:
     component:
       components/asset-builds/css/session_teaser.css: {}
+
+
+schedule-period:
+  css:
+    component:
+      components/asset-builds/css/schedule-period.css: {}
+
+
+schedule-session:
+  css:
+    component:
+      components/asset-builds/css/schedule-session.css: {}

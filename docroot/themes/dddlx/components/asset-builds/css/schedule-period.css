@@ -1,0 +1,22 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.schedule-period__wrapper {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.schedule-period {
+  -webkit-box-flex: 0;
+          flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+.schedule-period__border {
+  height: 2px;
+  background: rebeccapurple;
+  -webkit-box-flex: 1;
+          flex: 1 1 auto;
+  width: auto;
+}
