@@ -3,13 +3,26 @@
   border: thin solid blue;
   display: -webkit-box;
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
 .schedule-session {
-  width: 33%;
+  width: 100%;
   border: thin solid black;
   padding: 20px;
+}
+
+@media (min-width: 730px) {
+  .schedule-session {
+    width: 50%;
+  }
+}
+
+@media (min-width: 888px) {
+  .schedule-session {
+    width: 33%;
+  }
 }
 
 .schedule-session h2 {

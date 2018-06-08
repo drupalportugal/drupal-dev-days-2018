@@ -3,13 +3,22 @@
 .schedule-session__wrapper {
   border: thin solid blue;
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
 .schedule-session {
-  width: 33%;
+  width: 100%;
   border: thin solid black;
   padding: 20px;
+
+  @include respond-to(m) {
+    width: 50%;
+  }
+
+  @include respond-to(l) {
+    width: 33%;
+  }
 
   h2 {
     margin-top: 0;
