@@ -1,8 +1,7 @@
-/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .session-teaser {
   text-align: center;
   padding-bottom: 20px;
-  border-bottom: 1px solid #ededed;
+  position: relative;
 }
 
 @media (min-width: 0) and (max-width: 887px) {
@@ -16,6 +15,10 @@
     text-align: left;
     display: -webkit-box;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-flow: column;
+    height: 100%;
   }
   .session-teaser:before {
     content: "";

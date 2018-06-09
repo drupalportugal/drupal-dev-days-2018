@@ -13,7 +13,7 @@
 .session-teaser {
   text-align: center;
   padding-bottom: 20px;
-  border-bottom: 1px solid color(grey-extra-light);
+  position: relative;
 
   @include respond-to(until-l) {
     padding: 0 (zen-half-gutter()) 20px;
@@ -23,6 +23,9 @@
     @include zen-grid-container();
     text-align: left;
     display: flex;
+    flex-flow: column;
+    height: 100%;
+
   }
 }
 

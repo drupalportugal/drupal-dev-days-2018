@@ -395,8 +395,22 @@ schedule-period:
     component:
       components/asset-builds/css/schedule-period.css: {}
 
+schedule-break:
+  css:
+    component:
+      components/asset-builds/css/schedule-break.css: {}
 
 schedule-session:
   css:
     component:
       components/asset-builds/css/schedule-session.css: {}
+
+schedule-session-track-type:
+  css:
+    component:
+      components/asset-builds/css/schedule-session-track-type.css: {}
+
+session-title:
+  css:
+    component:
+      components/asset-builds/css/session-title.css: {}

@@ -1,0 +1,17 @@
+/*
+* Track Type Name
+*/
+.schedule-session-track-type {
+  position: relative;
+  padding-left: 50px;
+}
+
+.schedule-session-track-type__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.schedule-session-track-type__value {
+  line-height: 20px;
+}

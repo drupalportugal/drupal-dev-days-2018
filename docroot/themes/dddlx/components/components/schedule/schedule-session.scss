@@ -1,23 +1,35 @@
 @import 'init';
 
 .schedule-session__wrapper {
-  border: thin solid blue;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 40px;
+  justify-content: center;
+
+  @include respond-to(m) {
+    margin-left: 110px;
+  }
 }
 
 .schedule-session {
   width: 100%;
-  border: thin solid black;
   padding: 20px;
+  position: relative;
 
   @include respond-to(m) {
     width: 50%;
   }
 
   @include respond-to(l) {
-    width: 33%;
+    width: 33.333%;
+
+    & + & {
+      border-left: 1px solid color(grey-light);
+    }
+
+    &:nth-child(4) {
+      border-right: none;
+    }
   }
 
   h2 {
@@ -30,14 +42,15 @@
 * Type of session
 */
 .schedule-session-type {
-  border: thin solid burlywood;
+
 }
 
 /*
 * Speakers
 */
 .schedule-session-speakers__wrapper {
-  border: thin solid hotpink;
+  margin-bottom: 15px;
+  flex: 1 1 auto; 
 }
 
 .schedule-session-speaker {
@@ -53,22 +66,20 @@
 * Room Name
 */
 .schedule-session-room {
-  border: thin solid paleturquoise;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: bold;
 }
 
-/*
-* Track Type Name
-*/
-.schedule-session-track-type {
-  border: thin solid yellowgreen;
-  display: inline-block;
-  margin-right: 5px;
-}
 
 /*
 * Level
 */
 .schedule-session-level {
-  border: thin solid teal;
-  display: inline-block;
+  padding-left: 50px;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 20px;
+  color: color('grey');
 }

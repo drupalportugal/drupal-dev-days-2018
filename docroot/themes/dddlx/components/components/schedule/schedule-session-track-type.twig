@@ -38,8 +38,14 @@
  */
 #}
 
+{{ attach_library('dddlx/schedule-session-track-type') }}
+
+{% set class = 'schedule-session-track-type' %}
+
 {%
   set classes = [
+    class,
+    class ~ '--' ~ track_type_class|clean_class,
     'field',
     'field--name-' ~ field_name|clean_class,
     'field--type-' ~ field_type|clean_class,
@@ -47,36 +53,43 @@
     class_bundle|clean_class ~ '-' ~ class_view_mode|clean_class ~ '__' ~  field_name|replace({'field_' : '', 'node_' : ''})|clean_class,
   ]
 %}
-{%
-  set title_classes = [
-    'field__label',
-    label_display == 'visually_hidden' ? 'visually-hidden',
-  ]
-%}
 
-{% if label_hidden %}
-  {% if multiple %}
-    <div{{ attributes.addClass(classes, 'field__items') }}>
-      {% for item in items %}
-        <div{{ item.attributes.addClass('field__item schedule-session-track-type') }}>{{ item.content }}</div>
-      {% endfor %}
-    </div>
-  {% else %}
-    {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field__item schedule-session-track-type') }}>{{ item.content }}</div>
-    {% endfor %}
-  {% endif %}
-{% else %}
+{% for item in items %}
   <div{{ attributes.addClass(classes) }}>
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-    {% if multiple %}
-      <div class="field__items">
-    {% endif %}
-    {% for item in items %}
-      <div{{ item.attributes.addClass('field__item schedule-session-track-type') }}>{{ item.content }}</div>
-    {% endfor %}
-    {% if multiple %}
-      </div>
-    {% endif %}
+    <span {{ create_attribute({'class': [class ~ '__icon']}) }}>
+      {% if track_type_class == 'site_building' %}
+          {{ source(directory ~ '/components/components/schedule/icons/site-building.svg') }}
+      {% endif %}
+
+      {% if track_type_class == 'devops' %}
+          {{ source(directory ~ '/components/components/schedule/icons/devops.svg') }}
+      {% endif %}
+
+      {% if track_type_class == 'performances' %}
+          {{ source(directory ~ '/components/components/schedule/icons/performance.svg') }}
+      {% endif %}
+
+      {% if track_type_class == 'development' %}
+          {{ source(directory ~ '/components/components/schedule/icons/development.svg') }}
+      {% endif %}
+
+      {% if track_type_class == 'being_human' %}
+          {{ source(directory ~ '/components/components/schedule/icons/being-human.svg') }}
+      {% endif %}
+
+      {% if track_type_class == 'other' %}
+          {{ source(directory ~ '/components/components/schedule/icons/other.svg') }}
+      {% endif %}
+
+      {% if track_type_class == 'case_studies' %}
+          {{ source(directory ~ '/components/components/schedule/icons/case-studies.svg') }}
+      {% endif %}
+
+      {% if track_type_class == 'frontend' %}
+          {{ source(directory ~ '/components/components/schedule/icons/frontend.svg') }}
+      {% endif %}
+    </span>
+    <span {{ create_attribute({'class': [class ~ '__value']}) }}>{{ item.content }}</span>
   </div>
-{% endif %}
+{% endfor %}
+
