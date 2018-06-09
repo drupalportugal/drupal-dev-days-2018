@@ -1,18 +1,9 @@
 .session-teaser {
-  text-align: center;
-  padding-bottom: 20px;
   position: relative;
-}
-
-@media (min-width: 0) and (max-width: 887px) {
-  .session-teaser {
-    padding: 0 20px 20px;
-  }
 }
 
 @media (min-width: 888px) {
   .session-teaser {
-    text-align: left;
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;

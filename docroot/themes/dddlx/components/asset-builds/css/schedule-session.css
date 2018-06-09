@@ -19,9 +19,12 @@
   position: relative;
 }
 
-@media (min-width: 730px) {
+@media (min-width: 0) and (max-width: 887px) {
   .schedule-session {
-    width: 50%;
+    border-bottom: 1px solid #cccccc;
+  }
+  .schedule-session:last-child {
+    border-bottom: none;
   }
 }
 

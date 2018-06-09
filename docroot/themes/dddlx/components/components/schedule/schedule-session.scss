@@ -16,9 +16,13 @@
   padding: 20px;
   position: relative;
 
-  @include respond-to(m) {
-    width: 50%;
-  }
+  @include respond-to(until-l) {
+    border-bottom: 1px solid color(grey-light);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  } 
 
   @include respond-to(l) {
     width: 33.333%;

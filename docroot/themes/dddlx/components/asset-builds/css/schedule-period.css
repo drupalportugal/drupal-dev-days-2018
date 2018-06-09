@@ -1,9 +1,14 @@
 .schedule-period__wrapper {
   padding: 20px 0;
-  display: -webkit-box;
-  display: flex;
   -webkit-box-align: center;
           align-items: center;
+}
+
+@media (min-width: 730px) {
+  .schedule-period__wrapper {
+    display: -webkit-box;
+    display: flex;
+  }
 }
 
 .schedule-period {
@@ -18,5 +23,13 @@
   background: rebeccapurple;
   -webkit-box-flex: 1;
           flex: 1 1 auto;
-  width: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+}
+
+@media (min-width: 730px) {
+  .schedule-period__border {
+    width: auto;
+  }
 }

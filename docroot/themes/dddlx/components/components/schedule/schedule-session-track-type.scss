@@ -1,3 +1,5 @@
+@import 'init';
+
 /*
 * Track Type Name
 */
@@ -10,6 +12,10 @@
   position: absolute;
   left: 0;
   top: 0;
+
+  path {
+    fill: color(blue);
+  }
 }
 
 .schedule-session-track-type__value {

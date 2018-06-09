@@ -12,6 +12,10 @@
   top: 0;
 }
 
+.schedule-session-track-type__icon path {
+  fill: #5776b7;
+}
+
 .schedule-session-track-type__value {
   line-height: 20px;
 }
