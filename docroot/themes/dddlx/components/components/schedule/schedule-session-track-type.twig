@@ -1,0 +1,95 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ * To override output, copy the "field.html.twig" from the templates directory
+ * to your theme's directory and customize it, just like customizing other
+ * Drupal templates such as page.html.twig or node.html.twig.
+ *
+ * Instead of overriding the theming for all fields, you can also just override
+ * theming for a subset of fields using
+ * @link themeable Theme hook suggestions. @endlink For example,
+ * here are some theme hook suggestions that can be used for a field_foo field
+ * on an article node type:
+ * - field--node--field-foo--article.html.twig
+ * - field--node--field-foo.html.twig
+ * - field--node--article.html.twig
+ * - field--field-foo.html.twig
+ * - field--text-with-summary.html.twig
+ * - field.html.twig
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - label_hidden: Whether to show the field label or not.
+ * - title_attributes: HTML attributes for the title.
+ * - label: The label for the field.
+ * - multiple: TRUE if a field can contain multiple items.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item's content.
+ * - entity_type: The entity type to which the field belongs.
+ * - field_name: The name of the field.
+ * - field_type: The type of the field.
+ * - label_display: The display settings for the label.
+ *
+ *
+ * @see template_preprocess_field()
+ */
+#}
+
+{{ attach_library('dddlx/schedule-session-track-type') }}
+
+{% set class = 'schedule-session-track-type' %}
+
+{%
+  set classes = [
+    class,
+    class ~ '--' ~ track_type_class|clean_class,
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    class_bundle|clean_class ~ '-' ~ class_view_mode|clean_class ~ '__' ~  field_name|replace({'field_' : '', 'node_' : ''})|clean_class,
+  ]
+%}
+
+{% for item in items %}
+  <div{{ attributes.addClass(classes) }}>
+    <span {{ create_attribute({'class': [class ~ '__icon']}) }}>
+      {% if track_type_class == 'site_building' %}
+          {{ source(directory ~ '/components/components/schedule/icons/site-building.svg') }}
+      {% endif %}
+
+      {% if track_type_class == 'devops' %}
+          {{ source(directory ~ '/components/components/schedule/icons/devops.svg') }}
+      {% endif %}
+
+      {% if track_type_class == 'performances' %}
+          {{ source(directory ~ '/components/components/schedule/icons/performance.svg') }}
+      {% endif %}
+
+      {% if track_type_class == 'development' %}
+          {{ source(directory ~ '/components/components/schedule/icons/development.svg') }}
+      {% endif %}
+
+      {% if track_type_class == 'being_human' %}
+          {{ source(directory ~ '/components/components/schedule/icons/being-human.svg') }}
+      {% endif %}
+
+      {% if track_type_class == 'other' %}
+          {{ source(directory ~ '/components/components/schedule/icons/other.svg') }}
+      {% endif %}
+
+      {% if track_type_class == 'case_studies' %}
+          {{ source(directory ~ '/components/components/schedule/icons/case-studies.svg') }}
+      {% endif %}
+
+      {% if track_type_class == 'frontend' %}
+          {{ source(directory ~ '/components/components/schedule/icons/frontend.svg') }}
+      {% endif %}
+    </span>
+    <span {{ create_attribute({'class': [class ~ '__value']}) }}>{{ item.content }}</span>
+  </div>
+{% endfor %}
+

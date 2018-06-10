@@ -1,0 +1,89 @@
+@import 'init';
+
+.schedule-session__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  justify-content: center;
+
+  @include respond-to(m) {
+    margin-left: 110px;
+  }
+}
+
+.schedule-session {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+
+  @include respond-to(until-l) {
+    border-bottom: 1px solid color(grey-light);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  } 
+
+  @include respond-to(l) {
+    width: 33.333%;
+
+    & + & {
+      border-left: 1px solid color(grey-light);
+    }
+
+    &:nth-child(4) {
+      border-right: none;
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+
+/*
+* Type of session
+*/
+.schedule-session-type {
+
+}
+
+/*
+* Speakers
+*/
+.schedule-session-speakers__wrapper {
+  margin-bottom: 15px;
+  flex: 1 1 auto; 
+}
+
+.schedule-session-speaker {
+  display: inline-block;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+/*
+* Room Name
+*/
+.schedule-session-room {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: bold;
+}
+
+
+/*
+* Level
+*/
+.schedule-session-level {
+  padding-left: 50px;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 20px;
+  color: color('grey');
+}

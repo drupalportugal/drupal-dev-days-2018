@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.program
     - field.field.node.session.body
+    - field.field.node.session.field_file
     - field.field.node.session.field_room
     - field.field.node.session.field_session_level
     - field.field.node.session.field_session_status
@@ -13,8 +14,39 @@ dependencies:
     - field.field.node.session.field_user_ref
     - node.type.session
   module:
+    - ds
     - options
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: session_teaser
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          text: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      text:
+        - field_session_type
+        - node_title
+        - field_user_ref
+        - field_room
+        - field_session_track_type
+        - field_session_level
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
 id: node.session.program
 targetEntityType: node
 bundle: session
@@ -22,41 +54,41 @@ mode: program
 content:
   field_room:
     type: list_default
-    weight: 2
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    region: content
+    region: text
   field_session_level:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: text
+  field_session_track_type:
     weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
-    region: content
-  field_session_track_type:
-    weight: 3
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
+    region: text
   field_session_type:
     weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
-    region: content
+    region: text
   field_user_ref:
     type: entity_reference_entity_view
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       view_mode: compact
       link: false
     third_party_settings: {  }
-    region: content
+    region: text
 hidden:
   body: true
   field_file: true

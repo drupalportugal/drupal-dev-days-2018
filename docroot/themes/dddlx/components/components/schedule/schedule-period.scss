@@ -1,0 +1,30 @@
+@import 'init';
+
+.schedule-period__wrapper {
+  padding: 20px 0;
+  align-items: center;
+
+  @include respond-to(m) {
+    display: flex;
+  }
+}
+
+.schedule-period {
+  flex: 0 0 100px;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.schedule-period__border {
+  height: 2px;
+  background: rebeccapurple;
+  flex: 1 1 auto;
+  width: 100%;
+
+  display: flex;
+
+  @include respond-to(m) {
+    width: auto;
+  }
+}
+

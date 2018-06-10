@@ -1,20 +1,15 @@
 .session-teaser {
-  text-align: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ededed;
-}
-
-@media (min-width: 0) and (max-width: 887px) {
-  .session-teaser {
-    padding: 0 20px 20px;
-  }
+  position: relative;
 }
 
 @media (min-width: 888px) {
   .session-teaser {
-    text-align: left;
     display: -webkit-box;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-flow: column;
+    height: 100%;
   }
   .session-teaser:before {
     content: "";

@@ -1,0 +1,14 @@
+@import 'init';
+
+.schedule-break__wrapper {
+  text-align: center;
+  font-size: 30px;
+
+  @include respond-to(m) {
+    margin-left: 110px;
+  }
+}
+ 
+.schedule-break {
+  //
+}

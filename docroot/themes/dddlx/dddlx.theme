@@ -267,9 +267,9 @@ function dddlx_preprocess_field(&$variables, $hook) {
     $variables['class_view_mode'] = $variables['element']['#view_mode'];
   }
 
-  if ($variables['field_name'] === 'field_forum_state') {
+  if ($variables['field_name'] === 'field_session_track_type') {
     $value = $variables['element']['#items'][0]->getValue();
-    $variables['forum_class'] = 'forum-' . (($value['value']) ? 'open' : 'close');
+    $variables['track_type_class'] = (($value['value']));
   }
 }
 

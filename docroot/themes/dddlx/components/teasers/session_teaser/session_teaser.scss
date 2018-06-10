@@ -11,18 +11,14 @@
 // Style guide: teasers.article_teaser
 
 .session-teaser {
-  text-align: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid color(grey-extra-light);
-
-  @include respond-to(until-l) {
-    padding: 0 (zen-half-gutter()) 20px;
-  }
+  position: relative;
 
   @include respond-to(l) {
     @include zen-grid-container();
-    text-align: left;
     display: flex;
+    flex-flow: column;
+    height: 100%;
+
   }
 }
 
