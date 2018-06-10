@@ -8,4 +8,5 @@ events:
           script:
             # Build non-development composer packages.
             # - composer install --no-interaction --no-dev --optimize-autoloader
+            - composer global require hirak/prestissimo
             - composer install --no-interaction --no-dev --optimize-autoloader
