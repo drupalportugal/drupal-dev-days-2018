@@ -404,3 +404,8 @@ schedule-session-level:
   css:
     component:
       components/asset-builds/css/schedule-session-level.css: {}
+
+user-teaser:
+  css:
+    component:
+      components/asset-builds/css/user-teaser.css: {}

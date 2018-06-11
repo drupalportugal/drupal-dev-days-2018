@@ -54,6 +54,18 @@ session_teaser:
     text:
       label: Text Area
 
+
+user_teaser:
+  label: User Teaser
+  category: Teasers
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/user_teaser
+  regions:
+    text:
+      label: Text Area
+
+
 page_full:
   label: Page Full
   category: Full
