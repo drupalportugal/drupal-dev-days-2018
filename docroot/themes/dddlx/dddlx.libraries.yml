@@ -409,3 +409,8 @@ keynote-speaker:
   css:
     component:
       components/asset-builds/css/keynote-speaker.css: {}
+      
+user-teaser:
+  css:
+    component:
+      components/asset-builds/css/user-teaser.css: {}
