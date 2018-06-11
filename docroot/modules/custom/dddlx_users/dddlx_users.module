@@ -30,22 +30,6 @@ function dddlx_users_entity_extra_field_info() {
 }
 
 /**
- * Implements hook_entity_view().
- */
-function dddlx_users_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
-
-  /* @TODO Fix this for Lisbon theme */
-  if ($entity->getEntityTypeId() == 'user' && $view_mode !== 'compact') {
-    if ($entity->field_register_picture->isEmpty()) {
-      $build['default_user_image'] = ['#markup' => '
-      <div class="field--name-field-register-picture">
-        <img src="/themes/dddlx/logo.svg">
-      </div>'];
-    }
-  }
-}
-
-/**
  * Implements hook_form_FORM_ID_alter().
  */
 function dddlx_users_form_user_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
