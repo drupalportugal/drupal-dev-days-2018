@@ -17,6 +17,38 @@ dependencies:
     - options
     - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: schedule_full
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          background: div
+          header: div
+          admin: div
+          main: div
+          asidefirst: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      main:
+        - field_session_track_type
+        - field_session_type
+        - field_user_ref
+        - links
+        - field_room
+        - field_session_level
+        - field_session_status
+        - field_file
+        - body
 id: node.session.default
 targetEntityType: node
 bundle: session
@@ -32,7 +64,8 @@ content:
   field_file:
     weight: 8
     label: above
-    settings: {  }
+    settings:
+      use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
     region: content

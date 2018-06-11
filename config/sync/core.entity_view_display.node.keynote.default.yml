@@ -40,6 +40,7 @@ third_party_settings:
         id: ''
         classes: ''
       label: 'The company'
+      region: hidden
     group_speaker:
       children:
         - field_image
@@ -60,6 +61,7 @@ third_party_settings:
         id: ''
         classes: ''
       label: 'The speaker'
+      region: hidden
 id: node.keynote.default
 targetEntityType: node
 bundle: keynote
@@ -130,8 +132,8 @@ content:
     region: content
   links:
     weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   field_room: true

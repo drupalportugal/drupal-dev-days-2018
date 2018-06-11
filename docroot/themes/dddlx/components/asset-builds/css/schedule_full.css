@@ -36,3 +36,117 @@
 }
 
 /* Sidebar & content */
+.field--name-dynamic-block-fieldnode-schedule-menu .menu {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin: 0 0 2em;
+}
+
+.field--name-dynamic-block-fieldnode-schedule-menu .menu-item {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  width: 19%;
+  min-width: 115px;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  margin-bottom: 0.5em;
+  background-color: #fff;
+  min-height: 40px;
+  border: 1px solid #5776b7;
+  padding: 4px 8px;
+}
+
+.field--name-dynamic-block-fieldnode-schedule-menu .menu-item--active-trail {
+  background-color: #5776b7;
+}
+
+@media (min-width: 0) and (max-width: 887px) {
+  .field--name-dynamic-block-fieldnode-schedule-menu .menu-item {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    min-width: 100%;
+  }
+}
+
+.field--name-dynamic-block-fieldnode-schedule-menu .menu-item a {
+  text-transform: uppercase;
+  color: #5776b7;
+  transition: all 0.5s ease;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.field--name-dynamic-block-fieldnode-schedule-menu .menu-item a.is-active {
+  cursor: default;
+  color: #fff;
+}
+
+ul.schedule-legend {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+ul.schedule-legend li {
+  list-style: none outside none;
+}
+
+@media (min-width: 0) and (max-width: 887px) {
+  ul.schedule-legend {
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+ul.schedule-legend li.schedule-legend__item {
+  width: 25%;
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding: 13px;
+  background-size: 40px;
+  padding-left: 50px;
+  margin-bottom: 16px;
+}
+
+ul.schedule-legend .schedule-legend__item--development {
+  background-image: url("../../components/schedule/icons/development.svg");
+}
+
+ul.schedule-legend .schedule-legend__item--frontend {
+  background-image: url("../../components/schedule/icons/frontend.svg");
+}
+
+ul.schedule-legend .schedule-legend__item--being-human {
+  background-image: url("../../components/schedule/icons/being-human.svg");
+}
+
+ul.schedule-legend .schedule-legend__item--case-studies {
+  background-image: url("../../components/schedule/icons/case-studies.svg");
+}
+
+ul.schedule-legend .schedule-legend__item--devops {
+  background-image: url("../../components/schedule/icons/devops.svg");
+}
+
+ul.schedule-legend .schedule-legend__item--performance {
+  background-image: url("../../components/schedule/icons/performance.svg");
+}
+
+ul.schedule-legend .schedule-legend__item--other {
+  background-image: url("../../components/schedule/icons/other.svg");
+}
+
+ul.schedule-legend .schedule-legend__item--site-building {
+  background-image: url("../../components/schedule/icons/site-building.svg");
+}

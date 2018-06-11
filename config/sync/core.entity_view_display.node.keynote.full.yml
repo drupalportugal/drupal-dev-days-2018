@@ -1,0 +1,156 @@
+uuid: a4e21c71-8175-4def-8238-ede7af090f34
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.keynote.body
+    - field.field.node.keynote.field_company_bio
+    - field.field.node.keynote.field_company_name
+    - field.field.node.keynote.field_image
+    - field.field.node.keynote.field_logo
+    - field.field.node.keynote.field_room
+    - field.field.node.keynote.field_speaker_bio
+    - field.field.node.keynote.field_speaker_full_name
+    - field.field.node.keynote.field_speaker_position
+    - image.style.crop_150x150
+    - node.type.keynote
+  module:
+    - ds
+    - field_group
+    - image
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_company:
+      children: {  }
+      parent_name: ''
+      weight: 22
+      format_type: html_element
+      format_settings:
+        label: 'The company'
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: 'The company'
+      region: hidden
+    group_speaker:
+      children:
+        - field_image
+        - field_speaker_full_name
+        - field_speaker_position
+        - field_speaker_bio
+      parent_name: ''
+      weight: 6
+      format_type: html_element
+      format_settings:
+        label: 'The speaker'
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: 'The speaker'
+      region: hidden
+  ds:
+    layout:
+      id: session_full
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          main: div
+          asidefirst: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      main:
+        - node_title
+        - body
+        - field_image
+        - field_speaker_full_name
+        - field_speaker_position
+        - field_speaker_bio
+        - group_speaker
+      asidefirst:
+        - 'dynamic_block_field:node-call_to_action'
+    fields:
+      'dynamic_block_field:node-call_to_action':
+        plugin_id: 'dynamic_block_field:node-call_to_action'
+        weight: 7
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+id: node.keynote.full
+targetEntityType: node
+bundle: keynote
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: main
+  field_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: crop_150x150
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: main
+  field_speaker_bio:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: main
+  field_speaker_full_name:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: main
+  field_speaker_position:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: main
+hidden:
+  field_company_bio: true
+  field_company_name: true
+  field_logo: true
+  field_room: true
+  links: true

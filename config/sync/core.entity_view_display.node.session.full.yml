@@ -1,0 +1,127 @@
+uuid: 6fc465ef-fa47-417d-98d0-743ba15b9d3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.session.body
+    - field.field.node.session.field_file
+    - field.field.node.session.field_room
+    - field.field.node.session.field_session_level
+    - field.field.node.session.field_session_status
+    - field.field.node.session.field_session_track_type
+    - field.field.node.session.field_session_type
+    - field.field.node.session.field_user_ref
+    - node.type.session
+  module:
+    - ds
+    - file
+    - options
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: session_full
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          main: div
+          asidefirst: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      main:
+        - node_title
+        - body
+        - field_file
+        - field_session_track_type
+        - field_session_level
+        - field_room
+        - field_session_type
+        - field_user_ref
+      asidefirst:
+        - 'dynamic_block_field:node-call_to_action'
+    fields:
+      'dynamic_block_field:node-call_to_action':
+        plugin_id: 'dynamic_block_field:node-call_to_action'
+        weight: 8
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+id: node.session.full
+targetEntityType: node
+bundle: session
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: main
+  field_file:
+    weight: 2
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_table
+    region: main
+  field_room:
+    type: list_default
+    weight: 5
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    region: main
+  field_session_level:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: main
+  field_session_track_type:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: main
+  field_session_type:
+    weight: 6
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: main
+  field_user_ref:
+    type: entity_reference_entity_view
+    weight: 7
+    label: above
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    region: main
+hidden:
+  field_session_status: true
+  links: true

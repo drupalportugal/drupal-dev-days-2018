@@ -3,12 +3,15 @@
 .schedule-break__wrapper {
   text-align: center;
   font-size: 30px;
-
-  @include respond-to(m) {
-    margin-left: 110px;
-  }
+  color: color(blue);
+  margin-top: -20px;
+  margin-bottom: 20px;
 }
- 
-.schedule-break {
-  //
+
+/*
+** Description
+*/
+
+.schedule-break-description {
+  text-align: center;
 }

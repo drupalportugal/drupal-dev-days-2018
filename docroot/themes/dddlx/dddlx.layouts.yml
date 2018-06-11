@@ -20,26 +20,6 @@ article_teaser_small:
     text:
       label: Text Area
 
-article_full:
-  label: Article Full
-  category: Full
-  class: '\Drupal\ds\Plugin\DsLayout'
-  type: partial
-  template: templates/content/article_full
-  regions:
-    background:
-      label: Background image
-    header:
-      label: Header area
-    admin:
-      label: Admin area
-    main:
-      label: Content area
-    asidefirst:
-      label: Sidebar bottom
-    footer:
-      label: Footer area
-
 schedule_full:
   label: Schedule Full
   category: Full
@@ -49,6 +29,20 @@ schedule_full:
   regions:
     main:
       label: Content area
+
+session_full:
+  label: Session Full
+  category: Full
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/session_full
+  regions:
+    main:
+      label: Content area
+    asidefirst:
+      label: Sidebar bottom
+    footer:
+      label: Footer area
 
 session_teaser:
   label: Session Teaser
@@ -60,49 +54,17 @@ session_teaser:
     text:
       label: Text Area
 
-event_teaser:
-  label: Event Teaser
-  category: Teasers
-  class: '\Drupal\ds\Plugin\DsLayout'
-  type: partial
-  template: templates/content/event_teaser
-  regions:
-    text:
-      label: Text Area
-    media:
-      label: Media Area
 
-event_teaser_small:
-  label: Event Teaser Small
+user_teaser:
+  label: User Teaser
   category: Teasers
   class: '\Drupal\ds\Plugin\DsLayout'
   type: partial
-  template: templates/content/event_teaser_small
+  template: templates/content/user_teaser
   regions:
     text:
       label: Text Area
 
-event_full:
-  label: Event Full
-  category: Full
-  class: '\Drupal\ds\Plugin\DsLayout'
-  type: partial
-  template: templates/content/event_full
-  regions:
-    background:
-      label: Background image
-    header:
-      label: Header area
-    admin:
-      label: Admin area
-    main:
-      label: Content area
-    asidefirst:
-      label: Sidebar top
-    asidesecond:
-      label: Sidebar bottom
-    footer:
-      label: Footer area
 
 page_full:
   label: Page Full
@@ -145,88 +107,3 @@ featured_block:
       label: Background image
     main:
       label: Content area
-
-partner_full:
-  label: Partner Full
-  category: Full
-  class: '\Drupal\ds\Plugin\DsLayout'
-  type: partial
-  template: templates/content/partner_full
-  regions:
-    header:
-      label: Header area
-    admin:
-      label: Admin area
-    main:
-      label: Content area
-    asidefirst:
-      label: Sidebar top
-    footer:
-      label: Footer area
-
-partner_teaser:
-  label: Partner teaser
-  category: Teasers
-  class: '\Drupal\ds\Plugin\DsLayout'
-  type: partial
-  template: templates/content/partner_teaser
-  regions:
-    main:
-      label: Content area
-
-team_full:
-  label: Team Full
-  category: Full
-  class: '\Drupal\ds\Plugin\DsLayout'
-  type: partial
-  template: templates/content/team_full
-  regions:
-    header:
-      label: Header area
-    admin:
-      label: Admin area
-    main:
-      label: Content area
-    asidefirst:
-      label: Sidebar top
-
-team_teaser:
-  label: Team teaser
-  category: Teasers
-  class: '\Drupal\ds\Plugin\DsLayout'
-  type: partial
-  template: templates/content/team_teaser
-  regions:
-    main:
-      label: Content area
-
-tech_sheet_full:
-  label: Technical Sheet Full
-  category: Full
-  class: '\Drupal\ds\Plugin\DsLayout'
-  type: partial
-  template: templates/content/tech_sheet_full
-  regions:
-    header:
-      label: Header area
-    admin:
-      label: Admin area
-    main:
-      label: Content area
-    asidefirst:
-      label: Sidebar bottom
-    footer:
-      label: Footer area
-
-
-tech_sheet_teaser:
-  label: Technical Sheet Teaser
-  category: Teasers
-  class: '\Drupal\ds\Plugin\DsLayout'
-  type: partial
-  template: templates/content/tech_sheet_teaser
-  regions:
-    text:
-      label: Text Area
-    media:
-      label: Media Area

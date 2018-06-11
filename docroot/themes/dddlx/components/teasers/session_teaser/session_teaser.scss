@@ -18,7 +18,11 @@
     display: flex;
     flex-flow: column;
     height: 100%;
+  }
 
+
+  &.node--type-keynote {
+    text-align: center;
   }
 }
 

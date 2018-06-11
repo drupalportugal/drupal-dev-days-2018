@@ -228,26 +228,6 @@ wireframe:
     component:
       components/asset-builds/css/wireframe.css: {}
 
-paragraphs-text:
-  css:
-    component:
-      components/asset-builds/css/paragraphs_text.css: {}
-
-paragraphs-quote:
-  css:
-    component:
-      components/asset-builds/css/paragraphs_quote.css: {}
-
-paragraphs-image:
-  css:
-    component:
-      components/asset-builds/css/paragraphs_image.css: {}
-
-paragraphs-clipping:
-  css:
-    component:
-      components/asset-builds/css/paragraphs_clipping.css: {}
-
 paragraphs-video:
   css:
     component:
@@ -263,10 +243,10 @@ article_teaser_small:
     component:
       components/asset-builds/css/article_teaser_small.css: {}
 
-article_full:
+session_full:
   css:
     component:
-      components/asset-builds/css/article_full.css: {}
+      components/asset-builds/css/session_full.css: {}
 
 schedule_full:
   css:
@@ -414,3 +394,23 @@ session-title:
   css:
     component:
       components/asset-builds/css/session-title.css: {}
+
+schedule-session-speakers:
+  css:
+    component:
+      components/asset-builds/css/schedule-session-speakers.css: {}
+
+schedule-session-level:
+  css:
+    component:
+      components/asset-builds/css/schedule-session-level.css: {}
+
+keynote-speaker:
+  css:
+    component:
+      components/asset-builds/css/keynote-speaker.css: {}
+      
+user-teaser:
+  css:
+    component:
+      components/asset-builds/css/user-teaser.css: {}

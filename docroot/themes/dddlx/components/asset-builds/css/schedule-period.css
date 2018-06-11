@@ -1,35 +1,27 @@
 .schedule-period__wrapper {
-  padding: 20px 0;
+  padding: 30px 0;
   -webkit-box-align: center;
           align-items: center;
-}
-
-@media (min-width: 730px) {
-  .schedule-period__wrapper {
-    display: -webkit-box;
-    display: flex;
-  }
+  display: -webkit-box;
+  display: flex;
+  position: relative;
 }
 
 .schedule-period {
-  -webkit-box-flex: 0;
-          flex: 0 0 100px;
-  margin-right: 10px;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  background: #ffffff;
+  z-index: 5;
+  padding: 0 10px;
   font-size: 18px;
+  color: #5776b7;
 }
 
 .schedule-period__border {
   height: 2px;
-  background: rebeccapurple;
-  -webkit-box-flex: 1;
-          flex: 1 1 auto;
+  background: #5776b7;
   width: 100%;
-  display: -webkit-box;
-  display: flex;
-}
-
-@media (min-width: 730px) {
-  .schedule-period__border {
-    width: auto;
-  }
+  position: absolute;
+  z-index: 1;
 }

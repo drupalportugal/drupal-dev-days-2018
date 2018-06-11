@@ -6,6 +6,10 @@
   padding-left: 50px;
 }
 
+.session-full__content .schedule-session-track-type {
+  margin-bottom: 0;
+}
+
 .schedule-session-track-type__icon {
   position: absolute;
   left: 0;

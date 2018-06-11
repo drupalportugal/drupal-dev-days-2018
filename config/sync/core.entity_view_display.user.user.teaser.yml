@@ -12,28 +12,49 @@ dependencies:
     - field.field.user.user.field_register_picture
     - image.style.crop_150x150
   module:
+    - ds
     - image
+    - link
     - linked_field
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: user_teaser
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          text: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      text:
+        - field_register_picture
+        - field_register_name
+        - field_register_drupal_link
 id: user.user.teaser
 targetEntityType: user
 bundle: user
 mode: teaser
 content:
-  field_register_drupal_name:
+  field_register_drupal_link:
+    type: link
     weight: 2
+    region: text
     label: hidden
     settings:
-      link_to_entity: false
-    third_party_settings:
-      linked_field:
-        linked: '1'
-        type: custom
-        destination: '[user:field_register_drupal_link:uri]'
-        advanced:
-          target: _blank
-    type: string
-    region: content
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
   field_register_name:
     weight: 1
     label: hidden
@@ -41,7 +62,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
+    region: text
   field_register_picture:
     weight: 0
     label: hidden
@@ -56,9 +77,9 @@ content:
         advanced:
           target: _blank
     type: image
-    region: content
+    region: text
 hidden:
   field_gender: true
   field_gender_write_in: true
-  field_register_drupal_link: true
+  field_register_drupal_name: true
   member_for: true

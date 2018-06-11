@@ -1,10 +1,14 @@
 .schedule-break__wrapper {
   text-align: center;
   font-size: 30px;
+  color: #5776b7;
+  margin-top: -20px;
+  margin-bottom: 20px;
 }
 
-@media (min-width: 730px) {
-  .schedule-break__wrapper {
-    margin-left: 110px;
-  }
+/*
+** Description
+*/
+.schedule-break-description {
+  text-align: center;
 }

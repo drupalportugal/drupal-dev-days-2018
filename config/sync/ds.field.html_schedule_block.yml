@@ -1,0 +1,18 @@
+id: html_schedule_block
+label: 'HTML Schedule block'
+ui_limit: ''
+properties:
+  block: 'block_content:569f7c74-8b16-4e22-9baf-2862e39d608f'
+  use_block_title: false
+  config:
+    id: 'block_content:569f7c74-8b16-4e22-9baf-2862e39d608f'
+    label: ''
+    provider: block_content
+    label_display: visible
+    status: true
+    info: ''
+    view_mode: full
+type: block
+type_label: 'Block field'
+entities:
+  node: node

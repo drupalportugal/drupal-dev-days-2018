@@ -138,6 +138,7 @@ permissions:
   - 'select account cancellation method'
   - 'skip CAPTCHA'
   - 'synchronize configuration'
+  - 'use text format full_html'
   - 'use text format rich_text'
   - 'view all attendee revisions'
   - 'view all revisions'

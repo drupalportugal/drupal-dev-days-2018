@@ -1,3 +1,7 @@
+.schedule-session-list-item:last-child {
+  margin-bottom: 40px;
+}
+
 .schedule-session__wrapper {
   display: -webkit-box;
   display: flex;
@@ -5,12 +9,6 @@
   margin-bottom: 40px;
   -webkit-box-pack: center;
           justify-content: center;
-}
-
-@media (min-width: 730px) {
-  .schedule-session__wrapper {
-    margin-left: 110px;
-  }
 }
 
 .schedule-session {
@@ -48,24 +46,6 @@
 * Type of session
 */
 /*
-* Speakers
-*/
-.schedule-session-speakers__wrapper {
-  margin-bottom: 15px;
-  -webkit-box-flex: 1;
-          flex: 1 1 auto;
-}
-
-.schedule-session-speaker {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.schedule-session-speaker:last-child {
-  margin-right: 0;
-}
-
-/*
 * Room Name
 */
 .schedule-session-room {
@@ -75,13 +55,6 @@
   font-weight: bold;
 }
 
-/*
-* Level
-*/
-.schedule-session-level {
-  padding-left: 50px;
-  font-size: 12px;
-  text-transform: uppercase;
-  line-height: 20px;
-  color: #999999;
+.keynote-program__room {
+  position: static;
 }
