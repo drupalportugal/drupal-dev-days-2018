@@ -1,10 +1,9 @@
 version: 1.1.0
 
-https://docs.acquia.com/en/stable/acquia-cloud/develop/pipelines/yaml/
-
 services:
   - php:
       version: 7.1
+
 events:
   build:
     steps:

@@ -59,7 +59,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "platform": {"php": "5.6.36"},
+        "platform": {"php": "7.1"},
         "sort-packages": true
     },
     "autoload": {
