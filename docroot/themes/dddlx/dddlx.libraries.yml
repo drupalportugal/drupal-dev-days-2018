@@ -394,3 +394,13 @@ session-title:
   css:
     component:
       components/asset-builds/css/session-title.css: {}
+
+schedule-session-speakers:
+  css:
+    component:
+      components/asset-builds/css/schedule-session-speakers.css: {}
+
+schedule-session-level:
+  css:
+    component:
+      components/asset-builds/css/schedule-session-level.css: {}

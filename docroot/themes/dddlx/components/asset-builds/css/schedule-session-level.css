@@ -1,0 +1,11 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+/*
+* Level
+*/
+.schedule-session-level {
+  padding-left: 50px;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 20px;
+  color: #999999;
+}

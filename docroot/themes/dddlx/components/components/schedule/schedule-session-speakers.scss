@@ -1,0 +1,18 @@
+@import 'init';
+
+/*
+* Speakers
+*/
+.schedule-session-speakers__wrapper {
+  margin-bottom: 15px;
+  flex: 1 1 auto; 
+}
+
+.schedule-session-speaker {
+  display: inline-block;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
