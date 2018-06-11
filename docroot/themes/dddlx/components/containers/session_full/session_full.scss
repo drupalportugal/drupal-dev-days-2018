@@ -1,0 +1,76 @@
+@import '../full';
+
+// Session Full view mode
+//
+// A full view mode to display the session page content
+//
+// Markup: session_full.twig
+//
+// Style guide: containers.session_full
+
+.session-full {
+  @extend %full;
+}
+
+.session-full__header__wrapper {
+  @extend %full__header__wrapper;
+}
+
+.session-full__header__wrapper--with-background {
+  @extend %full__header__wrapper--with-background;
+}
+
+.session-full__image {
+  @extend %full__image;
+}
+
+.session-full__header {
+  @extend %full__header;
+  @extend %full__title;
+
+  .session-full__header__wrapper--with-background & {
+    justify-content: center;
+  }
+}
+
+.session-full__title {
+  @extend %full__title;
+}
+
+/* Sidebar & content */
+.session-full__content-outer-wrapper {
+  @extend %full__content-outer-wrapper;
+}
+
+.session-full__content-wrapper {
+  @extend %full__content-wrapper;
+}
+
+.session-full__content {
+  padding-bottom: 40px;
+
+  @include zen-respond-to(xl) {
+    @include zen-grid-item(8, 1);
+  }
+
+  > .field {
+    margin-bottom: 20px;
+  }
+}
+
+.session-full__sidebar-bottom {
+  @include zen-respond-to(xl) {
+    @include zen-grid-item(4, 1, right);
+  }
+}
+
+.session-full__footer__wrapper {
+  @include zen-respond-to(xl) {
+    @include zen-new-row();
+    @include zen-grid-item(12, 1);
+  }
+}
+
+.session-full__tags {
+  @extend %full__tags;
+}

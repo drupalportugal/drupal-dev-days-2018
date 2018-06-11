@@ -17,28 +17,13 @@
  * - footer: content of footer region
  */
 #}
-{{ attach_library('dddlx/article_full') }}
+{{ attach_library('dddlx/session_full') }}
 
-{% set class = node.bundle|clean_class ~ '-full' %}
-{% set background_class = has_background_image ? class ~ '__header__wrapper--with-background' : '' %}
+{% set class = 'session-full' %}
 
 <{{ outer_wrapper }}{{ attributes.addClass(class, 'clearfix') }}>
 
   {{ title_suffix.contextual_links }}
-
-  <{{ header_wrapper }}{{ header_attributes.addClass(class ~ '__header__wrapper', background_class) }}>
-
-    {{ background }}
-
-    <div {{ create_attribute({'class': [class ~ '__header', 'layout-center']}) }}>
-      {{ header }}
-    </div>
-
-    <div {{ create_attribute({'class': [class ~ '__header-tip__wrapper', 'layout-center']}) }}>
-      <span {{ create_attribute({'class': [class ~ '__header-tip']}) }}></span>
-    </div>
-
-  </{{ header_wrapper }}>
 
   <div {{ create_attribute({'class': [class ~ '__content-outer-wrapper', 'layout-center']}) }}>
 
