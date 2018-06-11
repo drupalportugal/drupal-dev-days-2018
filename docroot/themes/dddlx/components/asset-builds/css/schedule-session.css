@@ -1,3 +1,8 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.schedule-session-list-item:last-child {
+  margin-bottom: 40px;
+}
+
 .schedule-session__wrapper {
   display: -webkit-box;
   display: flex;
@@ -5,12 +10,6 @@
   margin-bottom: 40px;
   -webkit-box-pack: center;
           justify-content: center;
-}
-
-@media (min-width: 730px) {
-  .schedule-session__wrapper {
-    margin-left: 130px;
-  }
 }
 
 .schedule-session {

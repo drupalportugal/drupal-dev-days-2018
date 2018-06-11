@@ -1,14 +1,17 @@
 @import 'init';
 
+.schedule-session-list-item {
+
+  &:last-child {
+    margin-bottom: 40px;
+  }
+}
+
 .schedule-session__wrapper {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 40px;
   justify-content: center;
-
-  @include respond-to(m) {
-    margin-left: 130px;
-  }
 }
 
 .schedule-session {
