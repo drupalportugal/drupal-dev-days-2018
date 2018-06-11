@@ -98,6 +98,13 @@ class AllSponsorsBlock extends BlockBase implements ContainerFactoryPluginInterf
       '#arguments' => [],
     ];
 
+    $coffee_partner_sponsors = [
+      '#type' => 'view',
+      '#name' => 'sponsors',
+      '#display_id' => 'coffee_partner',
+      '#arguments' => [],
+    ];
+
     $partner_sponsors = [
       '#type' => 'view',
       '#name' => 'sponsors',
@@ -134,8 +141,14 @@ class AllSponsorsBlock extends BlockBase implements ContainerFactoryPluginInterf
       'special_partner' => [
         '#theme' => 'sponsors',
         '#title' => 'Official carrier',
-        '#sponsor_type' => 'bronze',
+        '#sponsor_type' => 'partner',
         '#sponsors' => $carrier_partner_sponsors,
+      ],
+      'coffee_partner' => [
+        '#theme' => 'sponsors',
+        '#title' => 'Official coffee',
+        '#sponsor_type' => 'partner',
+        '#sponsors' => $coffee_partner_sponsors,
       ],
       'partner' => [
         '#theme' => 'sponsors',

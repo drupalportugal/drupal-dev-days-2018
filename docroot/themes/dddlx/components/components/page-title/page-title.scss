@@ -4,7 +4,6 @@
 
 .page-title {
   @include type-layout(xxl, 2);
-  @include margin-top(2);
   @include margin-bottom(2);
   text-transform: uppercase;
   letter-spacing: 3px;

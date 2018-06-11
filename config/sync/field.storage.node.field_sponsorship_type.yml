@@ -53,6 +53,9 @@ settings:
     -
       value: 13
       label: 'Hosting partner'
+    -
+      value: 14
+      label: 'Coffee partner'
   allowed_values_function: ''
 module: options
 locked: false
