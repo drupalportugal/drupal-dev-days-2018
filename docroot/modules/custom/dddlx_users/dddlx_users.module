@@ -39,7 +39,7 @@ function dddlx_users_entity_view(array &$build, \Drupal\Core\Entity\EntityInterf
     if ($entity->field_register_picture->isEmpty()) {
       $build['default_user_image'] = ['#markup' => '
       <div class="field--name-field-register-picture">
-        <img src="/themes/da_vinci/images/avatar.svg">
+        <img src="/themes/dddlx/logo.svg">
       </div>'];
     }
   }
