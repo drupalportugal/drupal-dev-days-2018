@@ -10,7 +10,7 @@ dependencies:
     - field.field.user.user.field_register_drupal_name
     - field.field.user.user.field_register_name
     - field.field.user.user.field_register_picture
-    - image.style.thumbnail
+    - image.style.crop_150x150
   module:
     - ds
     - image
@@ -67,7 +67,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: thumbnail
+      image_style: crop_150x150
       image_link: ''
     third_party_settings:
       linked_field:
