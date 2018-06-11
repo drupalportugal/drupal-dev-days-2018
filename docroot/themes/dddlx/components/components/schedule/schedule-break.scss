@@ -3,9 +3,10 @@
 .schedule-break__wrapper {
   text-align: center;
   font-size: 30px;
+  color: color(blue);
 
   @include respond-to(m) {
-    margin-left: 110px;
+    margin-left: 130px;
   }
 }
  

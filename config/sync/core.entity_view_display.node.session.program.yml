@@ -47,6 +47,10 @@ third_party_settings:
         weight: 1
         label: hidden
         formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
 id: node.session.program
 targetEntityType: node
 bundle: session

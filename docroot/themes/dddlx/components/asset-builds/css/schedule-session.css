@@ -9,7 +9,7 @@
 
 @media (min-width: 730px) {
   .schedule-session__wrapper {
-    margin-left: 110px;
+    margin-left: 130px;
   }
 }
 
@@ -73,6 +73,10 @@
   top: 0;
   right: 0;
   font-weight: bold;
+}
+
+.keynote-program__room {
+  position: static;
 }
 
 /*

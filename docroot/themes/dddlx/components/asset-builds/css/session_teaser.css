@@ -22,6 +22,10 @@
   }
 }
 
+.session-teaser.node--type-keynote {
+  text-align: center;
+}
+
 .session-teaser__title h2 {
   font-size: 1.5rem;
   text-align: center;

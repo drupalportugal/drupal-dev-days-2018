@@ -15,8 +15,40 @@ dependencies:
     - field.field.node.keynote.field_speaker_position
     - node.type.keynote
   module:
+    - ds
     - options
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: session_teaser
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          text: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      text:
+        - field_room
+        - node_title
+        - field_speaker_full_name
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
 id: node.keynote.program
 targetEntityType: node
 bundle: keynote
@@ -24,24 +56,19 @@ mode: program
 content:
   field_room:
     type: list_default
-    weight: 2
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    region: content
+    region: text
   field_speaker_full_name:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link_to_entity: true
     third_party_settings: {  }
     type: string
-    region: content
-  links:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    region: content
+    region: text
 hidden:
   body: true
   field_company_bio: true
@@ -50,3 +77,4 @@ hidden:
   field_logo: true
   field_speaker_bio: true
   field_speaker_position: true
+  links: true
