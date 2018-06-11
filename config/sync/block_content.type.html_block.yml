@@ -1,0 +1,8 @@
+uuid: 1f4ab3e1-c1b5-481a-bba8-0f9d1d70d3a2
+langcode: en
+status: true
+dependencies: {  }
+id: html_block
+label: 'HTML block'
+revision: 0
+description: ''
