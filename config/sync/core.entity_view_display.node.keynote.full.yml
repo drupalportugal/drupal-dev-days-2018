@@ -1,8 +1,9 @@
-uuid: 0ec0a894-c08e-4184-afaf-b93eabe20961
+uuid: a4e21c71-8175-4def-8238-ede7af090f34
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.keynote.body
     - field.field.node.keynote.field_company_bio
     - field.field.node.keynote.field_company_name
@@ -12,9 +13,10 @@ dependencies:
     - field.field.node.keynote.field_speaker_bio
     - field.field.node.keynote.field_speaker_full_name
     - field.field.node.keynote.field_speaker_position
-    - image.style.medium
+    - image.style.crop_150x150
     - node.type.keynote
   module:
+    - ds
     - field_group
     - image
     - text
@@ -22,12 +24,9 @@ dependencies:
 third_party_settings:
   field_group:
     group_company:
-      children:
-        - field_logo
-        - field_company_name
-        - field_company_bio
+      children: {  }
       parent_name: ''
-      weight: 3
+      weight: 22
       format_type: html_element
       format_settings:
         label: 'The company'
@@ -42,13 +41,9 @@ third_party_settings:
       label: 'The company'
       region: hidden
     group_speaker:
-      children:
-        - field_image
-        - field_speaker_full_name
-        - field_speaker_position
-        - field_speaker_bio
+      children: {  }
       parent_name: ''
-      weight: 2
+      weight: 21
       format_type: html_element
       format_settings:
         label: 'The speaker'
@@ -62,78 +57,100 @@ third_party_settings:
         classes: ''
       label: 'The speaker'
       region: hidden
-id: node.keynote.default
+  ds:
+    layout:
+      id: session_full
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          main: div
+          asidefirst: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      main:
+        - node_title
+        - links
+        - body
+        - field_image
+        - field_speaker_full_name
+        - field_speaker_position
+        - field_speaker_bio
+      asidefirst:
+        - 'dynamic_block_field:node-call_to_action'
+    fields:
+      'dynamic_block_field:node-call_to_action':
+        plugin_id: 'dynamic_block_field:node-call_to_action'
+        weight: 7
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+id: node.keynote.full
 targetEntityType: node
 bundle: keynote
-mode: default
+mode: full
 content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_company_bio:
-    weight: 6
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_company_name:
-    weight: 5
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
+    region: main
   field_image:
-    weight: 4
+    weight: 3
     label: hidden
     settings:
       image_style: crop_150x150
       image_link: ''
     third_party_settings: {  }
     type: image
-    region: content
-  field_logo:
-    weight: 4
-    label: hidden
-    settings:
-      image_style: medium
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
+    region: main
   field_speaker_bio:
-    weight: 7
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
+    region: main
   field_speaker_full_name:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: main
+  field_speaker_position:
     weight: 5
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
-  field_speaker_position:
-    weight: 6
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
+    region: main
   links:
-    weight: 0
-    region: content
+    weight: 1
+    region: main
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_company_bio: true
+  field_company_name: true
+  field_logo: true
   field_room: true

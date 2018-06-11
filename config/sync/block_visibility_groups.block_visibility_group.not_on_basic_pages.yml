@@ -13,9 +13,7 @@ conditions:
     id: 'entity_bundle:node'
     bundles:
       job_offer: job_offer
-      keynote: keynote
       news: news
-      session: session
       sponsor: sponsor
     negate: false
     context_mapping:
