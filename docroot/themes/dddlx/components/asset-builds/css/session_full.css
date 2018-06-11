@@ -121,7 +121,7 @@
   }
 }
 
-.session-full__content > .field {
+.session-full__content > .field--label-inline {
   margin-bottom: 20px;
 }
 

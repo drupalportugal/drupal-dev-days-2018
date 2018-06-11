@@ -53,7 +53,7 @@
     @include zen-grid-item(8, 1);
   }
 
-  > .field {
+  > .field--label-inline {
     margin-bottom: 20px;
   }
 }
