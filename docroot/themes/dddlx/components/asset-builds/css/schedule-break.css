@@ -1,11 +1,15 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .schedule-break__wrapper {
   text-align: center;
   font-size: 30px;
   color: #5776b7;
+  margin-top: -20px;
+  margin-bottom: 20px;
 }
 
-@media (min-width: 730px) {
-  .schedule-break__wrapper {
-    margin-left: 130px;
-  }
+/*
+** Description
+*/
+.schedule-break-description {
+  text-align: center;
 }

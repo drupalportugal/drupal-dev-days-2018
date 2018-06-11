@@ -4,12 +4,19 @@
   text-align: center;
   font-size: 30px;
   color: color(blue);
-
-  @include respond-to(m) {
-    margin-left: 130px;
-  }
+  margin-top: -20px;
+  margin-bottom: 20px;
 }
  
 .schedule-break {
   //
+}
+
+
+/*
+** Description
+*/
+
+.schedule-break-description {
+  text-align: center;
 }
