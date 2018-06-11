@@ -129,3 +129,14 @@ img.image-style-silver-width-200 {
   max-height: 100px;
   width: auto !important;
 }
+
+@media (min-width: 888px) {
+  .sponsors-list--partner {
+    width: 50%;
+    float: left;
+  }
+}
+
+.sponsors-list--bronze {
+  clear: both;
+}

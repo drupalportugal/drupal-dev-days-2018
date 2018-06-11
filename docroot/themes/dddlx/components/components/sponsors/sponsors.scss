@@ -134,3 +134,13 @@ img.image-style-silver-width-200 {
   width: auto !important;
 }
 
+.sponsors-list--partner {
+  @include respond-to(l) {
+    width: 50%;
+    float: left;
+  }
+}
+
+.sponsors-list--bronze {
+  clear: both;
+}
