@@ -404,3 +404,8 @@ schedule-session-level:
   css:
     component:
       components/asset-builds/css/schedule-session-level.css: {}
+
+keynote-speaker:
+  css:
+    component:
+      components/asset-builds/css/keynote-speaker.css: {}

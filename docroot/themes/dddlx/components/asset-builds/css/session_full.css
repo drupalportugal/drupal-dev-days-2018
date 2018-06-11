@@ -1,4 +1,3 @@
-/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .session-full {
   overflow: hidden;
 }
@@ -159,4 +158,13 @@
     margin-right: 0%;
     margin-left: -100%;
   }
+}
+
+.keynote-full__image {
+  float: left;
+  margin-right: 20px;
+}
+
+.keynote-full__speaker-bio {
+  margin-top: 15px;
 }

@@ -65,7 +65,7 @@ content:
     weight: 2
     label: hidden
     settings:
-      link_to_entity: true
+      link_to_entity: false
     third_party_settings: {  }
     type: string
     region: text

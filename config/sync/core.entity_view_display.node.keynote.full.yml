@@ -41,9 +41,13 @@ third_party_settings:
       label: 'The company'
       region: hidden
     group_speaker:
-      children: {  }
+      children:
+        - field_image
+        - field_speaker_full_name
+        - field_speaker_position
+        - field_speaker_bio
       parent_name: ''
-      weight: 21
+      weight: 6
       format_type: html_element
       format_settings:
         label: 'The speaker'
@@ -77,12 +81,12 @@ third_party_settings:
     regions:
       main:
         - node_title
-        - links
         - body
         - field_image
         - field_speaker_full_name
         - field_speaker_position
         - field_speaker_bio
+        - group_speaker
       asidefirst:
         - 'dynamic_block_field:node-call_to_action'
     fields:
@@ -108,12 +112,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: main
   field_image:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       image_style: crop_150x150
@@ -122,14 +126,14 @@ content:
     type: image
     region: main
   field_speaker_bio:
-    weight: 6
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: main
   field_speaker_full_name:
-    weight: 4
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false
@@ -137,20 +141,16 @@ content:
     type: string
     region: main
   field_speaker_position:
-    weight: 5
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: main
-  links:
-    weight: 1
-    region: main
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   field_company_bio: true
   field_company_name: true
   field_logo: true
   field_room: true
+  links: true

@@ -74,3 +74,12 @@
 .session-full__tags {
   @extend %full__tags;
 }
+
+.keynote-full__image {
+  float: left;
+  margin-right: 20px;
+}
+
+.keynote-full__speaker-bio {
+  margin-top: 15px;
+}
