@@ -14,7 +14,7 @@
   display: flex;
   margin-bottom: 20px;
   padding: 20px 10px;
-  border-bottom: 1px solid color(title);
+  border-bottom: 1px solid rgba(color(title), .2);
   flex-wrap: wrap;
   text-align: center;
 
@@ -79,6 +79,16 @@
 
     .list-row__item:nth-child(2n+1) & {
       order: 2;
+    }
+  }
+}
+
+.keynote-teaser__title {
+
+  @include respond-to(l) {
+
+    h2 {
+      @include font-size(xxl);
     }
   }
 }

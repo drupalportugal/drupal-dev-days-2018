@@ -4,7 +4,7 @@
   display: flex;
   margin-bottom: 20px;
   padding: 20px 10px;
-  border-bottom: 1px solid #5776b7;
+  border-bottom: 1px solid rgba(87, 118, 183, 0.2);
   flex-wrap: wrap;
   text-align: center;
 }
@@ -76,5 +76,11 @@
   .list-row__item:nth-child(2n+1) .keynote-teaser__content__wrapper {
     -webkit-box-ordinal-group: 3;
             order: 2;
+  }
+}
+
+@media (min-width: 888px) {
+  .keynote-teaser__title h2 {
+    font-size: 2rem;
   }
 }
