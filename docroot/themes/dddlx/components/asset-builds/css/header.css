@@ -1,3 +1,4 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
 .header {
   position: relative;
   width: 100%;
@@ -5,10 +6,6 @@
   z-index: 300;
   top: 0;
   left: 0;
-}
-
-.is-logged-in-user .header {
-  top: 40px;
 }
 
 @media (min-width: 999px) {
@@ -24,9 +21,6 @@
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
     word-wrap: normal;
-  }
-  .is-logged-in-user .header {
-    top: 0;
   }
 }
 

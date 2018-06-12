@@ -16,9 +16,9 @@ $image-url-subdirectory: 'components/header';
   top: 0;
   left: 0;
 
-  .is-logged-in-user & {
-    top: 40px;
-  }
+  // .is-logged-in-user & {
+  //   top: 40px;
+  // }
 
   @include respond-to(xl) {
     // top: 0;
@@ -29,10 +29,6 @@ $image-url-subdirectory: 'components/header';
 
     .is-path-frontpage & {
       @include visually-hidden;
-    }
-
-    .is-logged-in-user & {
-      top: 0;
     }
   }
 }
