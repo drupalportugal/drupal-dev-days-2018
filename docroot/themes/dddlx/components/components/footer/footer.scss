@@ -172,8 +172,13 @@ $image-url-subdirectory: 'components/footer';
 
 .footer-follow-drupal-social li {
   display: inline-block;
-  margin-right: 20px;
-  font-size: 50px;
+  margin-right: 15px;
+  font-size: 40px;
+
+  @include respond-to(xxxs) {
+    font-size: 50px;
+    margin-right: 20px;
+  }
 
   &:last-child {
     margin-right: 0;
