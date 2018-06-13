@@ -81,6 +81,9 @@
     border: 0;
     font-size: .85em;
   }
+  .nav-primary__item:last-child {
+    border-bottom: 0;
+  }
   .nav-primary--sub-menu .nav-primary__item {
     width: 100%;
     background-color: transparent;
