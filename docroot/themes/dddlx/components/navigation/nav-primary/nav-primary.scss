@@ -87,14 +87,14 @@ $image-url-subdirectory: 'navigation/nav-primary';
     border: 0;
     font-size: .85em;
 
-    &:last-child {
-      border-bottom: 0;
+    // &:last-child {
+    //   border-bottom: 0;
 
-      a {
-        background: image-url('nav_bg_last.svg') no-repeat center center;
-        background-size: cover;
-      }
-    }
+    //   a {
+    //     background: image-url('nav_bg_last.svg') no-repeat center center;
+    //     background-size: cover;
+    //   }
+    // }
 
     .nav-primary--sub-menu & {
       width: 100%;
