@@ -31,7 +31,7 @@ conditions:
     uuid: 0beab86d-04d8-4b9e-974d-bfe823871fdb
   b9950d05-52f9-4058-bbd8-895cd05ae85c:
     id: request_path
-    pages: "<front>\r\n/news\r\n/attendees"
+    pages: "<front>\r\n/news\r\n/attendees\r\n/program/keynotes"
     negate: false
     context_mapping: {  }
     uuid: b9950d05-52f9-4058-bbd8-895cd05ae85c

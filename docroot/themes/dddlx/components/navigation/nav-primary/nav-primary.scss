@@ -89,11 +89,6 @@ $image-url-subdirectory: 'navigation/nav-primary';
 
     &:last-child {
       border-bottom: 0;
-
-      a {
-        background: image-url('nav_bg_last.svg') no-repeat center center;
-        background-size: cover;
-      }
     }
 
     .nav-primary--sub-menu & {

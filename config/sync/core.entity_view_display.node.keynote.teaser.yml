@@ -13,22 +13,23 @@ dependencies:
     - field.field.node.keynote.field_speaker_bio
     - field.field.node.keynote.field_speaker_full_name
     - field.field.node.keynote.field_speaker_position
-    - image.style.medium
     - node.type.keynote
   module:
+    - ds
     - field_group
-    - image
+    - responsive_image
     - text
     - user
 third_party_settings:
   field_group:
     group_keynote_main_info:
       children:
-        - field_speaker_full_name
+        - field_company_bio
+        - field_company_name
+        - field_logo
         - field_speaker_position
-        - field_speaker_bio
       parent_name: ''
-      weight: 1
+      weight: 17
       format_type: html_element
       format_settings:
         label: 'keynote main info'
@@ -41,6 +42,37 @@ third_party_settings:
         id: ''
         classes: keynote-main-info
       label: 'keynote main info'
+      region: hidden
+  ds:
+    layout:
+      id: keynote_teaser
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          text: div
+          media: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      text:
+        - node_title
+        - body
+        - field_speaker_full_name
+        - field_speaker_bio
+      media:
+        - field_image
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
 id: node.keynote.teaser
 targetEntityType: node
 bundle: keynote
@@ -49,55 +81,40 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 3
+    weight: 1
     settings:
       trim_length: 150
     third_party_settings: {  }
-    region: content
+    region: text
   field_image:
-    type: image
-    weight: 0
-    label: hidden
-    settings:
-      image_style: crop_150x150
-      image_link: ''
-    third_party_settings: {  }
-    region: content
-  field_logo:
-    type: image
-    weight: 2
-    label: hidden
-    settings:
-      image_style: medium
-      image_link: ''
-    third_party_settings: {  }
-    region: content
-  field_speaker_bio:
-    type: text_summary_or_trimmed
-    weight: 5
-    label: hidden
-    settings:
-      trim_length: 150
-    third_party_settings: {  }
-    region: content
-  field_speaker_full_name:
-    type: string
-    weight: 3
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    region: content
-  field_speaker_position:
-    type: string
+    type: responsive_image
     weight: 4
     label: hidden
     settings:
+      image_link: ''
+      responsive_image_style: ''
+    third_party_settings: {  }
+    region: media
+  field_speaker_bio:
+    type: text_summary_or_trimmed
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 150
+    third_party_settings: {  }
+    region: text
+  field_speaker_full_name:
+    type: string
+    weight: 2
+    label: hidden
+    settings:
       link_to_entity: false
     third_party_settings: {  }
-    region: content
+    region: text
 hidden:
   field_company_bio: true
   field_company_name: true
+  field_logo: true
   field_room: true
+  field_speaker_position: true
   links: true

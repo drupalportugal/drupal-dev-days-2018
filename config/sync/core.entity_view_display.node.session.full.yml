@@ -71,10 +71,9 @@ mode: full
 content:
   body:
     label: hidden
-    type: text_trimmed
+    type: text_default
     weight: 1
-    settings:
-      trim_length: 600
+    settings: {  }
     third_party_settings: {  }
     region: main
   field_file:

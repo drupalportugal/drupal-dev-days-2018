@@ -414,3 +414,8 @@ user-teaser:
   css:
     component:
       components/asset-builds/css/user-teaser.css: {}
+      
+keynote_teaser:
+  css:
+    component:
+      components/asset-builds/css/keynote_teaser.css: {}

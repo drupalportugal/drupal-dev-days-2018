@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: relative;
   width: 100%;
   background-color: #fff;
   z-index: 300;
@@ -7,14 +7,8 @@
   left: 0;
 }
 
-.is-logged-in-user .header {
-  top: 40px;
-}
-
 @media (min-width: 999px) {
   .header {
-    top: 0;
-    position: relative;
     background: url(../..//components/header/header_pattern_2.svg) repeat-x center top;
     background-size: contain;
     margin-bottom: 40px;
@@ -26,9 +20,6 @@
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
     word-wrap: normal;
-  }
-  .is-logged-in-user .header {
-    top: 0;
   }
 }
 

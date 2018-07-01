@@ -17,13 +17,13 @@ settings:
   allowed_values:
     -
       value: 1
-      label: B103
+      label: 'Wunder Space (B103)'
     -
       value: 2
-      label: B104
+      label: 'platform.sh Theater (B104)'
     -
       value: 3
-      label: Auditorium
+      label: 'Acquia Auditorium'
     -
       value: 4
       label: 'Workshop Room'

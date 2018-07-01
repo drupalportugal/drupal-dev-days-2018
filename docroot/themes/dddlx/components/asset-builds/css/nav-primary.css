@@ -84,10 +84,6 @@
   .nav-primary__item:last-child {
     border-bottom: 0;
   }
-  .nav-primary__item:last-child a {
-    background: url(../..//navigation/nav-primary/nav_bg_last.svg) no-repeat center center;
-    background-size: cover;
-  }
   .nav-primary--sub-menu .nav-primary__item {
     width: 100%;
     background-color: transparent;

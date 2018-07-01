@@ -65,6 +65,17 @@ user_teaser:
     text:
       label: Text Area
 
+keynote_teaser:
+  label: Keynote Teaser
+  category: Teasers
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/content/keynote_teaser
+  regions:
+    text:
+      label: Text Area
+    media:
+      label: Media Area
 
 page_full:
   label: Page Full

@@ -9,30 +9,26 @@ $image-url-subdirectory: 'components/header';
 
 .header,
 %header {
-  position: fixed;
+  position: relative;
   width: 100%;
   background-color: color('white');
   z-index: 300;
   top: 0;
   left: 0;
 
-  .is-logged-in-user & {
-    top: 40px;
-  }
+  // .is-logged-in-user & {
+  //   top: 40px;
+  // }
 
   @include respond-to(xl) {
-    top: 0;
-    position: relative;
+    // top: 0;
+    // position: relative;
     background: image-url('header_pattern_2.svg') repeat-x center top;
     background-size: contain;
     margin-bottom: 40px;
 
     .is-path-frontpage & {
       @include visually-hidden;
-    }
-
-    .is-logged-in-user & {
-      top: 0;
     }
   }
 }
