@@ -1,7 +1,0 @@
-uuid: a2e8ca62-fdca-4b95-b65e-4e61ffdc5034
-langcode: en
-status: true
-dependencies: {  }
-formId: user_pass
-captchaType: recaptcha/reCAPTCHA
-label: user_pass

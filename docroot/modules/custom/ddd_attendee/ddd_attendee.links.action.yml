@@ -1,5 +1,0 @@
-entity.attendee.add_form:
-  route_name: entity.attendee.add_form
-  title: 'Add Attendee'
-  appears_on:
-    - entity.attendee.collection

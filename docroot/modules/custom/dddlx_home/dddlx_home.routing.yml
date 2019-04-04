@@ -1,8 +1,0 @@
-
-dddlx_home.home_controller_home:
-  path: '/home'
-  defaults:
-    _controller: '\Drupal\dddlx_home\Controller\HomeController::home'
-    _title: 'Home'
-  requirements:
-    _permission: 'access content'

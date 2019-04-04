@@ -1,8 +1,0 @@
-# Module settings schema.
-ddd_attendee.settings:
-  type: config_object
-  label: 'Attendee settings'
-  mapping:
-    webhook_security_token:
-      type: string
-      label: 'The webhook security token.'
